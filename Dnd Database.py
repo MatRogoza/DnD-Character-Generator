@@ -148,7 +148,7 @@ for cls in classes:
 # Insert data into Features
 #c.executemany('INSERT INTO features VALUES (?, ?, ?, ?, ?)', features)
 
-
+#test for github
 
 #saves data into the dnd_character_generator file
 conn.commit()
