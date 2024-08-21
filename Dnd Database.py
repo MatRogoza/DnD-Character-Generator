@@ -8,66 +8,48 @@ conn = sqlite3.connect('dnd_character_generator.db')
 c = conn.cursor()
 
 #creates a new table called classes and add a number id, name of class, hit_die number, and short description
-# c.execute("""Create Table classes (
-#             id INTEGER PRIMARY KEY,
-#             name text NOT NULL,
-#             hit_die TEXT NOT NULL,
-#             description TEXT
-#             )""")
+c.execute("""Create Table classes (
+            id INTEGER PRIMARY KEY,
+            name text NOT NULL,
+            hit_die TEXT NOT NULL,
+            description TEXT
+            )""")
 
 #created tuples for each class in the format of the classes table
 classes = [
-    (1, 'Artificer', 'd8', 
-     'A master of invention, creating magical objects and technology.'),
-    (2, 'Barbarian', 'd12', 
-     'A fierce warrior of primitive background who can enter a battle rage.'),
-    (3, 'Bard', 'd8', 
-     'An inspiring magician whose power echoes the music of creation.'),
-    (4, 'Cleric', 'd8', 
-     'A priestly champion who wields divine magic in service of a higher power.'),
-    (5, 'Druid', 'd8', 
-     'A priest of the Old Faith, wielding the powers of nature and adopting '
-     'animal forms.'),
-    (6, 'Fighter', 'd10', 
-     'A master of martial combat, skilled with a variety of weapons and armor.'),
-    (7, 'Monk', 'd8', 
-     'A master of martial arts, harnessing the power of the body in pursuit of '
-     'physical and spiritual perfection.'),
-    (8, 'Paladin', 'd10', 
-     'A holy warrior bound to a sacred oath.'),
-    (9, 'Ranger', 'd10', 
-     'A warrior who uses martial prowess and nature magic to combat threats '
-     'on the edges of civilization.'),
-    (10, 'Rogue', 'd8', 
-     'A scoundrel who uses stealth and trickery to overcome obstacles and enemies.'),
-    (11, 'Sorcerer', 'd6', 
-     'A spellcaster who draws on inherent magic from a gift or bloodline.'),
-    (12, 'Warlock', 'd8', 
-     'A wielder of magic that is derived from a bargain with an extraplanar entity.'),
-    (13, 'Wizard', 'd6', 
-     'A scholarly magic-user capable of manipulating the structures of reality.')
+    (1, 'Artificer', 'd8', 'A master of invention, creating magical objects and technology.'),
+    (2, 'Barbarian', 'd12', 'A fierce warrior of primitive background who can enter a battle rage.'),
+    (3, 'Bard', 'd8', 'An inspiring magician whose power echoes the music of creation.'),
+    (4, 'Cleric', 'd8', 'A priestly champion who wields divine magic in service of a higher power.'),
+    (5, 'Druid', 'd8', 'A priest of the Old Faith, wielding the powers of nature and adopting animal forms.'),
+    (6, 'Fighter', 'd10', 'A master of martial combat, skilled with a variety of weapons and armor.'),
+    (7, 'Monk', 'd8', 'A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection.'),
+    (8, 'Paladin', 'd10', 'A holy warrior bound to a sacred oath.'),
+    (9, 'Ranger', 'd10', 'A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization.'),
+    (10, 'Rogue', 'd8', 'A scoundrel who uses stealth and trickery to overcome obstacles and enemies.'),
+    (11, 'Sorcerer', 'd6', 'A spellcaster who draws on inherent magic from a gift or bloodline.'),
+    (12, 'Warlock', 'd8', 'A wielder of magic that is derived from a bargain with an extraplanar entity.'),
+    (13, 'Wizard', 'd6', 'A scholarly magic-user capable of manipulating the structures of reality.')
 ]
 # Saving each class to the database
-for cls in classes:
-    cls.save_to_db(conn)
-
+c.executemany('INSERT INTO classes (id, name, hit_die, description) VALUES (?, ?, ?, ?)', classes)
 
 #printing the info of the class tables
-# def fetch_class_data(class_name):
-#     cursor = conn.cursor()
-#     cursor.execute("SELECT * FROM classes WHERE name = ?", (class_name,))
-#     result = cursor.fetchone()  # Fetches the first row that matches the query
+def fetch_class_data(class_name):
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM classes WHERE name = ?", (class_name,))
+    result = cursor.fetchone()  # Fetches the first row that matches the query
     
-#     if result:
-#         print("ID:", result[0])
-#         print("Name:", result[1])
-#         print("Hit Die:", result[2])
-#         print("Description:", result[3])
-#     else:
-#         print(f"No class found with the name '{class_name}'.")
+    if result:
+        print("ID:", result[0])
+        print("Name:", result[1])
+        print("Hit Die:", result[2])
+        print("Description:", result[3])
+    else:
+        print(f"No class found with the name '{class_name}'.")
 
 # Example: Fetch and print data for the 'Wizard' class
-# fetch_class_data('Wizard')
+fetch_class_data('Wizard')
 
 
 
