@@ -1,7 +1,7 @@
 import sqlite3
 
 # Connect to the database (or create it)
-conn = sqlite3.connect('dnd_characters.db')
+conn = sqlite3.connect('dnd_character_generator.db')
 c = conn.cursor()
 
 # Create table for DnD classes
@@ -34,11 +34,65 @@ dnd_classes = [
 # Insert classes into the database
 c.executemany('INSERT OR IGNORE INTO classes VALUES (?, ?, ?, ?)', dnd_classes)
 
+def main():
+    # Step 1: Display available classes
+    classes = fetch_classes()
+    
+    # Step 2: Ask the user to choose a class
+    if classes:
+        # Step 2: Ask the user to choose a class
+        ask = int(input("What class do you want to choose? (Enter the class number): "))
+        
+        # Validate user input and get the selected class
+        selected_class = next((cls for cls in classes if cls[0] == ask), None)
+        
+        if selected_class:
+            print(f"\nYou chose the {selected_class[1]} class.")
+            print(f"Here is a list of their abilities:\n")
+            
+            # Step 3: Fetch and display features of the selected class
+            fetch_class_features(ask)
+        else:
+            print("Invalid choice. Please try again.")
+    else:
+        print("Unable to fetch classes. Please check your database connection.")    
 
 
-# Connect to the database (or create it)
-conn = sqlite3.connect('dnd_characters.db')
-c = conn.cursor()
+
+def fetch_classes():
+    # Connect to the database
+    conn = sqlite3.connect('dnd_character_generator.db')
+    c = conn.cursor()
+
+    try:
+        # Fetch all classes from the 'classes' table
+        c.execute('SELECT * FROM classes')
+        classes = c.fetchall()
+
+        # Check if the query returned any results
+        if classes:
+            print("Available Classes:")
+            for cls in classes:
+                class_id = cls[0]
+                class_name = cls[1]
+                hit_die = cls[2]
+                description = cls[3]
+
+                print(f"{class_id}. {class_name}")
+                print(f"Hit Die: {hit_die}")
+                print(f"Description: {description}\n")
+        else:
+            print("No classes found in the database.")
+
+    except sqlite3.Error as e:
+        print(f"An error occurred: {e}")
+        classes = None
+
+    # Close the connection
+    conn.close()
+
+    return classes
+
 
 # Create table for class features
 c.execute('''
@@ -54,19 +108,26 @@ c.execute('''
 
 def fetch_class_features(class_id):
     # Connect to the database
-    conn = sqlite3.connect('dnd_characters.db')
+    conn = sqlite3.connect('dnd_character_generator.db')
     c = conn.cursor()
 
-    # Fetch features for the specified class
-    c.execute('SELECT * FROM features WHERE class_id = ? ORDER BY level', (class_id,))
-    features = c.fetchall()
+    try:
+        # Fetch features for the specified class
+        c.execute('SELECT * FROM features WHERE class_id = ? ORDER BY level', (class_id,))
+        features = c.fetchall()
 
-    # Display the features
-    for feature in features:
-        print(f"Level: {feature[3]}")
-        print(f"Feature: {feature[2]}")
-        print(f"Description: {feature[4]}")
-        print("-" * 40)
+        # Check if any features were found
+        if features:
+            for feature in features:
+                print(f"Level: {feature[3]}")
+                print(f"Feature: {feature[2]}")
+                print(f"Description: {feature[4]}")
+                print("-" * 40)
+        else:
+            print("No features found for this class.")
+
+    except sqlite3.Error as e:
+        print(f"An error occurred: {e}")
 
     # Close the connection
     conn.close()
@@ -213,15 +274,13 @@ druid_features = [
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', druid_features)
 
 fighter_features = [
-    
-    
     (6, 'Second Wind', 1, 'You have a limited well of stamina that you can draw on'
     'to protect yourself from harm. On your turn, you can use a bonus action to'
-    'regain hit points equal to 1d10 + your fighter level. \Once you use this'
+    'regain hit points equal to 1d10 + your fighter level. \nOnce you use this'
     'feature, you must finish a short or long rest before you can use it again.'),
     (6, 'Action Surge (1 use)', 2, 'Starting at 2nd level, you can push yourself'
     'beyond your normal limits for a moment. On your turn, you can take one'
-    'additional action. \Once you use this feature, you must finish a short'
+    'additional action. \nOnce you use this feature, you must finish a short'
     'or long rest before you can use it again. Starting at 17th level, you'
     'can use it twice before a rest, but only once on the same turn.'),
     (6, 'Martial Archetype', 3, 'You choose an archetype that you strive to'
@@ -229,7 +288,7 @@ fighter_features = [
     (6, 'Ability Score Improvement', 4, 'You can increase one ability score'
     'by 2, or you can increase two ability scores by 1 each.'),
     (6, 'Extra Attack (1)', 5, 'Beginning at 5th level, you can attack twice,'
-    'instead of once, whenever you take the Attack action on your turn. \The'
+    'instead of once, whenever you take the Attack action on your turn. \nThe'
     'number of attacks increases to three when you reach 11th level in this'
     'class and to four when you reach 20th level in this class.'),
     (6, 'Ability Score Improvement', 6, 'You can increase one ability score'
@@ -240,7 +299,7 @@ fighter_features = [
     'by 2, or you can increase two ability scores by 1 each.'),
     (6, 'Indomitable (1 use)', 9, "Beginning at 9th level, you can reroll a"
     "saving throw that you fail. If you do so, you must use the new roll,"
-    "and you can't use this feature again until you finish a long rest. \You"
+    "and you can't use this feature again until you finish a long rest. \nYou"
     "can use this feature twice between long rests starting at 13th level"
     "and three times between long rests starting at 17th level."),
     (6, 'Martial Archetype Feature', 10, 'You gain a feature from your chosen'
@@ -478,4 +537,4 @@ conn.close()
 
 
 # Example: Fetch and display features for Fighter (class_id 6)
-fetch_class_features(13)
+main()
