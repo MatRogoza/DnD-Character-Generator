@@ -68,7 +68,7 @@ def main_menu():
         messagebox.showinfo('Character Editor', 'Forward to Character Editor!')
 
     def on_closing():
-        if messagebox.askyesno('Quit?', 'Do you really want to log out?'):
+        if messagebox.askyesno('Logout?', 'Do you really want to log out?'):
             main_window.destroy()
             login_window.deiconify() #brings back the login menu
 
