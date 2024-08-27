@@ -52,6 +52,8 @@ def main():
             
             # Step 3: Fetch and display features of the selected class
             fetch_class_features(ask)
+            print(f'\nWhat subclass do you want to pick for the {selected_class[1]}?\n')
+            fetch_subclass(ask)
         else:
             print("Invalid choice. Please try again.")
     else:
@@ -94,17 +96,7 @@ def fetch_classes():
     return classes
 
 
-# Create table for class features
-c.execute('''
-    CREATE TABLE IF NOT EXISTS features (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        class_id INTEGER NOT NULL,
-        feature_name TEXT NOT NULL,
-        level INTEGER NOT NULL,
-        description TEXT NOT NULL,
-        FOREIGN KEY (class_id) REFERENCES classes(id)
-    )
-''')
+
 
 def fetch_class_features(class_id):
     # Connect to the database
@@ -132,10 +124,42 @@ def fetch_class_features(class_id):
     # Close the connection
     conn.close()
 
+def fetch_subclass(class_id):
+    conn = sqlite3.connect('dnd_character_generator.db')
+    c = conn.cursor()
+    
+    try:
+        # Fetch subclasses for the specified class
+        c.execute('SELECT * FROM subclasses WHERE class_id = ?', (class_id,))
+        subclasses = c.fetchall()
+
+        # Check if any subclasses were found
+        if subclasses:
+            for subclass in subclasses:
+                print(f'{subclass[1]}. {subclass[2]}')
+                print(f'Description: {subclass[3]}')
+                print("-" * 40)
+        else:
+            print("No subclasses found for this class.")
+
+    except sqlite3.Error as e:
+        print(f"An error occurred: {e}")
+
+    # Close the connection
+    conn.close()
 
 
-
-
+# Create table for class features
+c.execute('''
+    CREATE TABLE IF NOT EXISTS features (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        class_id INTEGER NOT NULL,
+        feature_name TEXT NOT NULL,
+        level INTEGER NOT NULL,
+        description TEXT NOT NULL,
+        FOREIGN KEY (class_id) REFERENCES classes(id)
+    )
+''')
 
 
 # Artificer features from level 1 to 20
@@ -523,7 +547,119 @@ wizard_features = [
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', wizard_features)
 
 
+c.execute('''CREATE TABLE subclasses(
+            class_id INTEGER,
+            subclass_id INTEGER NOT NULL,
+            name TEXT NOT NULL,
+            description TEXT NOT NULL)
+    ''')
 
+subclasses = [
+    (1, 1, "Alchemist", "You specialize in experimental potion-making, using your alchemical mastery to"
+    "craft powerful elixirs. These potions can heal, bolster defenses or provide various enhancements"
+    "to you and your allies."),
+    (1, 2, "Armorer", "You channel your expertise into crafting magical armor, transforming it"
+    "into a powerful exosuit. This suit enhances your combat abilities, offers exceptional protection"
+    "and can be customized with various magical effects to suit different combat roles."),
+    (1, 3, "Artillerist", "You focus on crafting and using magical cannons and other artillery. By"
+    "summoning arcane turrets, you can deal significant damage from a distance or provide defensive"
+    "support to your allies, making you effective in both offensive and defensive strategies."),
+    (1, 4, "Battle Smith", "You forge a strong bond with a clockwork animal construct that you create"
+    "and command in battle. Along with some minor combat abilities, you also gain the ability to repair"
+    "and reinforce both your construct and other equipment."),
+    (2, 1, "Path of the Ancestral Guardian", "You invoke the spirits of your ancestors to protect yourself"
+    "and your allies in battle. These ancestral spirits can shield your allies and deal extensive damage to your enemies."),
+    (2, 2, "Path of the Battlerager", "Available only for dwarves, you harness your rage into a reckless and frenzied"
+    "fighting style, using unique spiked armor as a weapon. This path allows you to excel in close combat, dealing"
+    "additional damage to anyone foolish enough to come within your reach."),
+    (2, 3, "Path of the Beast", "You channel the power of wild creatures, transforming physical aspects of your"
+    "body to unleash devastating attacks. This includes sprouting claws, fangs or even a tail, offering unique ways"
+    "to damage foes and interact with the battlefield."),
+    (2, 4, "Path of the Berserker", "You give in to the fury of combat, allowing you to fight with a primal ferocity."
+    "While in the grips of your battle rage, you can make extra attacks and ignore effects that would otherwise"
+    "cause damage or slow you down."),
+    (2, 5, "Path of the Giant", "You draw on the might of legendary giants, gaining their strength and abilities."
+    "This path allows you to embody different aspects of giantkind, such as frost or fire, with each option"
+    "enhancing your combat abilities in unique ways."),
+    (2, 6, "Path of the Storm Herald", "You tap into the power of the storm, generating a magical aura"
+    "that affects everything around you. Depending on the environment you choose—tundra, desert, or"
+    "sea—your aura can chill, scorch or lash your enemies with storm-like fury."),
+    (2, 7, "Path of the Totem Warrior", "You forge a spiritual bond with a totem animal spirit,"
+    "emulating the aspects of that being. Each animal spirit—be it bear, eagle, elk, tiger or"
+    "wolf—provides unique strengths and supernatural abilities to aid you and your allies."),
+    (2, 8, "Path of Wild Magic", "Your rage taps into the chaotic force of wild magic, resulting in"
+    "unpredictable arcane side-effects. This path is unique in that that can be both incredibly"
+    "powerful but also relies heavily on random dice roles."),
+    (2, 9, "Path of the Zealot", "You are driven by a divine fury, bolstered by the power of the gods. This"
+    "path not only increases your combat prowess with divine energy but also makes you nearly impossible"
+    "to kill while raging."),
+    (3, 1, "College of Creation", "You harness the magic of creation, channeling the raw chaos that formed"
+    "the universe. This subclass allows you to animate inanimate objects, create performance-enhancing motes"
+    "and summon items temporarily into existence."),
+    (3, 2, "College of Eloquence", "You are a master the art of persuasion, using your words to charm, inspire"
+    "and manipulate others. This subclass grants you abilities that make your speech almost impossible to"
+    "resist and reduce the effectiveness of enemies."),
+    (3, 3, "College of Glamour", "You weave a magic of enchantment and allure, captivating those around you."
+    "This subclass provides you with abilities to charm audiences, command attention and manipulate others’ emotions."),
+    (3, 4, "College of Lore", "You collect bits of knowledge from all manner of stories, songs and spells. This"
+    "subclass enhances your versatility by granting additional proficiencies, magical secrets from other classes"
+    "and the ability to use your knowledge to limit enemy attacks."),
+    (3, 5, "College of Spirits", "You channel the tales and powers of the spirits through your performances. This"
+    "subclass gives you the ability to summon spirits to convey storied fables, granting you and your"
+    "allies a variety of magical effects."),
+    (3, 6, "College of Swords", "You blend performance with martial prowess, using your weapon as both an instrument"
+    "and a conduit for your bardic spells. This subclass focuses on enhancing your combat abilities, allowing for"
+    "flourishes that deal extra damage and bolster your defenses."),
+    (3, 7, "College of Valor", "You inspire others in battle through your courage and prowess. This subclass bolsters"
+    "your martial capabilities, providing an Extra attack and allowing you protect your allies and"
+    "enhance group combat tactics."),
+    (3, 8, "College of Whispers", "You traffic in secrets and fear, using your performances to unsettle and manipulate."
+    "This subclass grants you the power to psychically harm your foes, steal identities and sow paranoia,"
+    "turning your art into a weapon of psychological warfare."),
+    (4, 1, "Arcana Domain", "You blend divine and arcane magic, focusing on spells that manipulate"
+    "and reveal the mysteries of the universe. This domain grants you powerful magical abilities,"
+    "including the use of arcane spells usually reserved for wizards."),
+    (4, 2, "Death Domain", "You harness the powers of death and the undead, focusing on spells"
+    "that cause decay and manipulate life forces. This domain grants abilities that enhance your"
+    "damage against the living and allow you to control the dead."),
+    (4, 3, "Forge Domain", "You are a divine artisan, specializing in the creation and"
+    "manipulation of metal and fire. This domain bestows abilities that enhance your crafting skills,"
+    "protect you with divine armor, and imbuing your weapons with fiery power."),
+    (4, 4, "Grave Domain", "You oversee the line between life and death, aiming to ensure balance and"
+    "respect for the dead. This domain grants abilities to hinder the undead, protect allies on the brink"
+    "of death and maximum the impact of restorative spells."),
+    (4, 5, "Knowledge Domain", "You are a seeker of truth, using your divine magic to uncover secrets and"
+    "enhance your wisdom. This domain provides powers to read thoughts, learn hidden knowledge and become"
+    "proficient in numerous skills and languages."),
+    (4, 6, "Life Domain", "You are a conduit of healing and vitality, specializing in spells that restore"
+    "and sustain life. This domain increases the effectiveness of your healing spells and grants you"
+    "abilities to protect and bolster your allies."),
+    (4, 7, "Light Domain", "You channel the power of light and fire, wielding these elements against the darkness."
+    "This domain provides powerful options to scorch your enemies, dispel darkness, and protect allies with radiant energy."),
+    (4, 8, "Nature Domain", "You are a guardian of the natural world, commanding its elements and creatures."
+    "This domain gives you abilities to charm animals and plants, reshape the terrain and summon nature’s"
+    "wrath to aid you in battle."),
+    (4, 9, "Order Domain", "You impose divine order, using your abilities to control the battlefield"
+    "and bolster lawful actions. This domain allows you to enchant allies with bonus attacks and"
+    "slow the advance of enemy forces."),
+    (4, 10, "Peace Domain", "You promote harmony and tranquility, diffusing conflict and healing"
+    "strife. This domain provides abilities that link allies together, allowing shared healing and protection in battle."),
+    (4, 11, "Tempest Domain", "You command the elements of storms, wielding thunder, lightning"
+    "and wind. This domain grants you control over these elements to shock and push back"
+    "enemies while protecting yourself."),
+    (4, 12, "Trickery Domain", "You revel in deception and mischief, using your divine gifts"
+    "to confuse and mislead. This domain provides stealth and illusion powers, enhancing your"
+    "ability to confuse foes and aid allies covertly."),
+    (4, 13, "Twilight Domain", "You guard against the fears of the night and guide others"
+    "through darkness. This domain bestows powers to comfort allies, manipulate shadows"
+    "and see through the deepest gloom."),
+    (4, 14, "War Domain", "You are a divine warrior, a crusader in the cause of your deity."
+    "This domain blesses you with martial prowess, the ability to make extra attacks and powers"
+    "that boost your strength and endurance in battle."),
+    
+    ]
+
+c.executemany('''INSERT INTO subclasses (class_id, subclass_id, name, description) VALUES (?, ?, ?, ?)''', subclasses)
 
 
 
