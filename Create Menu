@@ -1,0 +1,82 @@
+import tkinter as tk
+from tkinter import ttk
+import sqlite3
+
+#Connect to the users.db 
+conn = sqlite3.connect('users.db')
+c1 = conn.cursor()
+
+#Connect to the character info db
+conn = sqlite3.connect('dnd_character_info')
+c2 = conn.cursor()
+
+#list of classes for the class dropdown
+class_options = ['Artificier', 'Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard']
+#list of class levels for the level dropdown
+class_levels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+def center_window(window, width, height): #function to center window
+    screen_width = window.winfo_screenwidth()
+    screen_height = window.winfo_screenheight()
+
+    x = int((screen_width / 2) - (width / 2))
+    y = int((screen_height / 2) - (height / 2))
+
+    window.geometry(f'{width}x{height}+{x}+{y}')
+
+
+#create the new buttons for the level once class is chosen
+def class_level_button(create_window):
+    label_class_level = tk.Label(create_window, text='Level:')
+    label_class_level.grid(row=1, column=2, padx=10, pady=10)
+
+    combo_class_level = ttk.Combobox(create_window, values=class_levels, width=2)
+    combo_class_level.grid(row=1, column=3, padx=10, pady=10)
+
+#Event trigger and label once a class is chosen
+def get_class_level(event, create_window, combo_class):
+    label_class_name = tk.Label(create_window, text=f"You selected: {combo_class.get()}")
+    label_class_name.grid(row=2, column=0, columnspan=2)
+    class_level_button(create_window)
+    get_class_level_features(create_window)
+
+def get_class_level_features(create_window):
+    
+    
+#function to call the create character menu
+def create_menu():
+        
+    create_window = tk.Tk() 
+    create_window.title("Mat's D&D Character Sheet")
+    create_window.geometry('1000x1000')
+
+    #labels for the create character menu
+    label_name = tk.Label(create_window, text='Character Name:')
+    label_class = tk.Label(create_window, text='Class:')
+    
+
+    #positions of the labels
+    label_name.grid(row=0, column=0, padx=10, pady=10)
+    label_class.grid(row=1, column=0, padx=10, pady=10)
+
+
+    #entry for the Character name
+    entry_name = tk.Entry(create_window)
+    entry_name.grid(row=0, column=1)
+
+    #Class selection dropdwon
+    combo_class = ttk.Combobox(create_window, values=class_options)
+    combo_class.grid(row=1, column=1, padx=10, pady=10)
+
+    #Binding the action of selecting a class to then make the level button
+    combo_class.bind('<<ComboboxSelected>>', lambda event: get_class_level(event, create_window, combo_class))
+
+
+    center_window(create_window, 1000, 1000)
+    
+
+
+    
+    
+
+
