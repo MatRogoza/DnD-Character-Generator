@@ -2,20 +2,22 @@ import tkinter as tk
 from tkinter import messagebox
 import sqlite3
 import hashlib
+from create_menu import create_menu
+
 
 #Connect to the Sqlite database
 conn = sqlite3.connect('users.db')
 c = conn.cursor()
 
 #Create a table for storing user accounts
-c.execute('''
-CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT NOT NULL UNIQUE,
-    password TEXT NOT NULL
-)
-''')
-conn.commit()
+# c.execute('''
+# CREATE TABLE IF NOT EXISTS users (
+#     id INTEGER PRIMARY KEY AUTOINCREMENT,
+#     username TEXT NOT NULL UNIQUE,
+#     password TEXT NOT NULL
+# )
+# ''')
+# conn.commit()
 
 #Function to hash passwords
 def hash_password(password):
@@ -55,11 +57,13 @@ def create_account():
 #Main Menu Function
 def main_menu():
     main_window = tk.Toplevel() #Create a new window
-    main_window.title('D&D Character Sheet')
+    main_window.title("Mat's D&D Character Sheet")
     main_window.geometry('500x500')
 
     def create_character():
-        messagebox.showinfo('New Character', 'Forward to Character creator!')
+        messagebox.showinfo('Character Creator', "Forward to Character Creator!")
+        main_window.withdraw() #Hide the main window
+        create_menu()
 
     def view_character():
         messagebox.showinfo('Characters', 'Forward to existing Characters!')
@@ -68,7 +72,7 @@ def main_menu():
         messagebox.showinfo('Character Editor', 'Forward to Character Editor!')
 
     def on_closing():
-        if messagebox.askyesno('Logout?', 'Do you really want to log out?'):
+        if messagebox.askyesno('Quit?', 'Do you really want to log out?'):
             main_window.destroy()
             login_window.deiconify() #brings back the login menu
 
@@ -99,6 +103,7 @@ def center_window(window, width, height): #function to center window
 def close_login_window():
     conn.close()
     login_window.destroy()
+
 
 #Create the login window      
 login_window = tk.Tk()
