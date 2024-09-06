@@ -656,6 +656,245 @@ def fetch_subclass(class_id):
 #     (4, 14, "War Domain", "You are a divine warrior, a crusader in the cause of your deity."
 #     "This domain blesses you with martial prowess, the ability to make extra attacks and powers"
 #     "that boost your strength and endurance in battle."),
+    (5, 1, "Circle of Dreams", "You are a guardian of the border between the Feywild and the"
+    "mortal world, tapping into the magic of nature to heal and aid your allies. This subclass"
+    "grants you abilities to cure wounds, provide safe rest and offer protection."),
+    (5, 2, "Circle of the Land", "You have a deep connection to a specific natural terrain,"
+    "such as forests, mountains or coastlines. This subclass enhances your magical abilities,"
+    "allowing you to draw upon the arcane essence of your chosen land for additional spells."),
+    (5, 3, "Circle of the Moon", "You specialize in transforming into more powerful animals"
+    "and even elemental forms. This subclass focuses on improving your combat effectiveness"
+    "in beast form, granting you the ability to become larger, stronger and more formidable creatures."),
+    (5, 4, "Circle of the Shepherd", "You are a protector of nature’s creatures, communicating with"
+    "and nurturing them. This subclass gives you powers to summon and strengthen spirit totems,"
+    "enhancing the abilities of your allies and conjured beasts."),
+    (5, 5, "Circle of Spores", "You harness the life and decay aspects of nature, using fungal"
+    "spores to fuel your magic. This subclass allows you to animate dead plants and creatures,"
+    "deal necrotic damage to enemies and gain temporary health boosts."),
+    (5, 6, "Circle of Stars", "You draw on the mystic power of the stars and constellations, using"
+    "them to guide and protect. This subclass provides abilities to transform starlight into protective"
+    "and restorative magic or harness it for divination and attacks."),
+    (5, 6, "Circle of Wildfire", "You believe in renewal through fire, using flames to clear decay"
+    "and make way for new life. This subclass lets you summon a wildfire spirit, cast fire-related spells"
+    "and heal or bolster your allies with the purifying power of fire."),
+    (6, 1, "Arcane Archer", "You infuse your arrows with magical properties, using arcane elvish magic"
+    "to create a variety of special effects. This subclass allows you to choose from magical arrow types"
+    "that can entangle, banish or even strike hidden targets."),
+    (6, 2, "Battle Master", "You are a master of combat techniques and tactics, using maneuvers to"
+    "outsmart and defeat your enemies. This subclass grants you abilities to enhance your attacks,"
+    "control the battlefield and provide tactical advantages to your allies."),
+    (6, 3, "Cavalier", "You excel in mounted combat and are dedicated to protecting others, especially"
+    "when riding your steed. This subclass boosts your effectiveness while mounted and on foot, focusing"
+    "on defensive tactics and controlling enemies to protect your allies."),
+    (6, 4, "Champion", "You focus on refining your martial prowess, becoming a formidable warrior. This"
+    "subclass enhances your ability to land critical hits more often and increases your physical capabilities,"
+    "making you a relentless fighter."),
+    (6, 5, "Echo Knight", "You manipulate time and space to summon an echo of yourself from a parallel"
+    "dimension. This subclass allows you to fight from multiple positions, attack from a distance with"
+    'your echo, and even swap places with it for strategic maneuvers."),
+    (6, 6, "Eldritch Knight", "You blend martial prowess with magical ability, casting spells while"
+    "also engaging in hand-to-hand combat. This subclass allows you to summon weapons, cast protective"
+    "spells, and use magic to enhance your combat effectiveness."),
+    (6, 7, "Rune Knight", "You use mystical runes to enhance your combat skills and manipulate"
+    "various magical effects. This subclass allows you to inscribe runes onto your equipment, granting"
+    "you and your allies enhanced abilities, protection, or offensive power."),
+    (6, 8, "Samurai", "You are a warrior who combines fierce determination with meticulous skill."
+    "This subclass provides you with bonuses to accuracy, the ability to withstand damage, and a resolute"
+    "will that can keep you fighting even when severely wounded."),
+    (7, 1, "Way of the Ascendant Dragon", "You channel the power of dragons, using their mythical"
+    "essence to enhance your martial arts prowess. This subclass grants you abilities to breathe"
+    "elemental energy, manipulate the battlefield with draconic force and inspire awe or fear like a dragon."),
+    (7, 2, "Way of the Astral Self", "You summon an astral projection of yourself, enhancing your combat"
+    "capabilities. This subclass allows you to extend your reach, deal extra damage and use your astral form"
+    "to shield and strike at your enemies."),
+    (7, 3, "Way of the Drunken Master", "You incorporate unpredictable movements into your fighting"
+    "style, mimicking a drunkard. This subclass provides you with superior evasion, sudden strikes"
+    "and the ability to redirect attacks, making you a slippery target in combat."),
+    (7, 4, "Way of the Four Elements", "You harness the power of elemental forces, using them"
+    "to cast spells and augment your martial arts. This subclass allows you to manipulate earth,"
+    "air, fire and water to attack your foes, defend yourself and control the environment."),
+    (7, 5, "Way of the Kensei", "You master the use of weapons as an extension of your body,"
+    "integrating them into your martial practice. This subclass enhances your proficiency with"
+    "specific weapons, making them more effective and allowing you to use them in conjunction with other monk abilities."),
+    (7, 6, "Way of the Long Death", "You are fascinated with the meaning and mechanics of dying, using this"
+    "knowledge to your advantage in battle. This subclass grants you the ability to siphon"
+    "life force from those you kill to heal yourself and instill fear in your enemies."),
+    (7, 7, "Way of Mercy", "You balance between harm and healing, using your knowledge"
+    "of anatomy to both cure and cause pain. This subclass provides you with abilities"
+    "to heal and harm with your touch, choosing to restore health or drain it as you see fit."),
+    (7, 8, "Way of the Open Hand", "You focus on the pure techniques of martial arts, perfecting"
+    "strikes that incapacitate your foes. This subclass gives you powerful techniques to"
+    "knock enemies prone, push them away or deny them reactions, exemplifying the art of hand-to-hand combat."),
+    (7, 9, "Way of the Shadow", "You embrace the stealth and cunning of the shadow, using darkness to"
+    "conceal your movements and strike unseen. This subclass allows you to teleport into shadows, become"
+    "invisible in dim light and use the dark as a weapon against your enemies."),
+    (7, 10, "Way of the Sun Soul", "You channel your inner light into searing bolts of light, similar"
+    "to the rays of the sun. This subclass allows you to hurl radiant energy from your hands, use it to"
+    "create barriers or radiate light to damage and disrupt your foes."),
+    (8, 1, "Oath of Conquest", "Aimed at dominating enemies, this subclass grants spells and"
+    "abilities to instill fear and control over the battlefield, allowing you to intimidate and overpower foes."),
+    (8, 2, "Oath of Devotion", "Centered on the ideals of honesty and courage, this subclass offers protective"
+    "magic, the power to purge evil and the ability to protect and heal allies."),
+    (8, 3, "Oath of Glory", "Focused on the pursuit of fame and the embodiment of heroism,"
+    "this subclass provides enhancements to physical prowess and leadership, allowing you to excel"
+    "in athletic feats and inspire others during battle."),
+    (8, 4, "Oath of Redemption", "Focused on nonviolent solutions, you are able to access spells and"
+    'abilities to protect yourself and your allies, while also using non-lethal attacks to slow enemies down."),
+    (8, 5, "Oath of the Ancients", "Dedicated to preserving the light and life found in nature, you can"
+    "access abilities that heal and protect, as well as tapping into offensive spells that harness nature’s wrath."),
+    (8, 6, "Oath of the Crown", "Committed to the ideals of civilization and leadership, you are"
+    "dedicated to protecting the lawful authority and those who serve it. Your abilities emphasize"
+    "defense and control in combat."),
+    (8, 7, "Oath of the Watchers", "Designed to guard against the threats of extraplanar entities,"
+    "you are able to hinder and combat creatures from other realms, with abilities centered around"
+    "detection, containment and banishment."),
+    (8, 8, "Oath of Vengeance", "Focused on punishing evildoers, this subclass offers aggressive"
+    "tactics and powers that enhance your ability to hunt down and destroy your enemies, emphasizing"
+    "relentless offensive attacks."),
+    (8, 9, "Oathbreaker", "Tailored for paladins who have forsaken their oaths, this evil subclass"
+    "provides powers to control and manipulate the undead, wield dread magics and command the shadows."),
+    (9, 1, "Beast Master", "You bond with a loyal beast companion, commanding it in battle to fight by"
+    "your side. Your connection allows you to work seamlessly as a team, enhancing your combat abilities and coordination."),
+    (9, 2, "Drakewarden", "You form a mystical bond with a drake, a dragon-like creature that assists you in battle."
+    "As you grow in power, your drake evolves, gaining new abilities that complement your own."),
+    (9, 3, "Fey Wanderer", "You draw on the mysterious magic of the Feywild, using enchantments and tricks to bewilder your"
+    "foes and charm others. Your abilities also strengthen your mind, providing resilience against mental assaults."),
+    (9, 4, "Gloom Stalker", "You excel in darkness and ambush, using your skills to become nearly invisible in the shadows."
+    "Your attacks are swift and deadly, particularly at the onset of battle, giving you a critical advantage in the first"
+    "moments of combat."),
+    (9, 5, "Horizon Walker", "You protect the world from extraplanar threats, gaining abilities that allow you to manipulate"
+    "space and even teleport. Your attacks can bypass defenses as you harness the energies of the multiverse."),
+    (9, 6, "Hunter", "You specialize in tracking and defeating a variety of creatures, adapting your tactics based on the"
+    "nature of your prey. In addition, you gain specific abilities that enhance your effectiveness against certain types"
+    "of enemies."),
+    (9, 7, "Monster Slayer", "You focus on hunting down the most dangerous creatures, gaining supernatural abilities that"
+    "help you track, confront and destroy these threats. Your skills make you particularly adept at disrupting your"
+    "enemies’ abilities and resisting their magic."),
+    (9, 8, "Swarmkeeper", "You are surrounded by a swarm of tiny creatures or spirits that assist you in battle."
+    "This mystical connection to these creatures grants you a range of combat tactics, with both offensive and"
+    "defensive capabilities."),
+    (10, 1, "Arcane Trickster", "You enhance your skills as a rogue with the subtle magic of illusion and"
+    "enchantment. This subclass grants you the ability to cast spells that can manipulate others, hide your"
+    "movements or confuse your foes."),
+    (10, 2, "Assassin", "You specialize in infiltration and the art of the kill, becoming a master"
+    "of disguise and deadly strikes. This subclass provides you with bonuses for attacking unaware"
+    "opponents, allowing you to deal significant damage in the first moments of combat."),
+    (10, 3, "Inquisitive", "You have a sharp eye for detail and excel at deducing clues"
+    "and lies. This subclass allows you to use your keen observation to uncover hidden truths, spot"
+    "weaknesses in your opponents and gain an advantage in social and combat encounters."),
+    (10, 4, "Mastermind", "You are a strategist and manipulator, skilled at pulling the strings from"
+    "the shadows. This subclass grants you the ability to mimic speech, forge documents and direct allies in combat."),
+    (10, 5, "Phantom", "You channel the powers of the dead, gaining abilities linked to shadows and spirits. This"
+    "subclass allows you to steal aspects of the deceased to gain temporary benefits and leave behind spectral"
+    "tokens to spy or communicate."),
+    (10, 6, "Scout", "You are adept at wilderness survival and reconnaissance, using your skills to navigate"
+    "and track. This subclass enhances your mobility and ability to avoid danger, making you formidable"
+    "in stealth and surprise."),
+    (10, 7, "Soulknife", "You manifest psychic blades from your mind, using them as weapons. This subclass"
+    "grants you the ability to create and wield these ethereal blades, attack from a distance and use"
+    "your psychic power to deliver devestating mental assaults."),
+    (10, 8, "Swashbuckler", "You thrive in fast-paced duels and charismatic interactions, embodying"
+    "the daring rogue with a flair for dramatic combat. This subclass enhances your ability"
+    "to engage foes one-on-one, dodge attacks and charm individuals in social situations."),
+    (10, 9, "Thief", "You excel at climbing, sneaking and stealing, using your agility"
+    "and cunning to gain access to places others can’t go. This subclass provides you"
+    "with enhanced abilities to perform sleight of hand, disarm traps and make the most of your"
+    "ill-gotten goods."),
+    (11, 1, "Aberrant mind", "You are imbued with psychic powers derived from an alien"
+    "influence. This subclass grants you the ability to telepathically communicate, manipulate"
+    "thoughts and cast spells without verbal or somatic components."),
+    (11, 2, "Clockwork Soul", "Influenced by the orderly mechanisms of Mechanus, you"
+    "can manipulate probabilities and ensure that events unfold according to plan. This subclass"
+    "allows you to impose order on chaotic situations, prevent alterations to conditions and"
+    "repair both magical and mundane items."),
+    (11, 3, "Divine Soul", "With a touch of the divine in your bloodline, you blend sorcerous"
+    "magic with divine power. This subclass provides you access to both sorcerer and cleric"
+    "spell lists, enhancing your healing and protective capabilities alongside your natural sorcery."),
+    (11, 4, "Draconic Bloodline", "Your magical powers derive from a dragon ancestor, granting you"
+    "scales, fearsome presence and elemental affinities related to your dragon’s nature. This"
+    "subclass enhances your durability, charisma, and grants abilities based on the type of dragon from which you descend."),
+    (11, 5, "Shadow Magic", "Born from the Plane of Shadow, you harness dark energies to create illusions,"
+    "summon shadow, and occasionally slip through the veil between life and death. This subclass"
+    "provides you with resilience against death and the ability to summon a shadowy hound to harry your foes."),
+    (11, 6, "Storm Sorcery", "Your magic crackles with the raw energy of tempests, giving you"
+    "control over wind, lightning and thunder. This subclass enhances your mobility, allowing you"
+    "to ride gusts of wind and channel your spells with the power of a storm."),
+    (11, 7, "Wild Magic", "Your magic is unpredictable and explosive, resulting from a chaotic"
+    "surge of magical energy. This subclass leads to random magical effects that can either"
+    "dramatically benefit or hamper you and your allies, adding an element of chance to every spell you cast."),
+    (12, 1, "Archfey", "You have made a pact with a powerful being of the Feywild, gaining powers that enchant"
+    "and bewilder. This subclass provides you with abilities to charm and frighten others, teleport short "
+    "distances and manipulate the minds and emotions of those around you."),
+    (12, 2, "Celestial", "Your patron is a creature of good, imbuing you with powers of healing and radiance."
+    "This subclass allows you to cure wounds, channel celestial energy into destructive power and provide"
+    "resilience against death for you and your allies."),
+    (12, 3, "Fathomless", "Bound to a mysterious entity from the watery depths, you command"
+    "the crushing pressure and cold darkness of the sea. This subclass grants you tentacle"
+    "attacks, watery teleportation and the ability to breathe underwater as well as resist cold."),
+    (12, 4, "Fiend", "Your patron is a creature of the lower planes, bestowing upon you the"
+    "ability to channel fiery wrath and curses upon your foes. This subclass enhances your resilience,"
+    "provides bonuses to certain types of spells and allows you to temporarily gain hit points"
+    "when you reduce a foe to 0 hit points."),
+    (12, 5, "Genie", "You serve a powerful genie, gaining magic that reflects"
+    "the genie’s elemental nature—be it air, fire, earth or water. This subclass"
+    "allows you to craft a magical vessel linked to your genie, gain resistance related to"
+    "your genie’s type and manipulate the battlefield with elemental power."),
+    (12, 6, "Great Old One", "Linked to a mysterious, otherworldly entity, your"
+    "powers include telepathy and mental manipulation. This subclass provides you with"
+    "the ability to communicate thoughts, sow madness among your enemies and protect your"
+    "mind against intrusions."),
+    (12, 7, "Hexblade", "You are connected to a magical weapon borne from the Shadowfell,"
+    "which grants you combat prowess and the ability to curse your foes. This subclass"
+    "enhances your melee capabilities, allows you to use charisma for weapon attacks and"
+    "provides spells related to combat and protection."),
+    (12, 8, "Undead", "You derive your power from a bond with the undead, embracing necrotic"
+    "energies and manipulating the forces of death. This subclass allows you to adopt"
+    "ghostly traits, terrify your enemies and eventually even defy death itself."),
+    (12, 9, "Undying", "Your patron is an immortal being who has mastered the secrets"
+    "of longevity, sharing with you the magic of endurance and preservation. This subclass"
+    "gives you abilities to avoid death, resist disease and restore health."),
+    (13, 1, "Bladesinger", "Almost entirely exclusive to elves and half-elves,'
+    "you blend expert swordplay with arcane magic, enhancing your agility, concentration"
+    "and combat spells through a mystical battle ritual known as the Bladesong."),
+    (13, 2, "Chronurgy", "You manipulate the flow of time through your magic, gaining"
+    "abilities that allow you to adjust initiative, hasten or slow spells and creatures, and even"
+    "alter the course of events as they occur."),
+    (13, 3, "Graviturgy", "Specializing in the manipulation of gravity, you can make"
+    "objects heavier or lighter, pin foes to the spot or use gravitational force to"
+    "enhance your own mobility and offensive capabilities."),
+    (13, 4, "Order of Scribes", "You magically awaken your spellbook, turning"
+    "it into a valuable assistant. This subclass provides unique ways to cast and"
+    "store spells, swap spell properties and even resurrect your spellbook if it’s destroyed."),
+    (13, 5, "School of Abjuration", "You specialize in protective magic, strengthening"
+    "your defenses and banishing enemies. This school enhances your ability to cast wards,"
+    "counterspells and protective enchantments, making you and your allies more resilient against attacks."),
+    (13, 6, "School of Conjuration", "You specialize in summoning creatures, objects and phenomena from"
+    "other places, mastering the art of teleportation and conjuration. This subclass grants"
+    "you the ability to instantly transport and create items and allies to aid in various situations."),
+    (13, 7, "School of Divination", "You focus on foresight and information, using your spells to"
+    "reveal secrets, predict events and gain insights that others cannot perceive. This school"
+    "provides abilities that manipulate dice rolls and provide additional information."),
+    (13, 8, "School of Enchantment", "You wield magic that charms and beguiles, influencing"
+    "and controlling the behavior of others. This school grants powers to charm individuals, erase"
+    "memories and dominate minds."),
+    (13, 9, "School of Evocation", "You channel raw elemental power into destructive spells"
+    "to control and maximize damage. This school allows you to shape spells to protect allies,"
+    "augment attacks and target enemies from afar."),
+    (13, 10, "School of Illusion", "You create convincing illusions and deceptive images that"
+    "can trick the senses. This school develops your skills to manipulate illusions, making"
+    "them interact with the environment and even become real for a short time."),
+    (13, 11, "School of Necromancy", "You tap into the energies of life and death,"
+    "using your spells to drain energy, control undead and manipulate existence. This"
+    "school enhances your abilities related to the undead and grants you necrotic"
+    "powers that sap strength from your enemies."),
+    (13, 12, "School of Transmutation", "You master the art of changing energy and matter,"
+    "transforming the physical properties of creatures, objects and yourself. This"
+    "school allows you to alter your physical form, enhance combat abilities and"
+    "manipulate the natural world."),
+    (13, 13, "War Magic", "A blend of defensive and offensive magic, you focus on"
+    "quick thinking and rapid responses to maintain superior control in battle. This"
+    "school enhances your ability to maintain concentration, boost defenses and deliver powerful counterattacks.")
+    
     
 #     ]
 
