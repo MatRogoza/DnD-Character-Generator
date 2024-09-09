@@ -554,7 +554,7 @@ def fetch_subclass(class_id):
 #             description TEXT NOT NULL)
 #     ''')
 
-# subclasses = [
+ subclasses = [
 #     (1, 1, "Alchemist", "You specialize in experimental potion-making, using your alchemical mastery to"
 #     "craft powerful elixirs. These potions can heal, bolster defenses or provide various enhancements"
 #     "to you and your allies."),
@@ -896,9 +896,9 @@ def fetch_subclass(class_id):
     "school enhances your ability to maintain concentration, boost defenses and deliver powerful counterattacks.")
     
     
-#     ]
+     ]
 
-# c.executemany('''INSERT INTO subclasses (class_id, subclass_id, name, description) VALUES (?, ?, ?, ?)''', subclasses)
+ c.executemany('''INSERT INTO subclasses (class_id, subclass_id, name, description) VALUES (?, ?, ?, ?)''', subclasses)
 
 
 
