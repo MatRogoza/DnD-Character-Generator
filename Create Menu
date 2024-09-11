@@ -40,7 +40,7 @@ def get_class_level(event, create_window, combo_class):
     class_level_button(create_window)
     get_class_level_features(create_window)
 
-def get_class_level_features(create_window):
+#def get_class_level_features(create_window):
     
     
 #function to call the create character menu
