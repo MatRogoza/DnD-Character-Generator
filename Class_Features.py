@@ -547,11 +547,12 @@ def fetch_subclass(class_id):
 # c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', wizard_features)
 
 
-# c.execute('''CREATE TABLE subclasses(
+# c.execute('''CREATE TABLE IF NOT EXISTS subclasses(
 #             class_id INTEGER,
 #             subclass_id INTEGER NOT NULL,
 #             name TEXT NOT NULL,
-#             description TEXT NOT NULL)
+#             description TEXT NOT NULL
+#             FOREIGN KEY (class_id) REFERENCES class(id)
 #     ''')
 
  subclasses = [
@@ -894,12 +895,119 @@ def fetch_subclass(class_id):
     (13, 13, "War Magic", "A blend of defensive and offensive magic, you focus on"
     "quick thinking and rapid responses to maintain superior control in battle. This"
     "school enhances your ability to maintain concentration, boost defenses and deliver powerful counterattacks.")
-    
-    
-     ]
+    ]
 
- c.executemany('''INSERT INTO subclasses (class_id, subclass_id, name, description) VALUES (?, ?, ?, ?)''', subclasses)
+c.executemany('''INSERT INTO subclasses (class_id, subclass_id, name, description) VALUES (?, ?, ?, ?)''', subclasses)
 
+c.execute('''CREATE TABLE IF NOT EXISTS subclass_features (
+            class_id INTEGER NOT NULL,
+            subclass_id INTEGER NOT NULL,
+            feature_name TEXT NOT NULL,
+            level INTEGER, NOT NULL,
+            description TEXT NOT NULL
+            FOREIGN KEY (class_id) REFERENCES classes(id)
+            FOREIGN KEY (subclass_id) REFERNECES sublasses(subclass_id))
+            
+    ''')
+
+subclass_features [
+    (1, 1, "Tool Proficiency", 3, "When you adopt this specialization at 3rd level, you"
+    "gain proficiency with alchemist's supplies. If you already have this proficiency, you"
+    "gain proficiency with one other type of artisan's tools of your choice."),
+    (1, 1, "Alchemist Spells", 3, "Starting at 3rd level, you always have certain spells"
+    "prepared after you reach particular levels in this class, as shown in the Alchemist"
+    "Spells table. These spells count as artificer spells for you, but they don’t count against"
+    "the number of artificer spells you prepare."),
+    (1, 1, "Experimental Elixir", 3, "Beginning at 3rd level, whenever you finish a long rest, you"
+    "can magically produce an experimental elixir in an empty flask you touch. Roll on the Experimental"
+    "Elixir table for the elixir's effect, which is triggered when someone drinks the elixir. As an"
+    "action, a creature can drink the elixir or administer it to an incapacitated creature.\n"
+    "You can create additional experimental elixirs by expending a spell slot of 1st level or"
+    "higher for each one. When you do so, you use your action to create the elixir in an empty flask"
+    "you touch, and you choose the elixir's effect from the Experimental Elixir table.\n Creating"
+    "an experimental elixir requires you to have alchemist supplies on your person, and any elixir you"
+    "create with this feature lasts until it is drunk or until the end of your next long rest.\n When"
+    "you reach certain levels in this class, you can make more elixirs at the end of a long rest: two"
+    "at 6th level and three at 15th level. Roll for each elixir's effect separately. Each"
+    "elixir requires its own flask."),
+    (1, 1, "Alchemical Savant", 5, "At 5th level, you've developed masterful command of magical chemicals,"
+    "enhancing the healing and damage you create through them. Whenever you cast a spell using your alchemist's"
+    "supplies as the spellcasting focus, you gain a bonus to one roll of the spell. That roll must restore hit"
+    "points or be a damage roll that deals acid, fire, necrotic, or poison damage, and the bonus equals your"
+    "Intelligence modifier (minimum of +1)."),
+    (1, 1, "Restorative Reagents", 9, "Starting at 9th level, you can incorporate restorative reagents into"
+    "some of your works:\n Whenever a creature drinks an experimental elixir you created, the creature"
+    "gains temporary hit points equal to 2d6 + your Intelligence modifier (minimum of 1 temporary hit point).\n"
+    "You can cast Lesser Restoration without expending a spell slot and without preparing the spell, provided"
+    "you use alchemist's supplies as the spellcasting focus. You can do so a number of times equal to your"
+    "Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."),
+    (1, 1, "Chemical Mastery", 15, "By 15th level, you have been exposed to so many chemicals that they pose"
+    "little risk to you, and you can use them to quickly end certain ailments:\n You gain resistance to"
+    "acid damage and poison damage, and you are now immune to the poisoned condition.\n You can cast"
+    "Greater Restoration and Heal without expending a spell slot, without preparing the spell, and"
+    "without providing the material component, provided you use alchemist’s supplies as the spellcasting"
+    "focus. Once you cast either spell with this feature, you can't cast that spell with it again until"
+    "you finish a long rest."),
+    (1, 2, "Tools of the Trade", 3, "When you adopt this specialization at 3rd level, you gain"
+    "proficiency with heavy armor. You also gain proficiency with smith's tools. If you already"
+    "have this tool proficiency, you gain proficiency with one other type of artisan's tools of your choice."),
+    (1, 2, "Armorer Spells", 3, "Starting at 3rd level, you always have certain spells prepared after"
+    "you reach particular levels in this class, as shown in the Armorer Spells table. These spells count"
+    "as artificer spells for you, but they don't count against the number of artificer spells you prepare."),
+    (1, 2, "Arcane Armor", 3, "Beginning at 3rd level, your metallurgical pursuits have led to you making"
+    "armor a conduit for your magic. As an action, you can turn a suit of armor you are wearing into"
+    "Arcane Armor, provided you have smith's tools in hand. \nYou gain the following benefits while"
+    "wearing this armor: \nIf the armor normally has a Strength requirement, the arcane armor lacks"
+    "this requirement for you. \nYou can use the arcane armor as a spellcasting focus for your artificer spells."
+    "The armor attaches to you and can’t be removed against your will. It also expands to cover your"
+    "entire body, although you can retract or deploy the helmet as a bonus action. The armor replaces"
+    "any missing limbs, functioning identically to a body part it is replacing. \nYou can doff or don"
+    "the armor as an action. \nThe armor continues to be Arcane Armor until you don another suit of armor or you die."),
+    (1, 2, "Armor Model", 3, "Beginning at 3rd level, you can customize your Arcane Armor. When you do so,"
+    "choose one of the following armor models: Guardian or Infiltrator. The model you choose gives you"
+    "special benefits while you wear it. \nEach model includes a special weapon. When you attack with"
+    "that weapon, you can add your Intelligence modifier, instead of Strength or Dexterity, to the"
+    "attack and damage rolls. \nYou can change the armor's model whenever you finish a short or"
+    "long rest, provided you have smith's tools in hand. \nGuardian. You design your armor to be"
+    "in the front line of conflict. It has the following features: \nThunder Gauntlets. Each of the"
+    "armor's gauntlets counts as a simple melee weapon while you aren't holding anything in it, and"
+    "it deals 1d8 thunder damage on a hit. A creature hit by the gauntlet has disadvantage on attack"
+    "rolls against targets other than you until the start of your next turn, as the armor magically"
+    "emits a distracting pulse when the creature attacks someone else. \nDefensive Field. As a bonus"
+    "action, you can gain temporary hit points equal to your level in this class, replacing any temporary"
+    "hit points you already have. You lose these temporary hit points if you doff the armor. You"
+    "can use this bonus action a number of times equal to your proficiency bonus, and you regain all"
+    "expended uses when you finish a long rest. \nInfiltrator. \nYou customize your armor for subtle"
+    "undertakings. It has the following features: \nLightning Launcher. A gemlike node appears on"
+    "one of your armored fists or on the chest (your choice). It counts as a simple ranged weapon, with"
+    "a normal range of 90 feet and a long range of 300 feet, and it deals 1d6 lightning damage"
+    "on a hit. Once on each of your turns when you hit a creature with it, you can deal an extra"
+    "1d6 lightning damage to that target. \nPowered Steps. Your walking speed increases by 5 feet."
+    "\nDampening Field. You have advantage on Dexterity (Stealth) checks. If the armor normally"
+    "imposes disadvantage on such checks, the advantage and disadvantage cancel each other, as normal."),
+    (1, 2, "Extra Attack", 5, "Starting at 5th level, you can attack twice, rather than once, whenever"
+    "you take the Attack action on your turn."),
+    (1, 2, "Armor Modifications", 9, "At 9th level, you learn how to use your artificer infusions"
+    "to specially modify your Arcane Armor. That armor now counts as separate items for the purposes"
+    "of your Infuse Items feature: armor (the chest piece), boots, helmet, and the armor's special weapon."
+    "Each of those items can bear one of your infusions, and the infusions transfer over if you change your"
+    "armor's model with the Armor Model feature. In addition, the maximum number of items you can infuse"
+    "at once increases by 2, but those extra items must be part of your Arcane Armor."),
+    (1, 2, "Perfected Armor", 3, "At 15th level, your Arcane Armor gains additional benefits based on its"
+    "model, as shown below. \nGuardian. When a Huge or smaller creature you can see ends its turn within"
+    "30 feet of you, you can use your reaction to magically force it to make a Strength saving throw"
+    "against your spell save DC. On a failed save, you pull the creature up to 25 feet directly to"
+    "an unoccupied space. If you pull the target to a space within 5 feet of you, you can make a"
+    "melee weapon attack against it as part of this reaction. \nYou can use this reaction a number"
+    "of times equal to your proficiency bonus, and you regain all expended uses of it when you finish"
+    "a long rest. \nInfiltrator. Any creature that takes lightning damage from your Lightning Launcher"
+    "glimmers with magical light until the start of your next turn. The glimmering creature sheds"
+    "dim light in a 5-foot radius, and it has disadvantage on attack rolls against you, as the light"
+    "jolts it if it attacks you. In addition, the next attack roll against it has advantage, and"
+    "if that attack hits, the target takes an extra 1d6 lightning damage.")
+        
+    ]
+c.executemany('INSERT INTO subclass_features (class_id, subclass_features, feature_name, level, description) VALUES (?, ?, ?, ?, ?)', subclass_features)
 
 
 
