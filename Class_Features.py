@@ -172,8 +172,8 @@ artificer_features = [
     "like). The chosen phenomenon is perceivable up to 10 feet away.\n\t" + chr(9679) + "A "
     "static visual effect appears on one of the object's surfaces. This effect can be a "
     "picture, up to 25 words of text, lines and shapes, or a mixture of these elements, "
-    "as you like.\nThe chosen property lasts indefinitely. As an action, you can touch "
-    "the object and end the property early.\nYou can bestow magic on multiple objects, touching "
+    "as you like.\n\nThe chosen property lasts indefinitely. As an action, you can touch "
+    "the object and end the property early.\n\nYou can bestow magic on multiple objects, touching "
     "one object each time you use this feature, though a single object can only bear one property "
     "at a time. The maximum number of objects you can affect with this feature at one time "
     "is equal to your Intelligence modifier (minimum of one object). If you try to exceed "
@@ -181,60 +181,60 @@ artificer_features = [
     (1, "Spellcasting", 1, "You've studied the workings of magic and how to cast spells, "
     "channeling the magic through objects. To observers, you don't appear to be casting spells "
     "in a conventional way; you appear to produce wonders from mundane items and outlandish "
-    "inventions.\nTools Required\nYou produce your artificer spell effects through your tools. "
+    "inventions.\n\nTools Required\n\nYou produce your artificer spell effects through your tools. "
     "You must have a spellcasting focus - specifically thieves' tools or some kind of "
     "artisan's tool - in hand when you cast any spell with this Spellcasting feature (meaning "
     "the spell has an 'M' component when you cast it). You must be proficient with the tool "
     "to use it in this way. See the equipment chapter in the Player's Handbook for descriptions "
-    "of these tools.\nAfter you gain the Infuse Item feature at 2nd level, you can also use "
-    "any item bearing one of your infusions as a spellcasting focus.\nCantrips (0-Level Spells)\n"
+    "of these tools.\n\nAfter you gain the Infuse Item feature at 2nd level, you can also use "
+    "any item bearing one of your infusions as a spellcasting focus.\n\nCantrips\n\n"
     "At 1st level, you know two cantrips of your choice from the artificer spell list. At higher "
     "levels, you learn additional artificer cantrips of your choice, as shown in the Cantrips "
-    "Known column of the Artificer table.\nWhen you gain a level in this class, you can replace "
+    "Known column of the Artificer table.\n\nWhen you gain a level in this class, you can replace "
     "one of the artificer cantrips you know with another cantrip from the artificer spell "
-    "list.\nPreparing and Casting Spells\nThe Artificer table shows how many spell slots you "
+    "list.\n\nPreparing and Casting Spells\n\nThe Artificer table shows how many spell slots you "
     "have to cast your artificer spells. To cast one of your artificer spells of 1st level "
     "or higher, you must expend a slot of the spell's level or higher. You regain all "
-    "expended spell slots when you finish a long rest.\nYou prepare the list of artificer "
+    "expended spell slots when you finish a long rest.\n\nYou prepare the list of artificer "
     "spells that are available for you to cast, choosing from the artificer spell list. When "
     "you do so, choose a number of artificer spells equal to your Intelligence modifier + half "
     "your artificer level, rounded down (minimum of one spell). The spells must be of a level "
-    "for which you have spell slots.\nFor example, if you are a 5th-level artificer, you have "
+    "for which you have spell slots.\n\nFor example, if you are a 5th-level artificer, you have "
     "four 1st-level and two 2nd-level spell slots. With an Intelligence of 14, your list of "
     "prepared spells can include four spells of 1st or 2nd level, in any combination. If you "
     "prepare the 1st-level spell Cure Wounds, you can cast it using a lst-level or a "
     "2nd-level slot. Casting the spell doesn't remove it from your list of prepared "
-    "spells.\nYou can change your list of prepared spells when you finish a long rest. "
+    "spells.\n\nYou can change your list of prepared spells when you finish a long rest. "
     "Preparing a new list of artificer spells requires time spent tinkering with your "
-    "spellcasting focuses: at least 1 minute per spell level for each spell on your list.\n"
-    "Spellcasting Ability\nIntelligence is your spellcasting ability for your artificer spells; "
+    "spellcasting focuses: at least 1 minute per spell level for each spell on your list.\n\n"
+    "Spellcasting Ability\n\nIntelligence is your spellcasting ability for your artificer spells; "
     "your understanding of the theory behind magic allows you to wield these spells with "
     "superior skill. You use your Intelligence whenever an artificer spell refers to your "
     "spellcasting ability. In addition, you use your Intelligence modifier when setting the "
-    "saving throw DC for an artificer spell you cast and when making an attack roll with one.\n"
-    "Spell save DC = 8 + your proficiency bonus + your Intelligence modifier\nSpell attack modifier "
-    "= your proficiency bonus + your Intelligence modifier\nRitual Casting\nYou can cast an "
+    "saving throw DC for an artificer spell you cast and when making an attack roll with one.\n\t"
+    "Spell save DC = 8 + your proficiency bonus + your Intelligence modifier\n\tSpell attack modifier "
+    "= your proficiency bonus + your Intelligence modifier\n\nRitual Casting\n\nYou can cast an "
     "artificer spell as a ritual if that spell has the ritual tag and you have the spell prepared."),
     (1, "Infuse Item", 2, "At 2nd level, you've gained the ability to imbue mundane items with certain "
-    "magical infusions, turning those objects into magic items.\nInfusions Known\nWhen you gain this "
+    "magical infusions, turning those objects into magic items.\n\nInfusions Known\n\nWhen you gain this "
     "feature, pick four artificer infusions to learn. You learn additional infusions of your choice "
     "when you reach certain levels in this class, as shown in the Infusions Known column of the "
-    "Artificer table.\nWhenever you gain a level in this class, you can replace one of the artificer "
-    "infusions you learned with a new one.\nInfusing an Item\nWhenever you finish a long rest, you "
+    "Artificer table.\n\nWhenever you gain a level in this class, you can replace one of the artificer "
+    "infusions you learned with a new one.\n\nInfusing an Item\n\nWhenever you finish a long rest, you "
     "can touch a nonmagical object and imbue it with one of your artificer infusions, turning it "
     "into a magic item. An infusion works on only certain kinds of objects, as specified in the "
     "infusion's description. If the item requires attunement, you can attune yourself to it the "
     "instant you infuse the item. If you decide to attune to the item later, you must do so "
     "using the normal process for attunement (see the attunement rules in the Dungeon Master's "
-    "Guide).\nYour infusion remains in an item indefinitely, but when you die, the infusion "
+    "Guide).\n\nYour infusion remains in an item indefinitely, but when you die, the infusion "
     "vanishes after a number of days equal to your Intelligence modifier (minimum of 1 day). "
-    "The infusion also vanishes if you replace your knowledge of the infusion.\nYou can infuse "
+    "The infusion also vanishes if you replace your knowledge of the infusion.\n\nYou can infuse "
     "more than one nonmagical object at the end of a long rest; the maximum number of objects "
     "appears in the Infused Items column of the Artificer table. You must touch each of the "
     "objects, and each of your infusions can be in only one object at a time. Moreover, no "
     "object can bear more than one of your infusions at a time. If you try to exceed your "
     "maximum number of infusions, the oldest infusion ends, and then the new infusion "
-    "applies.\nIf an infusion ends on an item that contains other things, like a bag "
+    "applies.\n\nIf an infusion ends on an item that contains other things, like a bag "
     "of holding, its contents harmlessly appear in and around its space."),
     (1, "Artificer Specialist", 3, "Choose a specialty in a specific area of invention, "
     "such as Alchemist, Armorer, Artillerist, or Battle Smith."),
@@ -253,7 +253,7 @@ artificer_features = [
     (1, "Flash of Genius", 7, "At 7th level, you've gained the ability to come up with solutions "
     "under pressure. When you or another creature you can see within 30 feet of you makes an "
     "ability check or a saving throw, you can use your reaction to add your Intelligence modifier "
-    "to the roll.\nYou can use this feature a number of times equal to your Intelligence modifier "
+    "to the roll.\n\nYou can use this feature a number of times equal to your Intelligence modifier "
     "(minimum of once). You regain all expended uses when you finish a long rest."),
     (1, "Ability Score Improvement", 8, "When you reach 4th level, 8th, 12th, 16th, and 19th level, "
     "you can increase one ability score of your choice by 2, or you can increase two ability "
@@ -268,7 +268,7 @@ artificer_features = [
     "Whenever you finish a long rest, you can touch one simple or martial weapon or one item "
     "that you can use as a spellcasting focus, and you store a spell in it, choosing a 1st- "
     "or 2nd-level spell from the artificer spell list that requires 1 action to cast (you "
-    "needn't have it prepared).\nWhile holding the object, a creature can take an action "
+    "needn't have it prepared).\n\nWhile holding the object, a creature can take an action "
     "to produce the spell's effect from it, using your spellcasting ability modifier. If the "
     "spell requires concentration, the creature must concentrate. The spell stays in the "
     "object until it's been used a number of times equal to twice your Intelligence "
@@ -300,16 +300,16 @@ c.executemany('INSERT INTO features (class_id, feature_name, level, description)
 
 barbarian_features = [
     (2, "Rage", 1, "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a "
-    "bonus action.\nWhile raging, you gain the following benefits if you aren’t wearing heavy "
+    "bonus action.\n\nWhile raging, you gain the following benefits if you aren’t wearing heavy "
     "armor:\n\t" + chr(9679) + "You have advantage on Strength checks and Strength saving "
     "throws.\n\t" + chr(9679) + "When you make a melee weapon attack using Strength, you gain a bonus "
     "to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage "
     "Damage column of the Barbarian table.\n\t" + chr(9679) + "You have resistance to bludgeoning, "
-    "piercing, and slashing damage.\nIf you are able to cast spells, you can’t cast them or "
-    "concentrate on them while raging.\nYour rage lasts for 1 minute. It ends early if you are "
+    "piercing, and slashing damage.\n\nIf you are able to cast spells, you can’t cast them or "
+    "concentrate on them while raging.\n\nYour rage lasts for 1 minute. It ends early if you are "
     "knocked unconscious or if your turn ends and you haven’t attacked a hostile creature "
     "since your last turn or taken damage since then. You can also end your rage on your turn "
-    "as a bonus action.\nOnce you have raged the number of times shown for your barbarian level "
+    "as a bonus action.\n\nOnce you have raged the number of times shown for your barbarian level "
     "in the Rages column of the Barbarian table, you must finish a long rest before you can rage again."),
     (2, "Unarmored Defense", 1, "While you are not wearing any armor, your Armor Class equals 10 "
     "+ your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit."),
@@ -337,14 +337,14 @@ barbarian_features = [
     (2, "Ability Score Improvement", 8, "You can increase one ability score of your choice by 2, or "
     "you can increase two ability scores of your choice by 1. As normal, you can't increase an "
     "ability score above 20 using this feature."),
-    (2, "Brutal Critical (1 die)", 9, "Beginning at 9th level, you can roll one additional weapon "
-    "damage die when determining the extra damage for a critical hit with a melee attack.\nThis "
+    (2, "Brutal Critical", 9, "Beginning at 9th level, you can roll one additional weapon "
+    "damage die when determining the extra damage for a critical hit with a melee attack.\n\nThis "
     "increases to two additional dice at 13th level and three additional dice at 17th level."),
     (2, "Path Feature", 10, "Feature from your chosen Path"),
     (2, "Relentless Rage", 11, "Starting at 11th level, your rage can keep you fighting despite "
     "grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, "
     "you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point "
-    "instead.\nEach time you use this feature after the first, the DC increases by 5. When "
+    "instead.\n\nEach time you use this feature after the first, the DC increases by 5. When "
     "you finish a short or long rest, the DC resets to 10."),
     (2, "Ability Score Improvement", 12, "You can increase one ability score of your choice by 2, or "
     "you can increase two ability scores of your choice by 1. As normal, you can't increase an "
@@ -371,122 +371,426 @@ barbarian_features = [
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', barbarian_features)
 
 bard_features = [
-    (3, "Spellcasting", 1, "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music."),
-    (3, "Bardic Inspiration (d6)", 1, "You can inspire others through stirring words or music. As a bonus action, a creature within 60 feet that can hear you gains an inspiration die (a d6)."),
-    (3, "Jack of All Trades", 2, "You can add half your proficiency bonus, rounded down, to any ability check you make that doesn’t already include your proficiency bonus."),
-    (3, "Song of Rest (d6)", 2, "You can use soothing music or oration to help revitalize your wounded allies during a short rest, allowing them to regain an extra 1d6 hit points."),
-    (3, "Bard College", 3, "You choose a bardic college that shapes your approach to magic and performance. Your choice grants you features at 3rd level and again at 6th and 14th level."),
-    (3, "Expertise", 3, "Choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies."),
-    (3, "Ability Score Improvement", 4, "Increase one ability score by 2, or two ability scores by 1."),
+    (3, "Spellcasting", 1, "You have learned to untangle and reshape the fabric of reality in harmony "
+    "with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune "
+    "to different situations.\n\nCantrips\n\nYou know two cantrips of your choice from the bard spell "
+    "list. You learn additional bard cantrips of your choice at higher levels, as shown in the "
+    "Cantrips Known column of the Bard table.\n\nSpell Slots\n\nThe Bard table shows how many "
+    "spell slots you have to cast your bard spells of 1st level and higher. To cast one of "
+    "these spells, you must expend a slot of the spell's level or higher. You regain all "
+    "expended spell slots when you finish a long rest. For example, if you know the "
+    "1st-level spell Cure Wounds and have a 1st-level and a 2nd-level spell slot "
+    "available, you can cast Cure Wounds using either slot.\n\nSpells Known of 1st "
+    "Level and Higher\n\nYou know four 1st-level spells of your choice from the bard "
+    "spell list.\n\nThe Spells Known column of the Bard table shows when you learn more "
+    "bard spells of your choice. Each of these spells must be of a level for which you "
+    "have spell slots, as shown on the table. For instance, when you reach 3rd level in "
+    "this class, you can learn one new spell of 1st or 2nd level.\n\nAdditionally, when "
+    "you gain a level in this class, you can choose one of the bard spells you know "
+    "and replace it with another spell from the bard spell list, which also must be of "
+    "a level for which you have spell slots.\n\nSpellcasting Ability\n\nCharisma is your "
+    "spellcasting ability for your bard spells. Your magic comes from the heart and "
+    "soul you pour into the performance of your music or oration. You use your "
+    "Charisma whenever a spell refers to your spellcasting ability. In addition, you "
+    "use your Charisma modifier when setting the saving throw DC for a bard spell you "
+    "cast and when making an attack roll with one.\n\tSpell save DC = 8 + your "
+    "proficiency bonus + your Charisma modifier\n\tSpell attack modifier = your "
+    "proficiency bonus + your Charisma modifier\n\nRitual Casting\n\nYou can cast any "
+    "bard spell you know as a ritual if that spell has the ritual tag.\n\nSpellcasting Focus\n\n"
+    "You can use a musical instrument (found in chapter 5) as a spellcasting focus for "
+    "your bard spells."),
+    (3, "Bardic Inspiration", 1, "You can inspire others through stirring words or "
+    "music. To do so, you use a bonus action on your turn to choose one creature "
+    "other than yourself within 60 feet of you who can hear you. That creature gains "
+    "one Bardic Inspiration die, a d6.\n\nOnce within the next 10 minutes, the "
+    "creature can roll the die and add the number rolled to one ability check, "
+    "attack roll, or saving throw it makes. The creature can wait until after it "
+    "rolls the d20 before deciding to use the Bardic Inspiration die, but must decide "
+    "before the DM says whether the roll succeeds or fails. Once the Bardic "
+    "Inspiration die is rolled, it is lost. A creature can have only one "
+    "Bardic Inspiration die at a time.\n\nYou can use this feature a number of "
+    "times equal to your Charisma modifier (a minimum of once). You regain any "
+    "expended uses when you finish a long rest.\n\nYour Bardic Inspiration die changes "
+    "when you reach certain levels in this class. The die becomes a d8 at 5th "
+    "level, a d10 at 10th level, and a d12 at 15th level."),
+    (3, "Jack of All Trades", 2, "Starting at 2nd level, you can add half your "
+    "proficiency bonus, rounded down, to any ability check you make that "
+    "doesn't already include your proficiency bonus."),
+    (3, "Song of Rest", 2, "Beginning at 2nd level, you can use soothing music "
+    "or oration to help revitalize your wounded allies during a short rest. If you "
+    "or any friendly creatures who can hear your performance regain hit points at the "
+    "end of the short rest by spending one or more Hit Dice, each of those "
+    "creatures regains an extra 1d6 hit points.\n\nThe extra Hit Points increase when "
+    "you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th "
+    "level, and to 1d12 at 17th level."),
+    (3, "Bard College", 3, "At 3rd level, you delve into the advanced techniques "
+    "of a bard college of your choice. Your choice grants you features at 3rd "
+    "level and again at 6th and 14th level."),
+    (3, "Expertise", 3, "At 3rd level, choose two of your skill proficiencies. "
+    "Your proficiency bonus is doubled for any ability check you make that uses "
+    "either of the chosen proficiencies.\n\nAt 10th level, you can choose "
+    "another two skill proficiencies to gain this benefit."),
+    (3, "Ability Score Improvement", 4, "When you reach 4th level, and again at "
+    "8th, 12th, 16th, and 19th level, you can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1. "
+    "As normal, you can't increase an ability score above 20 using this feature."),
     (3, "Bardic Inspiration (d8)", 5, "Your Bardic Inspiration die becomes a d8."),
-    (3, "Font of Inspiration", 6, "You regain all of your expended uses of Bardic Inspiration when you finish a short or long rest."),
-    (3, "Countercharm", 6, "You gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn."),
-    (3, "Magical Secrets", 10, "You have plundered magical knowledge from a wide spectrum of disciplines. Choose two spells from any class, including this one."),
+    (3, "College Feature", 6, "Feature from your chosen College."),
+    (3, "Font of Inspiration", 6, "Beginning when you reach 5th level, you regain "
+    "all of your expended uses of Bardic Inspiration when you finish a short or long rest."),
+    (3, "Countercharm", 6, "At 6th level, you gain the ability to use musical notes or "
+    "words of power to disrupt mind-influencing effects. As an action, you can start "
+    "a performance that lasts until the end of your next turn. During that time, you "
+    "and any friendly creatures within 30 feet of you have advantage on saving throws "
+    "against being frightened or charmed. A creature must be able to hear you to "
+    "gain this benefit. The performance ends early if you are incapacitated or "
+    "silenced or if you voluntarily end it (no action required)."),
+    (3, "Ability Score Improvement", 8, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1. "
+    "As normal, you can't increase an ability score above 20 using this feature."),
+    (3, "Song of Rest (d8)", 9, "The die for Song of Rest becomes a d8"),
+    (3, "Magical Secrets", 10, "By 10th level, you have plundered magical knowledge "
+    "from a wide spectrum of disciplines. Choose two spells from any classes, "
+    "including this one. A spell you choose must be of a level you can cast, as "
+    "shown on the Bard table, or a cantrip.\n\nThe chosen spells count as bard "
+    "spells for you and are included in the number in the Spells Known column of "
+    "the Bard table.\n\nYou learn two additional spells from any classes at 14th "
+    "level and again at 18th level."),
     (3, "Bardic Inspiration (d10)", 10, "Your Bardic Inspiration die becomes a d10."),
-    (3, "Ability Score Improvement", 12, "Increase one ability score by 2, or two ability scores by 1."),
+    (3, "Ability Score Improvement", 12, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1. "
+    "As normal, you can't increase an ability score above 20 using this feature."),
+    (3, "Song of Rest (d10)", 13, "The die for Song of Rest becomes a d10"),
+    (3, "College Feature", 14, "Feature from your chosen College."),
     (3, "Magical Secrets", 14, "Choose two additional spells from any class."),
     (3, "Bardic Inspiration (d12)", 15, "Your Bardic Inspiration die becomes a d12."),
-    (3, "Superior Inspiration", 20, "When you roll initiative and have no uses of Bardic Inspiration left, you regain one use."),
+    (3, "Ability Score Improvement", 16, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1."
+    "As normal, you can't increase an ability score above 20 using this feature."),
+    (3, "Song of Rest (d12)", 17, "The die for Song of Rest becomes a d12"),
+    (3, "Magical Secrets", 18, "Choose two additional spells from any class."),
+    (3, "Ability Score Improvement", 19, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1. "
+    "As normal, you can't increase an ability score above 20 using this feature."),
+    (3, "Superior Inspiration", 20, "At 20th level, when you roll initiative and "
+    "have no uses of Bardic Inspiration left, you regain one use."),
 ]
 
 # # Insert Artificer features into the database
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', bard_features)
 
 cleric_features = [
-    (4, "Spellcasting", 1, "As a conduit for divine power, you can cast cleric spells that you have prepared."),
-    (4, "Divine Domain", 1, "Choose a domain related to your deity, which grants you special features at levels 1, 2, 6, 8, and 17."),
-    (4, "Channel Divinity (1/rest)", 2, "You can channel divine energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain."),
-    (4, "Channel Divinity: Turn Undead", 2, "As an action, you present your holy symbol and speak a prayer censuring the undead, forcing them to flee."),
-    (4, "Ability Score Improvement", 4, "Increase one ability score by 2, or two ability scores by 1."),
-    (4, "Destroy Undead (CR 1/2)", 5, "When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below 1/2."),
-    (4, "Divine Intervention", 10, "You can call on your deity to intervene on your behalf when your need is great. Your chance of success is equal to your cleric level."),
-    (4, "Destroy Undead (CR 1)", 8, "When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below 1."),
-    (4, "Ability Score Improvement", 8, "Increase one ability score by 2, or two ability scores by 1."),
-    (4, "Destroy Undead (CR 2)", 11, "When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below 2."),
-    (4, "Divine Intervention Improvement", 18, "When you use your Divine Intervention feature, it automatically succeeds without needing to roll."),
-    (4, "Ability Score Improvement", 12, "Increase one ability score by 2, or two ability scores by 1."),
-    (4, "Destroy Undead (CR 3)", 14, "When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below 3."),
-    (4, "Destroy Undead (CR 4)", 17, "When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below 4."),
-    (4, "Ability Score Improvement", 16, "Increase one ability score by 2, or two ability scores by 1."),
-    (4, "Ability Score Improvement", 19, "Increase one ability score by 2, or two ability scores by 1."),
-    (4, "Divine Intervention: Automatic Success", 20, "When you use your Divine Intervention feature, it automatically succeeds, no roll required."),
+    (4, "Spellcasting", 1, "As a conduit for divine power, you can cast cleric "
+    "spells.\n\nCantrips\n\nAt 1st level, you know three cantrips of your choice from "
+    "the cleric spell list. You learn additional cleric cantrips of your choice "
+    "at higher levels, as shown in the Cantrips Known column of the Cleric table."
+    "\n\nSpell Slots\n\nThe Cleric table shows how many spell slots you have to cast "
+    "your cleric spells of 1st level and higher. To cast one of these spells, "
+    "you must expend a slot of the spell's level or higher. You regain all expended "
+    "spell slots when you finish a long rest.\n\nYou prepare the list of cleric "
+    "spells that are available for you to cast, choosing from the cleric spell "
+    "list. When you do so, choose a number of cleric spells equal to your Wisdom "
+    "modifier + your cleric level (minimum of one spell). The spells must be of "
+    "a level for which you have spell slots.\n\nFor example, if you are a "
+    "3rd-level cleric, you have four 1st-level and two 2nd-level spell slots. "
+    "With a Wisdom of 16, your list of prepared spells can include six spells "
+    "of 1st or 2nd level, in any combination. If you prepare the 1st-level "
+    "spell Cure Wounds, you can cast it using a 1st-level or 2nd-level "
+    "slot. Casting the spell doesn't remove it from your list of prepared "
+    "spells.\n\nYou can change your list of prepared spells when you finish a "
+    "long rest. Preparing a new list of cleric spells requires time spent in "
+    "prayer and meditation: at least 1 minute per spell level for each spell "
+    "on your list.\n\nSpellcasting Ability\n\nWisdom is your spellcasting ability "
+    "for your cleric spells. The power of your spells comes from your devotion "
+    "to your deity. You use your Wisdom whenever a cleric spell refers to "
+    "your spellcasting ability. In addition, you use your Wisdom modifier "
+    "when setting the saving throw DC for a cleric spell you cast and when "
+    "making an attack roll with one.\n\tSpell save DC = 8 + your proficiency "
+    "bonus + your Wisdom modifier\n\tSpell attack modifier = your proficiency "
+    "bonus + your Wisdom modifier\n\nRitual Casting\n\nYou can cast a cleric "
+    "spell as a ritual if that spell has the ritual tag and you have the "
+    "spell prepared.\n\nSpellcasting Focus\n\nYou can use a holy symbol as a "
+    "spellcasting focus for your cleric spells."),
+    (4, "Divine Domain", 1, "At 1st level, you choose a domain shaped by "
+    "your choice of Deity and the gifts they grant you. Your choice grants "
+    "you domain spells and other features when you choose it at 1st level. It "
+    "also grants you additional ways to use Channel Divinity when you gain that "
+    "feature at 2nd level, and additional benefits at 6th, 8th, and 17th levels."),
+    (4, "Channel Divinity", 2, "At 2nd level, you gain the ability to channel "
+    "divine energy directly from your deity, using that energy to fuel magical "
+    "effects. You start with two such effects: Turn Undead and an effect determined "
+    "by your domain. Some domains grant you additional effects as you advance "
+    "in levels, as noted in the domain description.\n\nWhen you use your Channel "
+    "Divinity, you choose which effect to create. You must then finish a short "
+    "or long rest to use your Channel Divinity again.\n\nSome Channel Divinity "
+    "effects require saving throws. When you use such an effect from this "
+    "class, the DC equals your cleric spell save DC.\n\nBeginning at 6th "
+    "level, you can use your Channel Divinity twice between rests, and "
+    "beginning at 18th level, you can use it three times between rests. "
+    "When you finish a short or long rest, you regain your expended uses."),
+    (4, "Channel Divinity: Turn Undead", 2, "As an action, you present "
+    "your holy symbol and speak a prayer censuring the undead. Each "
+    "undead that can see or hear you within 30 feet of you must make a "
+    "Wisdom saving throw. If the creature fails its saving throw, it is "
+    "turned for 1 minute or until it takes any damage.\n\nA turned creature "
+    "must spend its turns trying to move as far away from you as it "
+    "can, and it can't willingly move to a space within 30 feet of "
+    "you. It also can't take reactions. For its action, it can use only "
+    "the Dash action or try to escape from an effect that prevents it "
+    "from moving. If there's nowhere to move, the creature can use "
+    "the Dodge action."),
+    (4, "Ability Score Improvement", 4, "When you reach 4th level, and again at "
+    "8th, 12th, 16th, and 19th level, you can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1."),
+    (4, "Destroy Undead (CR 1/2)", 5, "Starting at 5th level, when an undead fails "
+    "its saving throw against your Turn Undead feature, the creature is instantly "
+    "destroyed if its challenge rating is at or below a certain threshold, as "
+    "shown in the Cleric table above."),
+    (4, "Divine Domain", 6, "Feature from your chosen Domain"),
+    (4, "Ability Score Improvement", 8, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1."),
+    (4, "Divine Domain", 8, "Feature from your chosen Domain"),
+    (4, "Destroy Undead (CR 1)", 8, "When an undead fails its saving throw against "
+    "your Turn Undead feature, the creature is instantly destroyed if its challenge "
+    "rating is at or below 1."),
+    (4, "Divine Intervention", 10, "Beginning at 10th level, you can call on your "
+    "deity to intervene on your behalf when your need is great.\n\nImploring your "
+    "deity's aid requires you to use your action. Describe the assistance you "
+    "seek, and roll percentile dice. If you roll a number equal to or lower "
+    "than your cleric level, your deity intervenes. The DM chooses the nature "
+    "of the intervention; the effect of any cleric spell or cleric domain "
+    "spell would be appropriate. If your deity intervenes, you can't use this "
+    "feature again for 7 days. Otherwise, you can use it again after you finish "
+    "a long rest.\n\nAt 20th level, your call for intervention succeeds "
+    "automatically, no roll required."),
+    (4, "Destroy Undead (CR 2)", 11, "When an undead fails its saving throw "
+    "against your Turn Undead feature, the creature is instantly destroyed if "
+    "its challenge rating is at or below 2."),
+    (4, "Ability Score Improvement", 12, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1."),
+    (4, "Destroy Undead (CR 3)", 14, "When an undead fails its saving throw "
+    "against your Turn Undead feature, the creature is instantly destroyed if "
+    "its challenge rating is at or below 3."),
+    (4, "Ability Score Improvement", 16, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1."),
+    (4, "Destroy Undead (CR 4)", 17, "When an undead fails its saving throw "
+    "against your Turn Undead feature, the creature is instantly destroyed if "
+    "its challenge rating is at or below 4."),
+    (4, "Divine Domain", 17, "Feature from your chosen Domain"),
+    (4, "Channel Divinity (x3)", 18, "You can use your Channel Divinity three times between rests"),
+    (4, "Ability Score Improvement", 19, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1."),
+    (4, "Divine Intervention Improvement", 20, "When you use your Divine "
+    "Intervention feature, it automatically succeeds, no roll required."),
 ]
 
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', cleric_features)
 
 
 druid_features = [
-    (5, "Druidic", 1, "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages."),
-    (5, "Spellcasting", 1, "You can cast druid spells, using Wisdom as your spellcasting ability."),
-    (5, "Wild Shape", 2, "You can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice, regaining expended uses after a short or long rest."),
-    (5, "Druid Circle", 2, "Choose a druid circle that grants you features at levels 2, 6, 10, and 14."),
-    (5, "Wild Shape Improvement", 4, "You can transform into a beast with a challenge rating as high as 1/2 (no flying speed)."),
-    (5, "Ability Score Improvement", 4, "Increase one ability score by 2, or two ability scores by 1."),
-    (5, "Wild Shape Improvement", 8, "You can transform into a beast with a challenge rating as high as 1 (no flying speed)."),
-    (5, "Ability Score Improvement", 8, "Increase one ability score by 2, or two ability scores by 1."),
-    (5, "Timeless Body", 18, "You no longer suffer the effects of aging, and you can't be aged magically."),
-    (5, "Beast Spells", 18, "You can cast many of your druid spells in any shape you assume using Wild Shape."),
-    (5, "Archdruid", 20, "You can use Wild Shape an unlimited number of times, and you ignore the verbal and somatic components of your druid spells."),
-    (5, "Ability Score Improvement", 12, "Increase one ability score by 2, or two ability scores by 1."),
-    (5, "Ability Score Improvement", 16, "Increase one ability score by 2, or two ability scores by 1."),
-    (5, "Ability Score Improvement", 19, "Increase one ability score by 2, or two ability scores by 1."),
+    (5, "Druidic", 1, "You know Druidic, the secret language of druids. You can speak the language "
+    "and use it to leave hidden messages. You and others who know this language automatically "
+    "spot such a message. Others spot the message's presence with a successful DC 15 "
+    "Wisdom (Perception) check but can't decipher it without magic."),
+    (5, "Spellcasting", 1, "Drawing on the divine essence of nature itself, you can cast spells "
+    "to shape that essence to your will.\n\nCantrips\n\nAt 1st level, you know two cantrips of "
+    "your choice from the druid spell list. You learn additional druid cantrips of your "
+    "choice at higher levels, as shown in the Cantrips Known column of the Druid table."
+    "\n\nPreparing and Casting Spells\n\nThe Druid table shows how many spell slots you have "
+    "to cast your druid spells of 1st level and higher. To cast one of these druid spells, "
+    "you must expend a slot of the spell's level or higher. You regain all expended spell "
+    "slots when you finish a long rest.\n\nYou prepare the list of druid spells that are "
+    "available for you to cast, choosing from the druid spell list. When you do so, choose "
+    "a number of druid spells equal to your Wisdom modifier + your Druid level (minimum of "
+    "one spell). The spells must be of a level for which you have spell slots.\n\nFor example, "
+    "if you are a 3rd-level druid, you have four 1st-level and two 2nd-level spell slots. With "
+    "a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd "
+    "level, in any combination. If you prepare the 1st-level spell Cure Wounds, you can "
+    "cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it "
+    "from your list of prepared spells.\n\nYou can also change your list of prepared "
+    "spells when you finish a long rest. Preparing a new list of druid spells requires "
+    "time spent in prayer and meditation: at least 1 minute per spell level for each "
+    "spell on your list.\n\nSpellcasting Ability\n\nWisdom is your spellcasting ability "
+    "for your druid spells, since your magic draws upon your devotion and attunement "
+    "to nature. You use your Wisdom whenever a spell refers to your spellcasting "
+    "ability. In addition, you use your Wisdom modifier when setting the saving "
+    "throw DC for a druid spell you cast and when making an attack roll with one.\n\tSpell "
+    "save DC = 8 + your proficiency bonus + your Wisdom modifier\n\tSpell attack modifier "
+    "= your proficiency bonus + your Wisdom modifier\n\nRitual Casting\n\nYou can cast a "
+    "druid spell as a ritual if that spell has the ritual tag and you have the spell "
+    "prepared.\n\nSpellcasting Focus\n\nYou can use a druidic focus as a spellcasting "
+    "focus for your druid spells."),
+    (5, "Wild Shape", 2, "Starting at 2nd level, you can use your action to magically "
+    "assume the shape of a beast that you have seen before. You can use this feature "
+    "twice. You regain expended uses when you finish a short or long rest.\n\nYour druid "
+    "level determines the beasts you can transform into, as shown in the Beast Shapes "
+    "table. At 2nd level, for example, you can transform into any beast that has a "
+    "challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.\n\nYou "
+    "can stay in a beast shape for a number of hours equal to half your druid level "
+    "(rounded down). You then revert to your normal form unless you expend another use "
+    "of this feature. You can revert to your normal form earlier by using a bonus "
+    "action on your turn. You automatically revert if you fall unconscious, drop to "
+    "0 hit points, or die.\n\nWhile you are transformed, the following rules apply:\n\t "
+    + chr(9679) + "Your game statistics are replaced by the statistics of the beast, "
+    "but you retain your alignment, personality, and Intelligence, Wisdom, and Charisma "
+    "scores. You also retain all of your skill and saving throw proficiencies, in addition "
+    "to gaining those of the creature. If the creature has the same proficiency as "
+    "you and the bonus in its stat block is higher than yours, use the creature's bonus "
+    "instead of yours. If the creature has any legendary or lair actions, you can't "
+    "use them.\n\t" + chr(9679) + "When you transform, you assume the beast's hit "
+    "points and Hit Dice. When you revert to your normal form, you return to the number "
+    "of hit points you had before you transformed. However, if you revert as a result "
+    "of dropping to 0 hit points, any excess damage carries over to your normal form, "
+    "For example, if you take 10 damage in animal form and have only 1 hit point left, "
+    "you revert and take 9 damage. As long as the excess damage doesn't reduce your "
+    "normal form to 0 hit points, you aren't knocked unconscious.\n\t" + chr(9679) + "You "
+    "can't cast spells, and your ability to speak or take any action that requires hands "
+    "is limited to the capabilities of your beast form. Transforming doesn't break your "
+    "concentration on a spell you've already cast, however, or prevent you from taking "
+    "actions that are part of a spell, such as Call Lightning, that you've already cast.\n\t"
+    + chr(9679) + "You retain the benefit of any features from your class, race, or other "
+    "source and can use them if the new form is physically capable of doing so. However, "
+    "you can't use any of your special senses, such as darkvision, unless your new form "
+    "also has that sense.\n\t" + chr(9679) + "You choose whether your equipment falls "
+    "to the ground in your space, merges into your new form, or is worn by it. Worn "
+    "equipment functions as normal, but the DM decides whether it is practical for "
+    "the new form to wear a piece of equipment, based on the creature's shape and "
+    "size. Your equipment doesn't change size or shape to match the new form, and any "
+    "equipment that the new form can't wear must either fall to the ground or merge "
+    "with it. Equipment that merges with the form has no effect until you leave the form."),
+    (5, "Druid Circle", 2, "At 2nd level, you choose to identify with a circle of druids. "
+    "Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."),
+    (5, "Wild Shape Improvement", 4, "You can transform into a beast with a challenge "
+    "rating as high as 1/2 (no flying speed)."),
+    (5, "Ability Score Improvement", 4, "When you reach 4th level, and again at 8th, 12th, "
+    "16th, and 19th level, you can increase one ability score of your choice by 2, or "
+    "you can increase two ability scores of your choice by 1. As normal, you can't "
+    "increase an ability score above 20 using this feature."),
+    (5, "Druid Circle", 6, "Feature of your chosen Circle"),
+    (5, "Ability Score Improvement", 8, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1."),
+    (5, "Wild Shape Improvement", 8, "You can transform into a beast with a challenge "
+    "rating as high as 1 (no flying speed)."),
+    (5, "Druid Circle", 10, "Feature of your chosen Circle"),
+    (5, "Ability Score Improvement", 12, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1."),
+    (5, "Druid Circle", 14, "Feature of your chosen Circle"),
+    (5, "Ability Score Improvement", 16, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1."),
+    (5, "Timeless Body", 18, "Starting at 18th level, the primal magic that you wield causes "
+    "you to age more slowly. For every 10 years that pass, your body ages only 1 year."),
+    (5, "Beast Spells", 18, "Beginning at 18th level, you can cast many of your druid spells "
+    "in any shape you assume using Wild Shape. You can perform the somatic and verbal components of "
+    "a druid spell while in a beast shape, but you aren't able to provide material components."),
+    (5, "Ability Score Improvement", 19, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1."),
+    (5, "Archdruid", 20, "At 20th level, you can use your Wild Shape an unlimited number of times.\nAdditionally, "
+    "you can ignore the verbal and somatic components of your druid spells, as well as any material components "
+    "that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape "
+    "and your beast shape from Wild Shape."),
 ]
 
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', druid_features)
 
 fighter_features = [
-    (6, 'Second Wind', 1, 'You have a limited well of stamina that you can draw on'
-    'to protect yourself from harm. On your turn, you can use a bonus action to'
-    'regain hit points equal to 1d10 + your fighter level. \nOnce you use this'
-    'feature, you must finish a short or long rest before you can use it again.'),
-    (6, 'Action Surge (1 use)', 2, 'Starting at 2nd level, you can push yourself'
-    'beyond your normal limits for a moment. On your turn, you can take one'
-    'additional action. \nOnce you use this feature, you must finish a short'
-    'or long rest before you can use it again. Starting at 17th level, you'
-    'can use it twice before a rest, but only once on the same turn.'),
-    (6, 'Martial Archetype', 3, 'You choose an archetype that you strive to'
-    'emulate in your combat styles and techniques.'),
-    (6, 'Ability Score Improvement', 4, 'You can increase one ability score'
-    'by 2, or you can increase two ability scores by 1 each.'),
-    (6, 'Extra Attack (1)', 5, 'Beginning at 5th level, you can attack twice,'
-    'instead of once, whenever you take the Attack action on your turn. \nThe'
-    'number of attacks increases to three when you reach 11th level in this'
-    'class and to four when you reach 20th level in this class.'),
-    (6, 'Ability Score Improvement', 6, 'You can increase one ability score'
-    'by 2, or you can increase two ability scores by 1 each.'),
-    (6, 'Martial Archetype Feature', 7, 'You gain a feature from your chosen'
-    'Martial Archetype.'),
-    (6, 'Ability Score Improvement', 8, 'You can increase one ability score'
-    'by 2, or you can increase two ability scores by 1 each.'),
-    (6, 'Indomitable (1 use)', 9, "Beginning at 9th level, you can reroll a"
-    "saving throw that you fail. If you do so, you must use the new roll,"
-    "and you can't use this feature again until you finish a long rest. \nYou"
-    "can use this feature twice between long rests starting at 13th level"
+    (6, "Fighting Style", 1, "You adopt a particular style of fighting as your "
+    "specialty. Choose one of the following options. You can't take a Fighting "
+    "Style option more than once, even if you later get to choose again.\n\t" + chr(9679) +
+    "Archery. You gain a +2 bonus to attack rolls you make with ranged weapons.\n\t" + chr(9679) +
+    "Blind Fighting. You have blindsight with a range of 10 feet. Within that range, you can "
+    "effectively see anything that isn't behind total cover, even if you're blinded or "
+    "in darkness. Moreover, you can see an invisible creature within that range, "
+    "unless the creature successfully hides from you.\n\t" + chr(9679) + "Defense. "
+    "While you are wearing armor, you gain a +1 bonus to AC.\n\t" + chr(9679) + "Dueling. "
+    "When you are wielding a melee weapon in one hand and no other weapons, you gain a "
+    "+2 bonus to damage rolls with that weapon.\n\t" + chr(9679) + "Great Weapon Fighting. "
+    "When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon "
+    "that you are wielding with two hands, you can reroll the die and must use the new "
+    "roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed "
+    "or versatile property for you to gain this benefit.\n\t" + chr(9679) + "Interception. "
+    "When a creature you can see hits a target, other than you, within 5 feet of you "
+    "with an attack, you can use your reaction to reduce the damage the target takes "
+    "by 1d10 + your proficiency bonus (to a minimum of 0 damage). You must be wielding "
+    "a shield or a simple or martial weapon to use this reaction.\n\t" + chr(9679) + "Protection. "
+    "When a creature you can see attacks a target other than you that is within 5 feet of you, "
+    "you can use your reaction to impose disadvantage on the attack roll. You must be "
+    "wielding a shield.\n\t" + chr(9679) + "Superior Technique. You learn one maneuver "
+    "of your choice from among those available to the Battle Master archetype. If a maneuver "
+    "you use requires your target to make a saving throw to resist the maneuver's effects, "
+    "the saving throw DC equals 8 + your proficiency bonus + your Strength or Dexterity "
+    "modifier (your choice.)\n\t\t" + chr(9679) + "You gain one superiority die, which "
+    "is a d6 (this die is added to any superiority dice you have from another source). "
+    "This die is used to fuel your maneuvers. A superiority die is expended when you use "
+    "it. You regain your expended superiority dice when you finish a short or long rest."
+    "\n\t" + chr(9679) + "Thrown Weapon Fighting. You can draw a weapon that has the "
+    "thrown property as part of the attack you make with the weapon.\n\t\t" + chr(9679) + "In "
+    "addition, when you hit with a ranged attack using a thrown weapon, you gain a +2 "
+    "bonus to the damage roll.\n\t" + chr(9679) + "Two-Weapon Fighting. When you engage "
+    "in two-weapon fighting, you can add your ability modifier to the damage of the "
+    "second attack.\n\t" + chr(9679) + "Unarmed Fighting. Your unarmed strikes can "
+    "deal bludgeoning damage equal to 1d6 + your Strength modifier on a hit. If "
+    "you aren't wielding any weapons or a shield when you make the attack roll, "
+    "the d6 becomes a d8.\n\t\t" + chr(9679) + "At the start of each of your "
+    "turns, you can deal 1d4 bludgeoning damage to one creature grappled by "
+    "you."),
+    (6, "Second Wind", 1, "You have a limited well of stamina that you can draw on "
+    "to protect yourself from harm. On your turn, you can use a bonus action to "
+    "regain hit points equal to 1d10 + your fighter level.\n\nOnce you use this "
+    "feature, you must finish a short or long rest before you can use it again."),
+    (6, "Action Surge", 2, "Starting at 2nd level, you can push yourself "
+    "beyond your normal limits for a moment. On your turn, you can take one "
+    "additional action.\n\nOnce you use this feature, you must finish a short "
+    "or long rest before you can use it again. Starting at 17th level, you "
+    "can use it twice before a rest, but only once on the same turn."),
+    (6, "Martial Archetype", 3, "At 3rd level, you choose an archetype that you strive "
+    "to emulate in your combat styles and techniques. The archetype you choose grants "
+    "you features at 3rd level and again at 7th, 10th, 15th, and 18th level."),
+    (6, "Ability Score Improvement", 4, "When you reach 4th level, and again at "
+    "6th, 8th, 12th, 14th, 16th, and 19th level, you can increase one ability "
+    "score of your choice by 2, or you can increase two ability scores of "
+    "your choice by 1. As normal, you can't increase an ability score above 20 "
+    "using this feature."),
+    (6, "Extra Attack", 5, "Beginning at 5th level, you can attack twice, "
+    "instead of once, whenever you take the Attack action on your turn. \nThe "
+    "number of attacks increases to three when you reach 11th level in this "
+    "class and to four when you reach 20th level in this class."),
+    (6, "Ability Score Improvement", 6, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1. As "
+    "normal, you can't increase an ability score above 20 using this feature."),
+    (6, "Martial Archetype Feature", 7, "Feature from your chosen Martial Archetype."),
+    (6, "Ability Score Improvement", 8, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1. As "
+    "normal, you can't increase an ability score above 20 using this feature."),
+    (6, "Indomitable", 9, "Beginning at 9th level, you can reroll a "
+    "saving throw that you fail. If you do so, you must use the new roll, "
+    "and you can't use this feature again until you finish a long rest.\n\nYou "
+    "can use this feature twice between long rests starting at 13th level "
     "and three times between long rests starting at 17th level."),
-    (6, 'Martial Archetype Feature', 10, 'You gain a feature from your chosen'
-    'Martial Archetype.'),
-    (6, 'Extra Attack (2)', 11, 'You can attack three times whenever you take'
-    'the Attack action on your turn.'),
-    (6, 'Ability Score Improvement', 12, 'You can increase one ability score'
-    'by 2, or you can increase two ability scores by 1 each.'),
-    (6, 'Indomitable (2 uses)', 13, 'You can reroll a saving throw that you'
-    'fail twice per long rest.'),
-    (6, 'Ability Score Improvement', 14, 'You can increase one ability score'
-    'by 2, or you can increase two ability scores by 1 each.'),
-    (6, 'Martial Archetype Feature', 15, 'You gain a feature from your chosen'
-    'Martial Archetype.'),
-    (6, 'Ability Score Improvement', 16, 'You can increase one ability score'
-    'by 2, or you can increase two ability scores by 1 each.'),
-    (6, 'Action Surge (2 uses)', 17, 'You can use Action Surge twice per short'
-    'or long rest.'),
-    (6, 'Indomitable (3 uses)', 17, 'You can reroll a saving throw that you'
-    'fail three times per long rest.'),
-    (6, 'Martial Archetype Feature', 18, 'You gain a feature from your chosen'
-    'Martial Archetype.'),
-    (6, 'Ability Score Improvement', 19, 'You can increase one ability score'
-    'by 2, or you can increase two ability scores by 1 each.'),
-    (6, 'Extra Attack (3)', 20, 'You can attack four times whenever you take'
-    'the Attack action on your turn.')
+    (6, "Martial Archetype Feature", 10, "Feature from your chosen Martial Archetype."),
+    (6, "Extra Attack (2)", 11, "You can attack three times whenever you take "
+    "the Attack action on your turn."),
+    (6, "Ability Score Improvement", 12, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1. As "
+    "normal, you can't increase an ability score above 20 using this feature."),
+    (6, "Indomitable (2 uses)", 13, "You can reroll a saving throw that you "
+    "fail twice per long rest."),
+    (6, "Ability Score Improvement", 14, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1. As "
+    "normal, you can't increase an ability score above 20 using this feature."),
+    (6, "Martial Archetype Feature", 15, "Feature from your chosen Martial Archetype."),
+    (6, "Ability Score Improvement", 16, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1. As "
+    "normal, you can't increase an ability score above 20 using this feature."),
+    (6, "Action Surge (2 uses)", 17, "You can use Action Surge twice per short "
+    "or long rest."),
+    (6, "Indomitable (3 uses)", 17, "You can reroll a saving throw that you "
+    "fail three times per long rest."),
+    (6, "Martial Archetype Feature", 18, "Feature from your chosen Martial Archetype."),
+    (6, "Ability Score Improvement", 19, "You can increase one ability score of your "
+    "choice by 2, or you can increase two ability scores of your choice by 1. As "
+    "normal, you can't increase an ability score above 20 using this feature."),
+    (6, "Extra Attack (3)", 20, "You can attack four times whenever you take "
+    "the Attack action on your turn.")
 ]
 
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', fighter_features)
@@ -494,7 +798,8 @@ c.executemany('INSERT INTO features (class_id, feature_name, level, description)
 
 
 monk_features = [
-    (7, "Unarmored Defense", 1, "Your AC equals 10 + your Dexterity modifier + your Wisdom modifier when you aren’t wearing armor."),
+    (7, "Unarmored Defense", 1, "Beginning at 1st level, while you are wearing no armor and "
+    "not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."),
     (7, "Martial Arts", 1, "You can use Dexterity instead of Strength for attack and damage rolls of your unarmed strikes and monk weapons."),
     (7, "Ki", 2, "You can channel inner energy to fuel special techniques. You have a number of ki points equal to your monk level."),
     (7, "Unarmored Movement", 2, "Your speed increases by 10 feet while you aren’t wearing armor or wielding a shield."),
