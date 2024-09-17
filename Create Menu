@@ -42,10 +42,10 @@ def display_class_features(selected_class, selected_level):
 
 #create the new buttons for the level once class is chosen
 def class_level_button(e):
-    label_class_level = tk.Label(create_window, text='Level:')
+    label_class_level = tk.Label(tab1, text='Level:')
     label_class_level.grid(row=1, column=2, padx=10, pady=10)
 
-    combo_class_level = ttk.Combobox(create_window, values=class_levels, width=2)
+    combo_class_level = ttk.Combobox(tab1, values=class_levels, width=2)
     combo_class_level.grid(row=1, column=3, padx=10, pady=10)
 
     combo_class_level.bind('<<ComboboxSelected>>', lambda e: display_class_features(combo_class.get(), combo_class_level.get()))
@@ -53,7 +53,7 @@ def class_level_button(e):
 
 #Event trigger and label once a class is chosen
 def get_class_level(e):
-    label_class_name = tk.Label(create_window, text=f"You selected: {combo_class.get()}")
+    label_class_name = tk.Label(tab1, text=f"You selected: {combo_class.get()}")
     label_class_name.grid(row=2, column=0, columnspan=2)
     class_level_button(e)
     
@@ -63,33 +63,54 @@ def get_class_level(e):
 def create_menu():
     global create_window
     global text_features_box  # Make the text widget global to access it in other functions
+    global tab1
 
     create_window = tk.Tk()
     create_window.title("Mat's D&D Character Sheet")
     create_window.geometry('1000x600')
 
+
+    # Create a notebook widget (this is the widget that holds the tabs)
+    notebook = ttk.Notebook(create_window)
+    notebook.pack(fill='both', expand=True)
+
+    # Create frames for each tab
+    tab1 = ttk.Frame(notebook)
+    tab2 = ttk.Frame(notebook)
+    tab3 = ttk.Frame(notebook)
+    tab4 = ttk.Frame(notebook)
+    tab5 = ttk.Frame(notebook)
+
+    # Add frames to notebook as tabs
+    notebook.add(tab1, text="Class")
+    notebook.add(tab2, text="Background")
+    notebook.add(tab3, text="Species")
+    notebook.add(tab4, text="Stats")
+    notebook.add(tab5, text="Equipment")
+
+
     # Labels for the create character menu
-    label_name = tk.Label(create_window, text='Character Name:')
-    label_class = tk.Label(create_window, text='Class:')
+    label_name = tk.Label(tab1, text='Character Name:')
+    label_class = tk.Label(tab1, text='Class:')
 
     # Positions of the labels
     label_name.grid(row=0, column=0, padx=10, pady=10)
     label_class.grid(row=1, column=0, padx=10, pady=10)
 
     # Entry for the Character name
-    entry_name = tk.Entry(create_window)
+    entry_name = tk.Entry(tab1)
     entry_name.grid(row=0, column=1)
 
     # Class selection dropdown
     global combo_class
-    combo_class = ttk.Combobox(create_window, values=class_options)
+    combo_class = ttk.Combobox(tab1, values=class_options)
     combo_class.grid(row=1, column=1, padx=10, pady=10)
 
     # Binding the action of selecting a class to then make the level button
     combo_class.bind('<<ComboboxSelected>>', get_class_level)
 
     # Create a frame to hold the Text widget and scrollbar
-    frame_features = tk.Frame(create_window)
+    frame_features = tk.Frame(tab1)
     frame_features.grid(row=3, column=0, columnspan=4, padx=10, pady=10)
 
     # Create a scrollbar for the Text widget
