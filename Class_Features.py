@@ -1340,15 +1340,15 @@ subclasses = [
 
 c.executemany('''INSERT INTO subclasses (class_id, subclass_id, name, description) VALUES (?, ?, ?, ?)''', subclasses)
 
-#c.execute('''CREATE TABLE IF NOT EXISTS subclass_features (
-#            class_id INTEGER NOT NULL,
-#            subclass_id INTEGER NOT NULL,
-#            feature_name TEXT NOT NULL,
-#            level INTEGER, NOT NULL,
-#            description TEXT NOT NULL,
-#            FOREIGN KEY (class_id) REFERENCES classes(id),
-#            FOREIGN KEY (subclass_id) REFERENCES sublasses(subclass_id))
-#    ''')
+c.execute('''CREATE TABLE IF NOT EXISTS subclass_features (
+            class_id INTEGER NOT NULL,
+            subclass_id INTEGER NOT NULL,
+            feature_name TEXT NOT NULL,
+            level INTEGER NOT NULL,
+            description TEXT NOT NULL,
+            FOREIGN KEY (class_id) REFERENCES classes(id),
+            FOREIGN KEY (subclass_id) REFERENCES sublasses(subclass_id))
+    ''')
 
 subclass_features = [
     (1, 1, "Tool Proficiency", 3, "When you adopt this specialization at 3rd level, you"
