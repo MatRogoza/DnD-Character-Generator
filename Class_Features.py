@@ -810,7 +810,7 @@ monk_features = [
     + chr(9679) + "You can roll a d4 in place of the normal damage of your unarmed strike "
     "or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts "
     "column of the Monk table.\n\t" + chr(9679) + "When you use the Attack action with an "
-    'unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a "
+    "unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a "
     "bonus action. For example, if you take the Attack action and attack with a "
     "quarterstaff, you can also make an unarmed strike as a bonus action, assuming you "
     "haven't already taken a bonus action this turn.\n\nCertain monasteries use specialized "
@@ -1108,7 +1108,7 @@ ranger_features = [
     "Blind Fighting. You have blind sight with a range of 10 feet. Within that "
     "range, you can effectively see anything that isn't behind total cover, "
     "even if you're blinded or in darkness. Moreover, you can see an invisible "
-    'creature within that range, unless the creature successfully hides from you.\n\t"
+    "creature within that range, unless the creature successfully hides from you.\n\t"
     + chr(9679) + "Defense. While you are wearing armor, you gain a +1 bonus to "
     "AC.\n\t" + chr(9679) + "Druidic Warrior. You learn two cantrips of your "
     "choice from the Druid spell list. They count as ranger spells for you, "
@@ -1237,7 +1237,7 @@ rogue_features = [
     "tools. Your proficiency bonus is doubled for any ability check you make "
     "that uses either of the chosen proficiencies.\n\nAt 6th level, you can "
     "choose two more of your proficiencies (in skills or with thieves' tools) "
-    "to gain this benefit.")
+    "to gain this benefit."),
     (10, "Sneak Attack", 1, "Beginning at 1st level, you know how to strike "
     "subtly and exploit a foe's distraction. Once per turn, you can deal an "
     "extra 1d6 damage to one creature you hit with an attack if you have "
@@ -1325,7 +1325,6 @@ rogue_features = [
     "short or long rest.")
 ]
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', rogue_features)
-
 
 
 sorcerer_features = [
@@ -1469,7 +1468,6 @@ sorcerer_features = [
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', sorcerer_features)
 
 
-
 warlock_features = [
     (12, "Otherworldly Patron", 1, "At 1st level, you have struck a bargain with "
     "an otherworldly being of your choice. Your choice grants you features at 1st "
@@ -1520,7 +1518,7 @@ warlock_features = [
     "action to create a pact weapon in your empty hand. You can choose the form that "
     "this melee weapon takes each time you create it. You are proficient with "
     "it while you wield it. This weapon counts as magical for the purpose of "
-    "overcoming resistance and immunity to nonmagical attacks and damage.\n\t\t\"
+    "overcoming resistance and immunity to nonmagical attacks and damage.\n\t\t"
     "Your pact weapon disappears if it is more than 5 feet away from you "
     "for 1 minute or more. It also disappears if you use this feature again, "
     "if you dismiss the weapon (no action required), or if you die.\n\t\t"
@@ -1554,7 +1552,7 @@ warlock_features = [
     "patron gives you an amulet, a talisman that can aid the wearer when "
     "the need is great. When the wearer fails an ability check, they can "
     "add a d4 to the roll, potentially turning the roll into a success. "
-    'This benefit can be used a number of times equal to your proficiency "
+    "This benefit can be used a number of times equal to your proficiency "
     "bonus, and all expended uses are restored when you finish a long rest.\n\t\t"
     "If you lose the talisman, you can perform a 1-hour ceremony to receive "
     "a replacement from your patron. This ceremony can be performed during "
@@ -1575,7 +1573,7 @@ warlock_features = [
     "you a magical secret called an arcanum. Choose one 6th-level spell "
     "from the warlock spell list as this arcanum.\n\nYou can cast your "
     "arcanum spell once without expending a spell slot. You must finish a "
-    'long rest before you can do so again.\n\nAt higher levels, you gain "
+    "long rest before you can do so again.\n\nAt higher levels, you gain "
     "more warlock spells of your choice that can be cast in this way: one "
     "7th-level spell at 13th level, one 8th-level spell at 15th level, and "
     "one 9th-level spell at 17th level. You regain all uses of your Mystic "
@@ -1594,7 +1592,7 @@ warlock_features = [
     "choice by 1. As normal, you can't increase an ability score above 20 "
     "using this feature."),
     (12, "Mystic Arcanum (9th level)", 17, "You can cast one 9th-level spell once "
-    'without expending a spell slot."),
+    "without expending a spell slot."),
     (12, "Ability Score Improvement", 19, "You can increase one ability score "
     "of your choice by 2, or you can increase two ability scores of your "
     "choice by 1. As normal, you can't increase an ability score above 20 "
