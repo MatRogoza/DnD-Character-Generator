@@ -1070,100 +1070,400 @@ c.executemany('INSERT INTO features (class_id, feature_name, level, description)
 
 
 ranger_features = [
-    (9, "Favored Enemy", 1, "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. You gain advantages in tracking and knowing about them."),
-    (9, "Natural Explorer", 1, "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions."),
-    (9, "Fighting Style", 2, "You adopt a particular style of fighting as your specialty. Choose from Archery, Defense, Dueling, or Two-Weapon Fighting."),
-    (9, "Spellcasting", 2, "You can cast Ranger spells, using Wisdom as your spellcasting ability."),
-    (9, "Primeval Awareness", 3, "You can use your action and expend one Ranger spell slot to focus your awareness on the region around you."),
-    (9, "Ranger Archetype", 3, "Choose an archetype that grants you features at 3rd, 7th, 11th, and 15th levels."),
-    (9, "Ability Score Improvement", 4, "Increase one ability score by 2, or two ability scores by 1."),
-    (9, "Extra Attack", 5, "You can attack twice, instead of once, whenever you take the Attack action on your turn."),
-    (9, "Land's Stride", 8, "Moving through nonmagical difficult terrain costs you no extra movement."),
-    (9, "Hide in Plain Sight", 10, "You can spend 1 minute creating camouflage for yourself."),
-    (9, "Vanish", 14, "You can use the Hide action as a bonus action."),
-    (9, "Feral Senses", 18, "You gain preternatural senses that help you fight creatures you can't see."),
-    (9, "Foe Slayer", 20, "You become an unparalleled hunter of your enemies."),
-    (9, "Ability Score Improvement", 8, "Increase one ability score by 2, or two ability scores by 1."),
-    (9, "Ability Score Improvement", 12, "Increase one ability score by 2, or two ability scores by 1."),
-    (9, "Ability Score Improvement", 16, "Increase one ability score by 2, or two ability scores by 1."),
-    (9, "Ability Score Improvement", 19, "Increase one ability score by 2, or two ability scores by 1."),
+    (9, "Favored Enemy", 1, "Beginning at 1st level, you have significant experience "
+    "studying, tracking, hunting, and even talking to a certain type of enemy.\n\nChoose "
+    "a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, "
+    "elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. "
+    "Alternatively, you can select two races of humanoid (such as gnolls and orcs) "
+    "as favored enemies.\n\nYou have advantage on Wisdom (Survival) checks to "
+    "track your favored enemies, as well as on Intelligence checks to recall "
+    "information about them.\n\nWhen you gain this feature, you also learn one "
+    "language of your choice that is spoken by your favored enemies, if they "
+    "speak one at all.\n\nYou choose one additional favored enemy, as well "
+    "as an associated language, at 6th and 14th level. As you gain levels, "
+    "your choices should reflect the types of monsters you have encountered "
+    "on your adventures."),
+    (9, "Natural Explorer", 1, "Also at 1st level, you are particularly familiar "
+    "with one type of natural environment and are adept at traveling and "
+    "surviving in such regions. Choose one type of favored terrain: arctic, coast, "
+    "desert, forest, grassland, mountain, swamp, or the Underdark. When you "
+    "make an Intelligence or Wisdom check related to your favored terrain, "
+    "your proficiency bonus is doubled if you are using a skill that you’re "
+    "proficient in.\n\nWhile traveling for an hour or more in your favored "
+    "terrain, you gain the following benefits:\n\t" + chr(9679) + "Difficult "
+    "terrain doesn’t slow your group’s travel.\n\t" + chr(9679) + "Your group "
+    "can’t become lost except by magical means.\n\t" + chr(9679) + "Even when "
+    "you are engaged in another activity while traveling (such as foraging, "
+    "navigating, or tracking), you remain alert to danger.\n\t" + chr(9679) + "If "
+    "you are traveling alone, you can move stealthily at a normal pace.\n\t" + chr(9679) + 
+    "When you forage, you find twice as much food as you normally would.\n\t"
+    + chr(9679) + "While tracking other creatures, you also learn their exact "
+    "number, their sizes, and how long ago they passed through the area.\n\nYou "
+    "choose additional favored terrain types at 6th and 10th level."),
+    (9, "Fighting Style", 2, "At 2nd level, you adopt a particular style of "
+    "fighting as your specialty. Choose one of the following options. You "
+    "can't take a Fighting Style option more than once, even if you later "
+    "get to choose again.\n\t" + chr(9679) + "Archery. You gain a +2 "
+    "bonus to attack rolls you make with ranged weapons.\n\t" + chr(9679) +
+    "Blind Fighting. You have blind sight with a range of 10 feet. Within that "
+    "range, you can effectively see anything that isn't behind total cover, "
+    "even if you're blinded or in darkness. Moreover, you can see an invisible "
+    'creature within that range, unless the creature successfully hides from you.\n\t"
+    + chr(9679) + "Defense. While you are wearing armor, you gain a +1 bonus to "
+    "AC.\n\t" + chr(9679) + "Druidic Warrior. You learn two cantrips of your "
+    "choice from the Druid spell list. They count as ranger spells for you, "
+    "and Wisdom is your spellcasting ability for them. Whenever you gain a "
+    "level in this class, you can replace one of these cantrips with "
+    "another cantrip from the Druid spell list.\n\t" + chr(9679) + "Dueling. "
+    "When you are wielding a melee weapon in one hand and no other weapons, "
+    "you gain a +2 bonus to damage rolls with that weapon.\n\t" + chr(9679) +
+    "Thrown Weapon Fighting. You can draw a weapon that has the thrown "
+    "property as part of the attack you make with the weapon.\n\t\t" + chr(9679) +
+    "In addition, when you hit with a ranged attack using a thrown weapon, you "
+    "gain a +2 bonus to the damage roll.\n\t" + chr(9679) + "Two-Weapon Fighting. "
+    "When you engage in two-weapon fighting, you can add your ability modifier "
+    "to the damage of the second attack."),
+    (9, "Spellcasting", 2, "By the time you reach 2nd level, you have learned "
+    "to use the magical essence of nature to cast spells, much as a druid "
+    "does.\n\nSpell Slots\n\nThe Ranger table shows how many spell slots "
+    "you have to cast your ranger spells of 1st level and higher. To cast "
+    "one of these spells, you must expend a slot of the spell's level or "
+    "higher. You regain all expended spell slots when you finish a long "
+    "rest.\n\nFor example, if you know the 1st-level spell Animal Friendship "
+    "and have a 1st-level and a 2nd-level spell slot available, you can "
+    "cast Animal Friendship using either slot.\n\nSpells Known of 1st "
+    "Level and Higher\n\nYou know two 1st-level spells of your choice "
+    "from the ranger spell list.\n\nThe Spells Known column of the "
+    "Ranger table shows when you learn more ranger spells of your "
+    "choice. Each of these spells must be of a level for which you have "
+    "spell slots. For instance, when you reach 5th level in this "
+    "class, you can learn one new spell of 1st or 2nd level.\n\nAdditionally, "
+    "when you gain a level in this class, you can choose one of the "
+    "ranger spells you know and replace it with another spell from "
+    "the ranger spell list, which also must be of a level for which "
+    "you have spell slots.\n\nSpellcasting Ability\n\nWisdom is your "
+    "spellcasting ability for your ranger spells, since your magic "
+    "draws on your attunement to nature. You use your Wisdom whenever "
+    "a spell refers to your spellcasting ability. In addition, you "
+    "use your Wisdom modifier when setting the saving throw DC for "
+    "a ranger spell you cast and when making an attack roll with one.\n\t"
+    "Spell save DC = 8 + your proficiency bonus + your Wisdom modifier\n\t"
+    "Spell attack modifier = your proficiency bonus + your Wisdom modifier"),
+    (9, "Primeval Awareness", 3, "Beginning at 3rd level, you can use your "
+    "action and expend one ranger spell slot to focus your awareness on "
+    "the region around you. For 1 minute per level of the spell slot you "
+    "expend, you can sense whether the following types of creatures are "
+    "present within 1 mile of you (or within up to 6 miles if you are "
+    "in your favored terrain): aberrations, celestials, dragons, elementals, "
+    "fey, fiends, and undead. This feature doesn’t reveal the creatures’ "
+    "location or number."),
+    (9, "Ranger Conclave", 3, "At 3rd level, you choose to emulate the "
+    "ideals and training of a ranger conclave. Your choice grants you "
+    "features at 3rd level and again at 7th, 11th, and 15th level."),
+    (9, "Ability Score Improvement", 4, "When you reach 4th level, and again "
+    "at 8th, 12th, 16th, and 19th level, you can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above 20 "
+    "using this feature."),
+    (9, "Extra Attack", 5, "Beginning at 5th level, you can attack twice, "
+    "instead of once, whenever you take the Attack action on your turn."),
+    (9, "Favored Enemy Improvement", 6, "You choose one additional favored "
+    "enemy, as well as an associated language."),
+    (9, "Natural Explorer Improvement", 6, "You choose additional favored "
+    "terrain types"),
+    (9, "Ranger Conclave", 7, "Feature from chosen Conclave."),
+    (9, "Land's Stride", 8, "Starting at 8th level, moving through nonmagical "
+    "difficult terrain costs you no extra movement. You can also pass "
+    "through nonmagical plants without being slowed by them and without "
+    "taking damage from them if they have thorns, spines, or a similar "
+    "hazard.\n\nIn addition, you have advantage on saving throws against "
+    "plants that are magically created or manipulated to impede movement, "
+    "such as those created by the Entangle spell."),
+    (9, "Ability Score Improvement", 8, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above 20 "
+    "using this feature."),
+    (9, "Natural Explorer Improvement", 10, "You choose additional favored "
+    "terrain types"),
+    (9, "Hide in Plain Sight", 10, "Starting at 10th level, you can spend "
+    "1 minute creating camouflage for yourself. You must have access to "
+    "fresh mud, dirt, plants, soot, and other naturally occurring materials "
+    "with which to create your camouflage.\n\nOnce you are camouflaged in "
+    "this way, you can try to hide by pressing yourself up against a solid "
+    "surface, such as a tree or wall, that is at least as tall and wide "
+    "as you are. You gain a +10 bonus to Dexterity (Stealth) checks as "
+    "long as you remain there without moving or taking actions. Once you "
+    "move or take an action or a reaction, you must camouflage yourself "
+    "again to gain this benefit."),
+    (9, "Ranger Conclave", 11, "Feature from chosen Conclave."),
+    (9, "Ability Score Improvement", 12, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above 20 "
+    "using this feature."),
+    (9, "Favored Enemy Improvement", 14, "You choose one additional favored "
+    "enemy, as well as an associated language."),
+    (9, "Vanish", 14, "Starting at 14th level, you can use the Hide action "
+    "as a bonus action on your turn. Also, you can't be tracked by "
+    "nonmagical means, unless you choose to leave a trail."),
+    (9, "Ranger Conclave", 15, "Feature from chosen Conclave."),
+    (9, "Ability Score Improvement", 16, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above 20 "
+    "using this feature."),
+    (9, "Feral Senses", 18, "At 18th level, you gain preternatural senses "
+    "that help you fight creatures you can't see. When you attack a "
+    "creature you can't see, your inability to see it doesn't impose "
+    "disadvantage on your attack rolls against it.\n\nYou are also aware "
+    "of the location of any invisible creature within 30 feet of you, "
+    "provided that the creature isn't hidden from you and you aren't "
+    "blinded or deafened."),
+    (9, "Ability Score Improvement", 19, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above 20 "
+    "using this feature."),
+    (9, "Foe Slayer", 20, "At 20th level, you become an unparalleled hunter "
+    "of your enemies. Once on each of your turns, you can add your Wisdom "
+    "modifier to the attack roll or the damage roll of an attack you make "
+    "against one of your favored enemies. You can choose to use this "
+    "feature before or after the roll, but before any effects of the roll "
+    "are applied."),
 ]
 
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', ranger_features)
 
 rogue_features = [
-    (10, "Sneak Attack", 1, "You know how to strike subtly and exploit a foe's"
-    "distraction. Your attacks deal extra damage when you have advantage on the"
-    "attack roll."),
-    (10, "Thieves' Cant", 1, "During your rogue training you learned thieves' cant"
-    ", a secret mix of dialect, jargon, and code that allows you to hide messages"
-    "in seemingly normal conversation."),
-    (10, "Cunning Action", 2, "Your quick thinking and agility allow you to move"
-    "and act quickly. You can take a bonus action to Dash, Disengage, or Hide."),
-    (10, "Roguish Archetype", 3, "At 3rd level, you choose an archetype that you"
-    "emulate in the exercise of your rogue abilities: Thief, Assassin, or Arcane Trickster."),
-    (10, "Ability Score Improvement", 4, "When you reach 4th level, you can"
-    "increase one ability score of your choice by 2, or you can increase two ability"
-    "scores of your choice by 1."),
-    (10, "Uncanny Dodge", 5, "Starting at 5th level, when an attacker that you can"
-    "see hits you with an attack, you can use your reaction to halve the attack's damage."),
-    (10, "Expertise", 6, "At 6th level, choose two more of your proficiencies in skills"
+    (10, "Expertise", 1, "At 1st level, choose two of your skill proficiencies, "
+    "or one of your skill proficiencies and your proficiency with thieves' "
+    "tools. Your proficiency bonus is doubled for any ability check you make "
+    "that uses either of the chosen proficiencies.\n\nAt 6th level, you can "
+    "choose two more of your proficiencies (in skills or with thieves' tools) "
+    "to gain this benefit.")
+    (10, "Sneak Attack", 1, "Beginning at 1st level, you know how to strike "
+    "subtly and exploit a foe's distraction. Once per turn, you can deal an "
+    "extra 1d6 damage to one creature you hit with an attack if you have "
+    "advantage on the attack roll. The attack must use a finesse or a ranged "
+    "weapon.\n\nYou don't need advantage on the attack roll if another enemy "
+    "of the target is within 5 feet of it, that enemy isn't incapacitated, "
+    "and you don't have disadvantage on the attack roll.\n\nThe amount of "
+    "the extra damage increases as you gain levels in this class, as shown "
+    "in the Sneak Attack column of the Rogue table."),
+    (10, "Thieves' Cant", 1, "During your rogue training you learned thieves' "
+    "cant, a secret mix of dialect, jargon, and code that allows you to "
+    "hide messages in seemingly normal conversation. Only another creature "
+    "that knows thieves' cant understands such messages. It takes four "
+    "times longer to convey such a message than it does to speak the "
+    "same idea plainly.\n\nIn addition, you understand a set of secret "
+    "signs and symbols used to convey short, simple messages, such as "
+    "whether an area is dangerous or the territory of a thieves' guild, "
+    "whether loot is nearby, or whether the people in an area are easy "
+    "marks or will provide a safe house for thieves on the run."),
+    (10, "Cunning Action", 2, "Starting at 2nd level, your quick thinking "
+    "and agility allow you to move and act quickly. You can take a bonus "
+    "action on each of your turns in combat. This action can be used "
+    "only to take the Dash, Disengage, or Hide action."),
+    (10, "Roguish Archetype", 3, "At 3rd level, you choose an archetype "
+    "that you emulate in the exercise of your rogue abilities. Your "
+    "archetype choice grants you features at 3rd level and then again "
+    "at 9th, 13th, and 17th level."),
+    (10, "Ability Score Improvement", 4, "When you reach 4th level, and "
+    "again at 8th, 10th, 12th, 16th, and 19th level, you can increase "
+    "one ability score of your choice by 2, or you can increase two "
+    "ability scores of your choice by 1. As normal, you can't increase "
+    "an ability score above 20 using this feature."),
+    (10, "Uncanny Dodge", 5, "Starting at 5th level, when an attacker "
+    "that you can see hits you with an attack, you can use your reaction "
+    "to halve the attack's damage against you."),
+    (10, "Expertise", 6, "Choose two more of your proficiencies in skills"
     "or your proficiency with thieves' tools. Your proficiency bonus is doubled for any"
     "ability check you make that uses either of the chosen proficiencies."),
-    (10, "Evasion", 7, "Beginning at 7th level, you can nimbly dodge out of the way"
-    "of certain area effects, such as a red dragon's fiery breath or an ice storm spell."),
-    (10, "Ability Score Improvement", 8, "When you reach 8th level, you can increase"
-    "one ability score of your choice by 2, or you can increase two ability scores"
-    "of your choice by 1."),
-    (10, "Roguish Archetype Feature", 9, "At 9th level, you gain a feature granted by"
-    "your Roguish Archetype."),
-    (10, "Ability Score Improvement", 10, "When you reach 10th level, you can increase"
-    "one ability score of your choice by 2, or you can increase two ability scores"
-    "of your choice by 1."),
-    (10, "Reliable Talent", 11, "By 11th level, you have refined your chosen skills"
-    "until they approach perfection. Whenever you make an ability check that lets you"
-    "add your proficiency bonus, you can treat a d20 roll of 9 or lower as a 10."),
-    (10, "Ability Score Improvement", 12, "When you reach 12th level, you can increase"
-    "one ability score of your choice by 2, or you can increase two ability scores' of your choice by 1."),
-    (10, "Roguish Archetype Feature", 13, "At 13th level, you gain a feature granted"
-    "by your Roguish Archetype."),
-    (10, "Blindsense", 14, "If you are able to hear, you are aware of the location"
-    "of any hidden or invisible creature within 10 feet of you."),
-    (10, "Slippery Mind", 15, "By 15th level, you have acquired greater mental strength."
-    "You gain proficiency in Wisdom saving throws."),
-    (10, "Ability Score Improvement", 16, "When you reach 16th level, you can increase"
-    "one ability score of your choice by 2, or you can increase two ability scores"
-    "of your choice by 1."),
-    (10, "Roguish Archetype Feature", 17, "At 17th level, you gain a feature granted"
-    "by your Roguish Archetype."),
-    (10, "Elusive", 18, "Beginning at 18th level, you are so evasive that attackers"
-    "rarely gain the upper hand against you. No attack roll has advantage against"
-    "you while you aren’t incapacitated."),
-    (10, "Ability Score Improvement", 19, "When you reach 19th level, you can"
-    "increase one ability score of your choice by 2, or you can increase two"
-    "ability scores of your choice by 1."),
-    (10, "Stroke of Luck", 20, "At 20th level, you have an uncanny knack for"
-    "succeeding when you need to. If your attack misses a target within range,"
-    "you can turn the miss into a hit.")
+    (10, "Evasion", 7, "Beginning at 7th level, you can nimbly dodge out "
+    "of the way of certain area effects, such as a red dragon's fiery "
+    "breath or an Ice Storm spell. When you are subjected to an effect "
+    "that allows you to make a Dexterity saving throw to take only half "
+    "damage, you instead take no damage if you succeed on the saving "
+    "throw, and only half damage if you fail."),
+    (10, "Ability Score Improvement", 8, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above "
+    "20 using this feature."),
+    (10, "Roguish Archetype", 9, "Feature of chosen Archetype."),
+    (10, "Ability Score Improvement", 10, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above "
+    "20 using this feature."),
+    (10, "Reliable Talent", 11, "By 11th level, you have refined your "
+    "chosen skills until they approach perfection. Whenever you make an "
+    "ability check that lets you add your proficiency bonus, you can "
+    "treat a d20 roll of 9 or lower as a 10."),
+    (10, "Ability Score Improvement", 12, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above "
+    "20 using this feature."),
+    (10, "Roguish Archetype", 13, "Feature of chosen Archetype."),
+    (10, "Blindsense", 14, "Starting at 14th level, if you are able to "
+    "hear, you are aware of the location of any hidden or invisible "
+    "creature within 10 feet of you."),
+    (10, "Slippery Mind", 15, "By 15th level, you have acquired greater "
+    "mental strength. You gain proficiency in Wisdom saving throws."),
+    (10, "Ability Score Improvement", 16, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above "
+    "20 using this feature."),
+    (10, "Roguish Archetype", 17, "Feature of chosen Archetype."),
+    (10, "Elusive", 18, "Beginning at 18th level, you are so evasive "
+    "that attackers rarely gain the upper hand against you. No attack "
+    "roll has advantage against you while you aren't incapacitated."),
+    (10, "Ability Score Improvement", 19, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above "
+    "20 using this feature."),
+    (10, "Stroke of Luck", 20, "At 20th level, you have an uncanny knack "
+    "for succeeding when you need to. If your attack misses a target "
+    "within range, you can turn the miss into a hit. Alternatively, if "
+    "you fail an ability check, you can treat the d20 roll as a 20.\n\nOnce "
+    "you use this feature, you can't use it again until you finish a "
+    "short or long rest.")
 ]
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', rogue_features)
 
 
 
 sorcerer_features = [
-    (11, "Spellcasting", 1, "You can cast Sorcerer spells, using Charisma as your spellcasting ability."),
-    (11, "Sorcerous Origin", 1, "Choose a sorcerous origin, which grants you features at 1st, 6th, 14th, and 18th levels."),
-    (11, "Font of Magic", 2, "You can use sorcery points to create spell slots or fuel special abilities."),
-    (11, "Metamagic", 3, "You can twist your spells to suit your needs. Choose two Metamagic options."),
-    (11, "Ability Score Improvement", 4, "Increase one ability score by 2, or two ability scores by 1."),
-    (11, "Sorcerous Origin Feature", 6, "You gain a feature from your chosen sorcerous origin."),
-    (11, "Ability Score Improvement", 8, "Increase one ability score by 2, or two ability scores by 1."),
-    (11, "Sorcerous Origin Feature", 14, "You gain a feature from your chosen sorcerous origin."),
-    (11, "Sorcerous Origin Feature", 18, "You gain a feature from your chosen sorcerous origin."),
-    (11, "Sorcerous Restoration", 20, "You regain 4 expended sorcery points whenever you finish a short rest."),
-    (11, "Ability Score Improvement", 12, "Increase one ability score by 2, or two ability scores by 1."),
-    (11, "Ability Score Improvement", 16, "Increase one ability score by 2, or two ability scores by 1."),
-    (11, "Ability Score Improvement", 19, "Increase one ability score by 2, or two ability scores by 1."),
+    (11, "Spellcasting", 1, "An event in your past, or in the life of "
+    "a parent or ancestor, left an indelible mark on you, infusing you "
+    "with arcane magic. This font of magic, whatever its origin, fuels "
+    "your spells.\n\nCantrips\n\nAt 1st level, you know four cantrips "
+    "of your choice from the sorcerer spell list. You learn additional "
+    "sorcerer cantrips of your choice at higher levels, as shown in "
+    "the Cantrips Known column of the Sorcerer table.\n\nSpell Slots\n\nThe "
+    "Sorcerer table shows how many spell slots you have to cast your "
+    "sorcerer spells of 1st level and higher. To cast one of these "
+    "sorcerer spells, you must expend a slot of the spell's level or "
+    "higher. You regain all expended spell slots when you finish a "
+    "long rest.\n\nFor example, if you know the 1st-level spell burning "
+    "hands and have a 1st-level and a 2nd-level spell slot available, "
+    "you can cast burning hands using either slot.\n\nSpells Known of "
+    "1st Level and Higher\n\nYou know two 1st-level spells of your "
+    "choice from the sorcerer spell list.\n\nThe Spells Known column "
+    "of the Sorcerer table shows when you learn more sorcerer spells "
+    "of your choice. Each of these spells must be of a level for "
+    "which you have spell slots. For instance, when you reach 3rd "
+    "level in this class, you can learn one new spell of 1st or 2nd "
+    "level.\n\nAdditionally, when you gain a level in this class, "
+    "you can choose one of the sorcerer spells you know and replace "
+    "it with another spell from the sorcerer spell list, which also "
+    "must be of a level for which you have spell slots.\n\nSpellcasting "
+    "Ability\n\nCharisma is your spellcasting ability for your "
+    "sorcerer spells, since the power of your magic relies on your "
+    "ability to project your will into the world. You use your Charisma "
+    "whenever a spell refers to your spellcasting ability. In addition, "
+    "you use your Charisma modifier when setting the saving throw DC "
+    "for a sorcerer spell you cast and when making an attack roll with "
+    "one.\n\tSpell save DC = 8 + your proficiency bonus + your Charisma "
+    "modifier\n\tSpell attack modifier = your proficiency bonus + your "
+    "Charisma modifier\n\nSpellcasting Focus\n\nYou can use an arcane "
+    "focus as a spellcasting focus for your sorcerer spells."),
+    (11, "Sorcerous Origin", 1, "Choose a sorcerous origin, which describes "
+    "the source of your innate magical power. Your choice grants you "
+    "features when you choose it at 1st level and again at 6th, 14th, "
+    "and 18th level."),
+    (11, "Font of Magic", 2, "At 2nd level, you tap into a deep wellspring "
+    "of magic within yourself. This wellspring is represented by sorcery "
+    "points, which allow you to create a variety of magical effects.\n\t"
+    + chr(9679) + "Sorcery Points. You have 2 sorcery points, and you gain "
+    "more as you reach higher levels, as shown in the Sorcery Points column of the "
+    "Sorcerer table. You can never have more sorcery points than shown "
+    "on the table for your level. You regain all spent sorcery points "
+    "when you finish a long rest.\n\t" + chr(9679) + "Flexible Casting. You "
+    "can use your sorcery points to gain additional spell slots, or sacrifice "
+    "spell slots to gain additional sorcery points. You learn other ways to "
+    "use your sorcery points as you reach higher levels.\n\t\t" + chr(9679) + "Creating "
+    "Spell Slots. You can transform unexpended sorcery points into one spell "
+    "slot as a bonus action on your turn. The Creating Spell Slots table shows "
+    "the cost of creating a spell slot of a given level. You can create spell "
+    "slots no higher in level than 5th. Any spell slot you create with this "
+    "feature vanishes when you finish a long rest.\n\t\t" + chr(9679) + "Converting "
+    "a Spell Slot to Sorcery Points. As a bonus action on your turn, you can "
+    "expend one spell slot and gain a number of sorcery points equal to the slot's level."),
+    (11, "Metamagic", 3, "At 3rd level, you gain the ability to twist your spells to "
+    "suit your needs. You gain two of the following Metamagic options of your "
+    "choice. You gain another one at 10th and 17th level.\n\nYou can use only "
+    "one Metamagic option on a spell when you cast it, unless otherwise noted.\n\t"
+    + chr(9679) + "Careful Spell. When you cast a spell that forces other "
+    "creatures to make a saving throw, you can protect some of those creatures "
+    "from the spell's full force. To do so, you spend 1 sorcery point and choose "
+    "a number of those creatures up to your Charisma modifier (minimum of one "
+    "creature). A chosen creature automatically succeeds on its saving throw "
+    "against the spell.\n\t" + chr(9679) + "Distant Spell. When you cast a "
+    "spell that has a range of 5 feet or greater, you can spend 1 sorcery "
+    "point to double the range of the spell.\n\t" + chr(9679) + "When you "
+    "cast a spell that has a range of touch, you can spend 1 sorcery point "
+    "to make the range of the spell 30 feet.\n\t" + chr(9679) + "Empowered Spell. "
+    "When you roll damage for a spell, you can spend 1 sorcery point to "
+    "reroll a number of the damage dice up to your Charisma modifier (minimum "
+    "of one). You must use the new rolls.\n\t" + chr(9679) + "You can use "
+    "Empowered Spell even if you have already used a different Metamagic "
+    "option during the casting of the spell.\n\t" + chr(9679) + "Extended Spell. "
+    "When you cast a spell that has a duration of 1 minute or longer, you "
+    "can spend 1 sorcery point to double its duration, to a maximum duration "
+    "of 24 hours.\n\t" + chr(9679) + "Heightened Spell. When you cast a "
+    "spell that forces a creature to make a saving throw to resist its "
+    "effects, you can spend 3 sorcery points to give one target of the "
+    "spell disadvantage on its first saving throw made against the spell."
+    + chr(9679) + "Quickened Spell. When you cast a spell that has a "
+    "casting time of 1 action, you can spend 2 sorcery points to change "
+    "the casting time to 1 bonus action for this casting.\n\t" + chr(9679) +
+    "Seeking Spell. If you make an attack roll for a spell and miss, you "
+    "can spend 2 sorcerer points to reroll the d20, and you must use the "
+    "new roll.\n\t" + chr(9679) + "You can use Seeking Spell even if you "
+    "have already used a different Metamagic option during the casting of "
+    "the spell.\n\t" + chr(9679) + "Seeking Spell (UA). When you cast a "
+    "spell that requires you to make a spell attack roll or that forces "
+    "a target to make a Dexterity saving throw, you can spend 1 sorcery "
+    "point to ignore the effects of half- and three-quarters cover against "
+    "targets of the spell.\n\t" + chr(9679) + "Subtle Spell. When you "
+    "cast a spell, you can spend 1 sorcery point to cast it without any "
+    "somatic or verbal components.\n\t" + chr(9679) + "Transmuted Spell. "
+    "When you cast a spell that deals a type of damage from the "
+    "following list, you can spend 1 sorcery point to change that damage "
+    "type to one of the other listed types: acid, cold, fire, lightning, "
+    "poison, thunder.\n\t" + chr(9679) + "Twinned Spell. When you cast "
+    "a spell that targets only one creature and doesn't have a range "
+    "of self, you can spend a number of sorcery points equal to the "
+    "spell's level to target a second creature in range with the "
+    "same spell (1 sorcery point if the spell is a cantrip). To be "
+    "eligible, a spell must be incapable of targeting more than one "
+    "creature at the spell's current level. For example, magic missile "
+    "and scorching ray aren't eligible, but ray of frost and chromatic "
+    "orb are."),
+    (11, "Ability Score Improvement", 4, "When you reach 4th level, and "
+    "again at 8th, 12th, 16th, and 19th level, you can increase one "
+    "ability score of your choice by 2, or you can increase two ability "
+    "scores of your choice by 1. As normal, you can't increase an ability "
+    "score above 20 using this feature."),
+    (11, "Sorcerous Origin Feature", 6, "Feature from your chosen Sorcerous."),
+    (11, "Ability Score Improvement", 8, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above "
+    "20 using this feature."),
+    (11, "Metamagic", 10, "Gain another Metamagic."),
+    (11, "Ability Score Improvement", 12, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above "
+    "20 using this feature."),
+    (11, "Sorcerous Origin", 14, "Feature from your chosen Sorcerous."),
+    (11, "Ability Score Improvement", 16, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above "
+    "20 using this feature."),
+    (11, "Metamagic", 17, "Gain another Metamagic."),
+    (11, "Sorcerous Origin Feature", 18, "Feature from your chosen Sorcerous."),
+    (11, "Ability Score Improvement", 19, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above "
+    "20 using this feature."),
+    (11, "Sorcerous Restoration", 20, "At 20th level, you regain 4 expended "
+    "sorcery points whenever you finish a short rest."),
 ]
 
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', sorcerer_features)
@@ -1171,20 +1471,141 @@ c.executemany('INSERT INTO features (class_id, feature_name, level, description)
 
 
 warlock_features = [
-    (12, "Otherworldly Patron", 1, "You have made a pact with an otherworldly being that grants you magical powers. Your choice grants you features at 1st, 6th, 10th, and 14th levels."),
-    (12, "Pact Magic", 1, "You can cast Warlock spells, using Charisma as your spellcasting ability. You regain expended spell slots after a short or long rest."),
-    (12, "Eldritch Invocations", 2, "You gain two eldritch invocations of your choice, which enhance your abilities or give you new powers."),
-    (12, "Pact Boon", 3, "Choose a boon from your patron that grants you features at 3rd level."),
-    (12, "Ability Score Improvement", 4, "Increase one ability score by 2, or two ability scores by 1."),
-    (12, "Mystic Arcanum (6th level)", 11, "You can cast one 6th-level spell once without expending a spell slot."),
-    (12, "Mystic Arcanum (7th level)", 13, "You can cast one 7th-level spell once without expending a spell slot."),
-    (12, "Mystic Arcanum (8th level)", 15, "You can cast one 8th-level spell once without expending a spell slot."),
-    (12, "Mystic Arcanum (9th level)", 17, "You can cast one 9th-level spell once without expending a spell slot."),
-    (12, "Eldritch Master", 20, "You can spend 1 minute entreating your patron to regain all your expended spell slots."),
-    (12, "Ability Score Improvement", 8, "Increase one ability score by 2, or two ability scores by 1."),
-    (12, "Ability Score Improvement", 12, "Increase one ability score by 2, or two ability scores by 1."),
-    (12, "Ability Score Improvement", 16, "Increase one ability score by 2, or two ability scores by 1."),
-    (12, "Ability Score Improvement", 19, "Increase one ability score by 2, or two ability scores by 1."),
+    (12, "Otherworldly Patron", 1, "At 1st level, you have struck a bargain with "
+    "an otherworldly being of your choice. Your choice grants you features at 1st "
+    "level and again at 6th, 10th, and 14th level."),
+    (12, "Pact Magic", 1, "Your arcane research and the magic bestowed on you by "
+    "your patron have given you facility with spells.\n\nCantrips\n\nYou know two "
+    "cantrips of your choice from the warlock spell list. You learn additional "
+    "warlock cantrips of your choice at higher levels, as shown in the Cantrips "
+    "Known column of the Warlock table.\n\nSpell Slots\n\nThe Warlock table "
+    "shows how many spell slots you have to cast your warlock spells of 1st "
+    "through 5th level. The table also shows what the level of those slots is; "
+    "all of your spell slots are the same level. To cast one of your warlock "
+    "spells of 1st level or higher, you must expend a spell slot. You regain "
+    "all expended spell slots when you finish a short or long rest.\n\nFor example, "
+    "when you are 5th level, you have two 3rd-level spell slots. To cast the "
+    "1st-level spell witch bolt, you must spend one of those slots, and you "
+    "cast it as a 3rd-level spell.\n\nSpells Known of 1st Level and Higher\n\n"
+    "At 1st level, you know two 1st-level spells of your choice from the "
+    "warlock spell list.\n\nThe Spells Known column of the Warlock table "
+    "shows when you learn more warlock spells of your choice of 1st level "
+    "or higher. A spell you choose must be of a level no higher than what's "
+    "shown in the table's Slot Level column for your level. When you reach "
+    "6th level, for example, you learn a new warlock spell, which can be 1st, "
+    "2nd, or 3rd level.\n\nAdditionally, when you gain a level in this "
+    "class, you can choose one of the warlock spells you know and replace "
+    "it with another spell from the warlock spell list, which also must "
+    "be of a level for which you have spell slots.\n\nSpellcasting Ability\n\n"
+    "Charisma is your spellcasting ability for your warlock spells, so you "
+    "use your Charisma whenever a spell refers to your spellcasting ability. "
+    "In addition, you use your Charisma modifier when setting the saving "
+    "throw DC for a warlock spell you cast and when making an attack roll "
+    "with one.\n\tSpell save DC = 8 + your proficiency bonus + your Charisma "
+    "modifier\n\tSpell attack modifier = your proficiency bonus + your "
+    "Charisma modifier\n\nSpellcasting Focus\n\nYou can use an arcane focus "
+    "as a spellcasting focus for your warlock spells."),
+    (12, "Eldritch Invocations", 2, "In your study of occult lore, you have "
+    "unearthed Eldritch Invocations, fragments of forbidden knowledge that "
+    "imbue you with an abiding magical ability.\n\nAt 2nd level, you gain "
+    "two eldritch invocations of your choice. When you gain certain warlock "
+    "levels, you gain additional invocations of your choice, as shown in the "
+    "Invocations Known column of the Warlock table. A level prerequisite "
+    "refers to your level in this class.\n\nAdditionally, when you gain a "
+    "level in this class, you can choose one of the invocations you know "
+    "and replace it with another invocation that you could learn at that level."),
+    (12, "Pact Boon", 3, "At 3rd level, your otherworldly patron bestows a gift "
+    "upon you for your loyal service. You gain one of the following features "
+    "of your choice.\n\t" + chr(9679) + "Pact of the Blade\n\t\tYou can use your "
+    "action to create a pact weapon in your empty hand. You can choose the form that "
+    "this melee weapon takes each time you create it. You are proficient with "
+    "it while you wield it. This weapon counts as magical for the purpose of "
+    "overcoming resistance and immunity to nonmagical attacks and damage.\n\t\t\"
+    "Your pact weapon disappears if it is more than 5 feet away from you "
+    "for 1 minute or more. It also disappears if you use this feature again, "
+    "if you dismiss the weapon (no action required), or if you die.\n\t\t"
+    "You can transform one magic weapon into your pact weapon by performing "
+    "a special ritual while you hold the weapon. You perform the ritual over "
+    "the course of 1 hour, which can be done during a short rest.\n\t\t"
+    "You can then dismiss the weapon, shunting it into an extradimensional "
+    "space, and it appears whenever you create your pact weapon thereafter. "
+    "You can't affect an artifact or a sentient weapon in this way. The weapon "
+    "ceases being your pact weapon if you die, if you perform the 1-hour ritual "
+    "on a different weapon, or if you use a 1-hour ritual to break your bond "
+    "to it. The weapon appears at your feet if it is in the extradimensional "
+    "space when the bond breaks.\n\t" + chr(9679) + "Pact of the Chain\n\t\t"
+    "You learn the find familiar spell and can cast it as a ritual. The spell "
+    "doesn't count against your number of spells known.\n\t\tWhen you cast the "
+    "spell, you can choose one of the normal forms for your familiar or one "
+    "of the following special forms: imp, pseudodragon, quasit, or sprite.\n\t\t"
+    "Additionally, when you take the Attack action, you can forgo one of "
+    "your own attacks to allow your familiar to make one attack with its "
+    "reaction.\n\t" + chr(9679) + "Pact of the Tome\n\t\tYour patron gives "
+    "you a grimoire called a Book of Shadows. When you gain this feature, "
+    "choose three cantrips from any class's spell list (the three needn't "
+    "be from the same list). While the book is on your person, you can "
+    "cast those cantrips at will. They don't count against your number of "
+    "cantrips known. If they don't appear on the warlock spell list, they "
+    "are nonetheless warlock spells for you.\n\t\tIf you lose your Book of "
+    "Shadows, you can perform a 1-hour ceremony to receive a replacement "
+    "from your patron. This ceremony can be performed during a short or "
+    "long rest, and it destroys the previous book. The book turns to ash "
+    "when you die.\n\t" + chr(9679) + "Pact of the Talisman\n\t\tYour "
+    "patron gives you an amulet, a talisman that can aid the wearer when "
+    "the need is great. When the wearer fails an ability check, they can "
+    "add a d4 to the roll, potentially turning the roll into a success. "
+    'This benefit can be used a number of times equal to your proficiency "
+    "bonus, and all expended uses are restored when you finish a long rest.\n\t\t"
+    "If you lose the talisman, you can perform a 1-hour ceremony to receive "
+    "a replacement from your patron. This ceremony can be performed during "
+    "a short or long rest, and it destroys the previous amulet. The talisman "
+    "turns to ash when you die."),
+    (12, "Ability Score Improvement", 4, "When you reach 4th level, and again "
+    "at 8th, 12th, 16th, and 19th level, you can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above 20 "
+    "using this feature."),
+    (12, "Otherworldly Patron", 6, "Feature from chosen Patron."),
+    (12, "Ability Score Improvement", 8, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above 20 "
+    "using this feature."),
+    (12, "Otherworldly Patron", 10, "Feature from chosen Patron."),
+    (12, "Mystic Arcanum", 11, "At 11th level, your patron bestows upon "
+    "you a magical secret called an arcanum. Choose one 6th-level spell "
+    "from the warlock spell list as this arcanum.\n\nYou can cast your "
+    "arcanum spell once without expending a spell slot. You must finish a "
+    'long rest before you can do so again.\n\nAt higher levels, you gain "
+    "more warlock spells of your choice that can be cast in this way: one "
+    "7th-level spell at 13th level, one 8th-level spell at 15th level, and "
+    "one 9th-level spell at 17th level. You regain all uses of your Mystic "
+    "Arcanum when you finish a long rest."),
+    (12, "Ability Score Improvement", 12, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above 20 "
+    "using this feature."),
+    (12, "Mystic Arcanum (7th level)", 13, "You can cast one 7th-level spell once "
+    "without expending a spell slot."),
+    (12, "Otherworldly Patron", 14, "Feature from chosen Patron."),
+    (12, "Mystic Arcanum (8th level)", 15, "You can cast one 8th-level spell once "
+    "without expending a spell slot."),
+    (12, "Ability Score Improvement", 16, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above 20 "
+    "using this feature."),
+    (12, "Mystic Arcanum (9th level)", 17, "You can cast one 9th-level spell once "
+    'without expending a spell slot."),
+    (12, "Ability Score Improvement", 19, "You can increase one ability score "
+    "of your choice by 2, or you can increase two ability scores of your "
+    "choice by 1. As normal, you can't increase an ability score above 20 "
+    "using this feature."),
+    (12, "Eldritch Master", 20, "At 20th level, you can draw on your inner "
+    "reserve of mystical power while entreating your patron to regain expended "
+    "spell slots. You can spend 1 minute entreating your patron for aid to regain "
+    "all your expended spell slots from your Pact Magic feature. Once you regain "
+    "spell slots with this feature, you must finish a long rest before you can "
+    "do so again."),
+    
 ]
 
 c.executemany('INSERT INTO features (class_id, feature_name, level, description) VALUES (?, ?, ?, ?)', warlock_features)
