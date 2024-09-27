@@ -1,0 +1,171 @@
+import tkinter as tk
+from tkinter import ttk
+import ttkbootstrap as tb
+from ttkbootstrap.scrolled import ScrolledFrame     
+import sqlite3
+from create_menu_tabs import *
+
+#list of classes for the class dropdown
+class_options = ['Artificier', 'Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard']
+#list of class levels for the level dropdown
+class_levels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+def center_window(window, width, height): #function to center window
+    screen_width = window.winfo_screenwidth()
+    screen_height = window.winfo_screenheight()
+
+    x = int((screen_width / 2) - (width / 2))
+    y = int((screen_height / 2) - (height / 2))
+
+    window.geometry(f'{width}x{height}+{x}+{y}')
+
+#function to populate the selected classes' features for what level you are
+def display_class_features(selected_class, selected_level):
+    #Clear existing content
+    for widget in frame_features.winfo_children():
+        widget.destroy()
+
+    conn = sqlite3.connect('dnd_character_info.db')
+    c = conn.cursor()
+    
+    class_id = class_options.index(selected_class) + 1
+
+    c.execute('SELECT * FROM features WHERE class_id = ? AND level <= ? ORDER BY level', (class_id, selected_level))
+    features = c.fetchall()
+    
+    if features:
+        row = 0
+        for feature in features:
+            create_feature_button(feature, row)
+            row += 2
+    else:
+        label_no_feature = tk.Label(frame_features, text="No features found for this class at the selected level.")
+        label_no_feature.grid(row=0, column=0, columnspan=2, padx=10, pady=5)
+    
+    conn.close()
+    #text_features_box.delete(1.0, tk.END)
+
+    #if features:
+    #    for feature in features:
+    #        # Insert feature into the Text widget
+    #        text_features_box.insert(tk.END, f"Level {feature[3]}: {feature[2]} - {feature[4]}\n\n")
+    #else:
+    #    text_features_box.insert(tk.END, "No features found for this class at the selected level.\n")
+
+
+def create_feature_button(feature, row):
+    feature_button = tk.Button(frame_features, text=f"Level {feature[3]}: {feature[2]}", relief=tk.RAISED)
+    feature_button.grid(row=row, column=0, columnspan=2, sticky="ew", padx=10, pady=5)
+
+    feature_description = tk.Label(frame_features, text=feature[4], wraplength=500, justify=tk.LEFT)
+    feature_description.grid(row=row+1, column=0, columnspan=2, padx=20, pady=5)
+    feature_description.grid_remove() #hides the label initially
+
+    def toggle_description():
+        if feature_description.winfo_viewable():
+            feature_description.grid_remove()
+        else:
+            feature_description.grid(row=row+1, column=0, columnspan=2, padx=20, pady=5)
+    
+    feature_button.config(command=toggle_description)
+
+#create the new buttons for the level once class is chosen
+def class_level_button(e):
+    label_class_level = tk.Label(tab1, text='Level:')
+    label_class_level.grid(row=1, column=2, padx=5, pady=10)
+
+    combo_class_level = ttk.Combobox(tab1, values=class_levels, width=2)
+    combo_class_level.grid(row=1, column=3, padx=5, pady=10)
+
+    combo_class_level.bind('<<ComboboxSelected>>', lambda e: display_class_features(combo_class.get(), combo_class_level.get()))
+    
+
+#Event trigger and label once a class is chosen
+def get_class_level(e):
+    label_class_name = tk.Label(tab1, text=f"You selected: {combo_class.get()}")
+    label_class_name.grid(row=2, column=0, columnspan=2)
+    class_level_button(e)
+    
+def next_tab2():
+    notebook.select(1)
+    
+#function to call the create character menu
+def create_menu():
+    global create_window
+    global frame_features
+    global tab1
+    global notebook
+
+    create_window = tb.Window(themename="darkly")
+    create_window.title("Mat's D&D Character Sheet")
+    create_window.geometry('600x600')
+
+    # Create a notebook widget (this is the widget that holds the tabs)
+    notebook = tb.Notebook(create_window, bootstyle="secondary")
+    notebook.pack(fill='both', expand=True)
+
+    # Create frames for each tab
+    tab1 = tb.Frame(notebook)
+    tab2 = tb.Frame(notebook)
+    tab3 = tb.Frame(notebook)
+    tab4 = tb.Frame(notebook)
+    tab5 = tb.Frame(notebook)
+
+
+    tab1.grid_columnconfigure((0, 1, 2, 3), weight = 1)
+    # Add frames to notebook as tabs
+    notebook.add(tab1, text="  Class  ")
+    notebook.add(tab2, text="  Background  ")
+    notebook.add(tab3, text="  Species  ")
+    notebook.add(tab4, text="  Stats  ")
+    notebook.add(tab5, text="  Equipment  ")
+
+    # Labels for the create character menu
+    label_name = tk.Label(tab1, text='Character Name:')
+    label_class = tk.Label(tab1, text='Class:')
+
+    # Positions of the labels
+    label_name.grid(row=0, column=0, padx=5, pady=10)
+    label_class.grid(row=1, column=0, padx=5, pady=10)
+
+    # Entry for the Character name
+    entry_name = tk.Entry(tab1)
+    entry_name.grid(row=0, column=1)
+
+    # Class selection dropdown
+    global combo_class
+    combo_class = ttk.Combobox(tab1, values=class_options)
+    combo_class.grid(row=1, column=1, padx=5, pady=10)
+
+    # Binding the action of selecting a class to then make the level button
+    combo_class.bind('<<ComboboxSelected>>', get_class_level)
+
+    # Create a frame to hold the Text widget and scrollbar
+    frame_features = ScrolledFrame(tab1, autohide=False)
+    frame_features.grid(row=3, column=0, columnspan=4, padx=5, pady=5)
+
+    # Create a scrollbar for the Text widget
+    #scrollbar = tk.Scrollbar(frame_features)
+    #scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+    # Create a Text widget to display features
+    #text_features_box = tk.Text(frame_features, wrap=tk.WORD, height=20, width=80, yscrollcommand=scrollbar.set)
+    #text_features_box.pack(side=tk.LEFT, fill=tk.BOTH)
+
+    # Configure the scrollbar to scroll the Text widget
+    #scrollbar.config(command=text_features_box.yview)
+
+    continue_button1 = tb.Button(tab1, bootstyle="info", text="Continue", command=next_tab2)
+        
+    continue_button1.place(relx=1.0, rely=1.0, anchor='se')
+    
+    create_tab2(tab2)
+    create_tab3(tab3)
+    create_tab4(tab4)
+    create_tab5(tab5)
+
+    center_window(create_window, 600, 600)
+    create_window.mainloop()
+    
+#test to see if the db is being connected
+create_menu()
