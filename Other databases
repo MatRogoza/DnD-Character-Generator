@@ -1,0 +1,113 @@
+import sqlite3
+
+conn = sqlite3.connect("dnd_character_info.db")
+c = conn.cursor()
+
+c.execute("""CREATE TABLE IF NOT EXISTS backgrounds (
+            name TEXT NOT NULL,
+            description TEXT NOT NULL,
+            skill_pro1 TEXT NOT NULL,
+            skill_pro2 TEXT NOT NULL,
+            equipment TEXT NOT NULL,
+            bg_feature_name TEXT NOT NULL,
+            bg_feature_des TEXT NOT NULL,
+            tool_pro TEXT,
+            languages TEXT)
+            """)
+            
+backgrounds = [
+    ("Acolyte",
+    "You have spent your life in the service of a temple to a "
+    "specific god or pantheon of gods. You act as an intermediary between "
+    "the realm of the holy and the mortal world, performing sacred rites and "
+    "offering sacrifices in order to conduct worshipers into the presence of "
+    "the divine. You are not necessarily a cleric – performing sacred rites "
+    "is not the same thing as channeling divine power.\n\nChoose a god, a "
+    "pantheon of gods, or some other quasi-divine being, and work with your "
+    "DM to detail the nature of your religious service. Were you a lesser "
+    "functionary in a temple, raised from childhood to assist the priests "
+    "in the sacred rites? Or were you a high priest who suddenly experienced "
+    "a call to serve your god in a different way? Perhaps you were the leader "
+    "of a small cult outside of any established temple structure, or even an "
+    "occult group that served a fiendish master that you now deny.",
+    "Insight",
+    "Religion",
+    "A holy symbol (a gift to you when you entered the priesthood), "
+    "a prayer book or prayer wheel, 5 sticks of incense, vestments, a set of "
+    "common clothes, and a pouch containing 15gp",
+    "Shelter of the Faithful",
+    "As an acolyte, you command the respect of those who share your faith, and "
+    "you can perform the religious ceremonies of your deity. You and your "
+    "adventuring companions can expect to receive free healing and care at a "
+    "temple, shrine, or other established presence of your faith, though you "
+    "must provide any material components needed for spells. Those who share "
+    "your religion will support you (but only you) at a modest lifestyle.\n\nYou "
+    "might also have ties to a specific temple dedicated to your chosen deity or "
+    "pantheon, and you have a residence there. This could be the temple where "
+    "you used to serve, if you remain on good terms with it, or a temple where "
+    "you have found a new home. While near your temple, you can call upon the "
+    "priests for assistance, provided the assistance you ask for is not hazardous "
+    "and you remain in good standing with your temple.",
+    "None",
+    "Two of your choice"),
+    ("Criminal",
+    "You are an experienced criminal with a history of breaking the law. You have "
+    "spent a lot of time among other criminals and still have contacts within the "
+    "criminal underworld. You're far closer than most people to the world of murder, "
+    "theft, and violence that pervades the underbelly of civilization, and you have "
+    "survived up to this point by flouting the rules and regulations of society.",
+    "Deception",
+    "Stealth",
+    "A crowbar, a set of dark common clothes including a hood, and a pouchValue"
+    ":5sp Weight:1lb containing 15gp",
+    "Criminal Contact",
+    "You have a reliable and trustworthy contact who acts as your liaison to "
+    "a network of other criminals. You know how to get messages to and from your "
+    "contact, even over great distances; specifically, you know the local messengers, "
+    "corrupt caravan masters, and seedy sailors who can deliver messages for you.",
+    "One type of gaming set, thieves' tools",
+    "None"),
+    ("Folk Hero",
+    "You come from a humble social rank, but you are destined for so much more. "
+    "Already the people of your home village regard you as their champion, and "
+    "your destiny calls you to stand against the tyrants and monsters that threaten "
+    "the common folk everywhere.",
+    )
+    ]
+    
+c.executemany("INSERT INTO backgrounds (name, description, skill_pro1, skill_pro2, equipment,"
+            "bg_feature_name, bg_feature_des, tool_pro, languages) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", backgrounds)
+
+conn.commit()
+conn.close()
+
+def main():
+    conn = sqlite3.connect("dnd_character_info.db")
+    c = conn.cursor()
+    
+    c.execute("SELECT * FROM backgrounds")
+    backgrounds = c.fetchall()
+    
+    for bgs in backgrounds:
+        name = bgs[0]
+        description = bgs[1]
+        skill_pro1 = bgs[2]
+        skill_pro2 = bgs[3]
+        equipment = bgs[4]
+        bg_feature_name = bgs[5]
+        bg_feature_des = bgs[6]
+        tool_pro = bgs[7]
+        languages = bgs[8]
+        
+        print(f"{name}.\n{description}")
+        print(f"\nSkill Proficencies: {skill_pro1}, {skill_pro2}")
+        print(f"Tool Proficencies: {tool_pro}")
+        print(f"Langues: {languages}")
+        print(f"\nEquipmenet: {equipment}")
+        print(f"\n{bg_feature_name}.\n{bg_feature_des}\n")
+        print("-" * 40)
+        
+    conn.close()    
+
+
+main()
