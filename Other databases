@@ -58,8 +58,8 @@ backgrounds = [
     "survived up to this point by flouting the rules and regulations of society.",
     "Deception",
     "Stealth",
-    "A crowbar, a set of dark common clothes including a hood, and a pouchValue"
-    ":5sp Weight:1lb containing 15gp",
+    "A crowbar, a set of dark common clothes including a hood, and a pouch "
+    "containing 15gp",
     "Criminal Contact",
     "You have a reliable and trustworthy contact who acts as your liaison to "
     "a network of other criminals. You know how to get messages to and from your "
@@ -83,6 +83,93 @@ backgrounds = [
     "else searching for you, though they will not risk their lives for you.",
     "One type of artisan's tools, vehicles (land)",
     "None"),
+    ("Sage", 
+    "You spent years learning the lore of the multiverse. You scoured "
+    "manuscripts, studied scrolls, and listened to the greatest experts "
+    "on the subjects that interest you. Your efforts have made you a "
+    "master in your fields of study.",
+    "Arcana",
+    "History",
+    "A bottle of ink, a quill, a small knife, a letter from a dead colleague "
+    "posing a question you have not yet been able to answer, a set of common "
+    "clothes, and a pouch containing 10gp",
+    "Researcher",
+    "When you attempt to learn or recall a piece of lore, if you do not know "
+    "that information, you often know where and from whom you can obtain it. "
+    "Usually, this information comes from a library, scriptorium, university, "
+    "or a sage or other learned person or creature. Your DM might rule that the "
+    "knowledge you seek is secreted away in an almost inaccessible place, or that "
+    "it simply cannot be found. Unearthing the deepest secrets of the multiverse "
+    "can require an adventure or even a whole campaign.",
+    "None",
+    "Two of your choice"),
+    ("Urchin",
+    "You grew up on the streets alone, orphaned, and poor, You had no one to watch "
+    "over you or to provide for you, so you learned to provide for yourself. You fought "
+    "fiercely over food and kept a constant watch out for other desperate souls who might "
+    "steal from you. You slept on rooftops and in alleyways, exposed to the elements, "
+    "and endured sickness without the advantage of medicine or a place to recuperate. "
+    "You've survived despite all odds, and did so through cunning, strength, speed, "
+    "or some combination of each.\n\nYou begin your adventuring career with enough "
+    "money to live modestly but securely for at least ten days. How did you come "
+    "by that money? What allowed you to break free of your desperate circumstances "
+    "and embark on a better life?",
+    "Sleight of Hand",
+    "Stealth",
+    "A small knife, a map of the city you grew up in, a pet mouse, a token to remember "
+    "your parents by, a set of common clothes, and a pouch containing 10gp",
+    "City Secrets",
+    "You know the secret patterns and flow to cities and can find passages through "
+    "the urban sprawl that others would miss. When you are not in combat, you (and "
+    "companions you lead) can travel between any two locations in the city twice as "
+    "fast as your speed would normally allow.",
+    "Disguise kit, thieves' tools",
+    "None"),
+    ("Soldier",
+    "War has been your life for as long as you care to remember. You trained as a youth, "
+    "studied the use of weapons and armor, learned basic survival techniques, including "
+    "how to stay alive on the battlefield. You might have been part of a standing national "
+    "army or a mercenary company, or perhaps a member of a local militia who rose to "
+    "prominence during a recent war.\n\nWhen you choose this background, work with your "
+    "DM to determine which military organization you were a part of, how far through its "
+    "ranks you progressed, and what kind of experiences you had during your military "
+    "career. Was it a standing army, a town guard, or a village militia? Or it might "
+    "have been a noble's or merchant's private army, or a mercenary company.",
+    "Athletics",
+    "Intimidation",
+    "An insignia of rank, a trophy taken from a fallen enemy (a dagger, broken blade, "
+    "or piece of a banner), a set of bone dice or a deck of cards, a set of common "
+    "clothes, and a pouch containing 10gp",
+    "Military Rank",
+    "You have a military rank from your career as a soldier. Soldiers loyal to your "
+    "former military organization still recognize your authority and influence, and "
+    "they defer to you if they are of a lower rank. You can invoke your rank to exert "
+    "influence over other soldiers and requisition simple equipment or horses for "
+    "temporary use. You can also usually gain access to friendly military encampments "
+    "and fortresses where your rank is recognized.",
+    "One type of gaming set, vehicles (land)",
+    "None"),
+    ("Outlander",
+    "You grew up in the wilds, far from civilization and the comforts of town and "
+    "technology. You've witnessed the migration of herds larger than forests, survived "
+    "weather more extreme than any city-dweller could comprehend, and enjoyed the solitude "
+    "of being the only thinking creature for miles in any direction. The wilds are in "
+    "your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, "
+    "or even a marauder. Even in places where you don't know the specific features of "
+    "the terrain, you know the ways of the wild.",
+    "Athletics",
+    "Survival",
+    "A staff, a hunting trap, a trophy from an animal you killed, a set of traveler's "
+    "clothes, and a pouch containing 10gp",
+    "Wanderer",
+    "You have an excellent memory for maps and geography, and you can always "
+    "recall the general layout of terrain, settlements, and other features around "
+    "you. In addition, you can find food and fresh water for yourself and up to "
+    "five other people each day, provided that the land offers berries, small game, "
+    "water, and so forth.",
+    "One type of musical instrument",
+    "One of your choice")
+
     ]
     
 c.executemany("INSERT INTO backgrounds (name, description, skill_pro1, skill_pro2, equipment,"
@@ -113,7 +200,7 @@ def main():
         print(f"\nSkill Proficencies: {skill_pro1}, {skill_pro2}")
         print(f"Tool Proficencies: {tool_pro}")
         print(f"Langues: {languages}")
-        print(f"\nEquipmenet: {equipment}")
+        print(f"\nEquipment: {equipment}")
         print(f"\n{bg_feature_name}.\n{bg_feature_des}\n")
         print("-" * 40)
         
