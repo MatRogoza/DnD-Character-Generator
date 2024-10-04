@@ -32,6 +32,27 @@ def create_tab3(tab):
        
     label = tk.Label(tab, text="This is where you choose your Species")
     label.pack()
+    
+    import requests
+
+    url = "https://www.dnd5eapi.co/api/races/:index"
+
+    payload = {}
+    headers = {
+        'Accept': 'application/json'
+    }
+
+    response = requests.request("GET", url, headers=headers, data=payload)
+
+    print(response.text)
+
+
+
+
+
+
+
+    
 
     continue_button3 = tk.Button(tab, text="Continue", bg="green", font=("Arial", 20, "bold"), command=next_tab4)
     continue_button3.place(relx=1.0, rely=1.0, anchor='se')
