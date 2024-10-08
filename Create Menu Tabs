@@ -29,31 +29,56 @@ def create_tab2(tab):
 
 
 def create_tab3(tab):
+    import requests
+    import json
+    
+    species = ["dragonborn", "dwarf", "elf", "gnome", "half-elf", "half-orc", "halfing", "human", "tiefling"]
+    
+    def fetch_race_date(race):
+        url = f"https://www.dnd5eapi.co/api/races/{race}"
+        headers = {"Accept": "application/json"}
+        
+        response = requests.get(url, headers=headers)
+        
+        if response.status_code == 200:
+            race_data = response.json()
+            display_race_info(race_data)
+        else:
+            result_label.config(text=f"Error: Could not retrieve data for {race}")
+    
+    def display_race_info(race_data):
+        race_name = race_data.get("name", "Unknown")
+        speed = race_data.get("speed", "Unknown")
+        alignment = race_data.get("alignment", "Unknown")
+        ability_bonuses = race_data.get("ability_bonuses", [])
+        
+        bonuses_text = ", ".join([f"{bonus["ability_score"]["name"]} +{bonus["bonus"]}" for bonus in ability_bonuses])
+        
+        result_text = (f"Race: {race_name}\n"
+                       f"Speed: {speed}\n"
+                       f"Alignment: {alignment}\n"
+                       f"Ability Bonuses: {bonuses_text}")
+        result_label.config(text=result_text)
+        
+    def on_combobox_select(event):
+        selected_race = race_combobox.get()
+        fetch_race_date(selected_race)
+        
+    
+    label = tk.Label(tab, text="This is where you choose your Species")
+    label.pack()
+    
+    race_combobox = ttk.Combobox(tab, values=species)
+    race_combobox.pack()
+    race_combobox.bind("<<ComboboxSelected>>", on_combobox_select)
+    
+    result_label = tk.Label(tab, text"Select a race to see details", justify="left")
+    result_label.pack
+    
        
     label = tk.Label(tab, text="This is where you choose your Species")
     label.pack()
     
-    import requests
-
-    url = "https://www.dnd5eapi.co/api/races/:index"
-
-    payload = {}
-    headers = {
-        'Accept': 'application/json'
-    }
-
-    response = requests.request("GET", url, headers=headers, data=payload)
-
-    print(response.text)
-
-
-
-
-
-
-
-    
-
     continue_button3 = tk.Button(tab, text="Continue", bg="green", font=("Arial", 20, "bold"), command=next_tab4)
     continue_button3.place(relx=1.0, rely=1.0, anchor='se')
 
