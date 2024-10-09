@@ -35,7 +35,7 @@ def create_tab3(tab):
     species = ["dragonborn", "dwarf", "elf", "gnome", "half-elf", "half-orc", "halfing", "human", "tiefling"]
     
     def fetch_race_date(race):
-        url = f"https://www.dnd5eapi.co/api/races/{race}"
+        url = f"https://www.dnd5eapi.co/api/races/{selected_race}"
         headers = {"Accept": "application/json"}
         
         response = requests.get(url, headers=headers)
@@ -44,7 +44,7 @@ def create_tab3(tab):
             race_data = response.json()
             display_race_info(race_data)
         else:
-            result_label.config(text=f"Error: Could not retrieve data for {race}")
+            result_label.config(text=f"Error: Could not retrieve data for {selected_race}")
     
     def display_race_info(race_data):
         race_name = race_data.get("name", "Unknown")
