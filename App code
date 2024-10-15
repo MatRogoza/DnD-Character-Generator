@@ -1,4 +1,5 @@
 #pip install pyinstaller
 #cd path/to/your/project
 
+
 pyinstaller --onefile --windowed --add-data "logo.png;." --add-data "data.db;." login_menu.py
