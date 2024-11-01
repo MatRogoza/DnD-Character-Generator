@@ -1756,339 +1756,78 @@ subclasses = [
     (1, 2, "Armorer", "You channel your expertise into crafting magical armor, transforming it"
     "into a powerful exosuit. This suit enhances your combat abilities, offers exceptional protection"
     "and can be customized with various magical effects to suit different combat roles."),
-    (1, 3, "Artillerist", "You focus on crafting and using magical cannons and other artillery. By"
-    "summoning arcane turrets, you can deal significant damage from a distance or provide defensive"
-    "support to your allies, making you effective in both offensive and defensive strategies."),
-    (1, 4, "Battle Smith", "You forge a strong bond with a clockwork animal construct that you create"
-    "and command in battle. Along with some minor combat abilities, you also gain the ability to repair"
-    "and reinforce both your construct and other equipment."),
-    (2, 1, "Path of the Ancestral Guardian", "You invoke the spirits of your ancestors to protect yourself"
-    "and your allies in battle. These ancestral spirits can shield your allies and deal extensive damage to your enemies."),
-    (2, 2, "Path of the Battlerager", "Available only for dwarves, you harness your rage into a reckless and frenzied"
-    "fighting style, using unique spiked armor as a weapon. This path allows you to excel in close combat, dealing"
-    "additional damage to anyone foolish enough to come within your reach."),
-    (2, 3, "Path of the Beast", "You channel the power of wild creatures, transforming physical aspects of your"
-    "body to unleash devastating attacks. This includes sprouting claws, fangs or even a tail, offering unique ways"
-    "to damage foes and interact with the battlefield."),
-    (2, 4, "Path of the Berserker", "You give in to the fury of combat, allowing you to fight with a primal ferocity."
+    (2, 1, "Path of the Berserker", "You give in to the fury of combat, allowing you to fight with a primal ferocity."
     "While in the grips of your battle rage, you can make extra attacks and ignore effects that would otherwise"
     "cause damage or slow you down."),
-    (2, 5, "Path of the Giant", "You draw on the might of legendary giants, gaining their strength and abilities."
-    "This path allows you to embody different aspects of giantkind, such as frost or fire, with each option"
-    "enhancing your combat abilities in unique ways."),
-    (2, 6, "Path of the Storm Herald", "You tap into the power of the storm, generating a magical aura"
-    "that affects everything around you. Depending on the environment you choose—tundra, desert, or"
-    "sea—your aura can chill, scorch or lash your enemies with storm-like fury."),
-    (2, 7, "Path of the Totem Warrior", "You forge a spiritual bond with a totem animal spirit,"
+    (2, 2, "Path of the Totem Warrior", "You forge a spiritual bond with a totem animal spirit,"
     "emulating the aspects of that being. Each animal spirit—be it bear, eagle, elk, tiger or"
     "wolf—provides unique strengths and supernatural abilities to aid you and your allies."),
-    (2, 8, "Path of Wild Magic", "Your rage taps into the chaotic force of wild magic, resulting in"
-    "unpredictable arcane side-effects. This path is unique in that that can be both incredibly"
-    "powerful but also relies heavily on random dice roles."),
-    (2, 9, "Path of the Zealot", "You are driven by a divine fury, bolstered by the power of the gods. This"
-    "path not only increases your combat prowess with divine energy but also makes you nearly impossible"
-    "to kill while raging."),
-    (3, 1, "College of Creation", "You harness the magic of creation, channeling the raw chaos that formed"
-    "the universe. This subclass allows you to animate inanimate objects, create performance-enhancing motes"
-    "and summon items temporarily into existence."),
-    (3, 2, "College of Eloquence", "You are a master the art of persuasion, using your words to charm, inspire"
-    "and manipulate others. This subclass grants you abilities that make your speech almost impossible to"
-    "resist and reduce the effectiveness of enemies."),
-    (3, 3, "College of Glamour", "You weave a magic of enchantment and allure, captivating those around you."
-    "This subclass provides you with abilities to charm audiences, command attention and manipulate others’ emotions."),
-    (3, 4, "College of Lore", "You collect bits of knowledge from all manner of stories, songs and spells. This"
+    (3, 1, "College of Lore", "You collect bits of knowledge from all manner of stories, songs and spells. This"
     "subclass enhances your versatility by granting additional proficiencies, magical secrets from other classes"
     "and the ability to use your knowledge to limit enemy attacks."),
-    (3, 5, "College of Spirits", "You channel the tales and powers of the spirits through your performances. This"
-    "subclass gives you the ability to summon spirits to convey storied fables, granting you and your"
-    "allies a variety of magical effects."),
-    (3, 6, "College of Swords", "You blend performance with martial prowess, using your weapon as both an instrument"
+    (3, 2, "College of Swords", "You blend performance with martial prowess, using your weapon as both an instrument"
     "and a conduit for your bardic spells. This subclass focuses on enhancing your combat abilities, allowing for"
     "flourishes that deal extra damage and bolster your defenses."),
-    (3, 7, "College of Valor", "You inspire others in battle through your courage and prowess. This subclass bolsters"
-    "your martial capabilities, providing an Extra attack and allowing you protect your allies and"
-    "enhance group combat tactics."),
-    (3, 8, "College of Whispers", "You traffic in secrets and fear, using your performances to unsettle and manipulate."
-    "This subclass grants you the power to psychically harm your foes, steal identities and sow paranoia,"
-    "turning your art into a weapon of psychological warfare."),
-    (4, 1, "Arcana Domain", "You blend divine and arcane magic, focusing on spells that manipulate"
-    "and reveal the mysteries of the universe. This domain grants you powerful magical abilities,"
-    "including the use of arcane spells usually reserved for wizards."),
-    (4, 2, "Death Domain", "You harness the powers of death and the undead, focusing on spells"
-    "that cause decay and manipulate life forces. This domain grants abilities that enhance your"
-    "damage against the living and allow you to control the dead."),
-    (4, 3, "Forge Domain", "You are a divine artisan, specializing in the creation and"
-    "manipulation of metal and fire. This domain bestows abilities that enhance your crafting skills,"
-    "protect you with divine armor, and imbuing your weapons with fiery power."),
-    (4, 4, "Grave Domain", "You oversee the line between life and death, aiming to ensure balance and"
-    "respect for the dead. This domain grants abilities to hinder the undead, protect allies on the brink"
-    "of death and maximum the impact of restorative spells."),
-    (4, 5, "Knowledge Domain", "You are a seeker of truth, using your divine magic to uncover secrets and"
-    "enhance your wisdom. This domain provides powers to read thoughts, learn hidden knowledge and become"
-    "proficient in numerous skills and languages."),
-    (4, 6, "Life Domain", "You are a conduit of healing and vitality, specializing in spells that restore"
+    (4, 1, "Life Domain", "You are a conduit of healing and vitality, specializing in spells that restore"
     "and sustain life. This domain increases the effectiveness of your healing spells and grants you"
     "abilities to protect and bolster your allies."),
-    (4, 7, "Light Domain", "You channel the power of light and fire, wielding these elements against the darkness."
+    (4, 2, "Light Domain", "You channel the power of light and fire, wielding these elements against the darkness."
     "This domain provides powerful options to scorch your enemies, dispel darkness, and protect allies with radiant energy."),
-    (4, 8, "Nature Domain", "You are a guardian of the natural world, commanding its elements and creatures."
-    "This domain gives you abilities to charm animals and plants, reshape the terrain and summon nature’s"
-    "wrath to aid you in battle."),
-    (4, 9, "Order Domain", "You impose divine order, using your abilities to control the battlefield"
-    "and bolster lawful actions. This domain allows you to enchant allies with bonus attacks and"
-    "slow the advance of enemy forces."),
-    (4, 10, "Peace Domain", "You promote harmony and tranquility, diffusing conflict and healing"
-    "strife. This domain provides abilities that link allies together, allowing shared healing and protection in battle."),
-    (4, 11, "Tempest Domain", "You command the elements of storms, wielding thunder, lightning"
-    "and wind. This domain grants you control over these elements to shock and push back"
-    "enemies while protecting yourself."),
-    (4, 12, "Trickery Domain", "You revel in deception and mischief, using your divine gifts"
-    "to confuse and mislead. This domain provides stealth and illusion powers, enhancing your"
-    "ability to confuse foes and aid allies covertly."),
-    (4, 13, "Twilight Domain", "You guard against the fears of the night and guide others"
-    "through darkness. This domain bestows powers to comfort allies, manipulate shadows"
-    "and see through the deepest gloom."),
-    (4, 14, "War Domain", "You are a divine warrior, a crusader in the cause of your deity."
-    "This domain blesses you with martial prowess, the ability to make extra attacks and powers"
-    "that boost your strength and endurance in battle."),
-    (5, 1, "Circle of Dreams", "You are a guardian of the border between the Feywild and the"
-    "mortal world, tapping into the magic of nature to heal and aid your allies. This subclass"
-    "grants you abilities to cure wounds, provide safe rest and offer protection."),
-    (5, 2, "Circle of the Land", "You have a deep connection to a specific natural terrain,"
+    (5, 1, "Circle of the Land", "You have a deep connection to a specific natural terrain,"
     "such as forests, mountains or coastlines. This subclass enhances your magical abilities,"
     "allowing you to draw upon the arcane essence of your chosen land for additional spells."),
-    (5, 3, "Circle of the Moon", "You specialize in transforming into more powerful animals"
+    (5, 2, "Circle of the Moon", "You specialize in transforming into more powerful animals"
     "and even elemental forms. This subclass focuses on improving your combat effectiveness"
     "in beast form, granting you the ability to become larger, stronger and more formidable creatures."),
-    (5, 4, "Circle of the Shepherd", "You are a protector of nature’s creatures, communicating with"
-    "and nurturing them. This subclass gives you powers to summon and strengthen spirit totems,"
-    "enhancing the abilities of your allies and conjured beasts."),
-    (5, 5, "Circle of Spores", "You harness the life and decay aspects of nature, using fungal"
-    "spores to fuel your magic. This subclass allows you to animate dead plants and creatures,"
-    "deal necrotic damage to enemies and gain temporary health boosts."),
-    (5, 6, "Circle of Stars", "You draw on the mystic power of the stars and constellations, using"
-    "them to guide and protect. This subclass provides abilities to transform starlight into protective"
-    "and restorative magic or harness it for divination and attacks."),
-    (5, 6, "Circle of Wildfire", "You believe in renewal through fire, using flames to clear decay"
-    "and make way for new life. This subclass lets you summon a wildfire spirit, cast fire-related spells"
-    "and heal or bolster your allies with the purifying power of fire."),
-    (6, 1, "Arcane Archer", "You infuse your arrows with magical properties, using arcane elvish magic"
-    "to create a variety of special effects. This subclass allows you to choose from magical arrow types"
-    "that can entangle, banish or even strike hidden targets."),
-    (6, 2, "Battle Master", "You are a master of combat techniques and tactics, using maneuvers to"
+    (6, 1, "Battle Master", "You are a master of combat techniques and tactics, using maneuvers to"
     "outsmart and defeat your enemies. This subclass grants you abilities to enhance your attacks,"
     "control the battlefield and provide tactical advantages to your allies."),
-    (6, 3, "Cavalier", "You excel in mounted combat and are dedicated to protecting others, especially"
-    "when riding your steed. This subclass boosts your effectiveness while mounted and on foot, focusing"
-    "on defensive tactics and controlling enemies to protect your allies."),
-    (6, 4, "Champion", "You focus on refining your martial prowess, becoming a formidable warrior. This"
+    (6, 2, "Champion", "You focus on refining your martial prowess, becoming a formidable warrior. This"
     "subclass enhances your ability to land critical hits more often and increases your physical capabilities,"
     "making you a relentless fighter."),
-    (6, 5, "Echo Knight", "You manipulate time and space to summon an echo of yourself from a parallel"
-    "dimension. This subclass allows you to fight from multiple positions, attack from a distance with"
-    "your echo, and even swap places with it for strategic maneuvers."),
-    (6, 6, "Eldritch Knight", "You blend martial prowess with magical ability, casting spells while"
-    "also engaging in hand-to-hand combat. This subclass allows you to summon weapons, cast protective"
-    "spells, and use magic to enhance your combat effectiveness."),
-    (6, 7, "Rune Knight", "You use mystical runes to enhance your combat skills and manipulate"
-    "various magical effects. This subclass allows you to inscribe runes onto your equipment, granting"
-    "you and your allies enhanced abilities, protection, or offensive power."),
-    (6, 8, "Samurai", "You are a warrior who combines fierce determination with meticulous skill."
-    "This subclass provides you with bonuses to accuracy, the ability to withstand damage, and a resolute"
-    "will that can keep you fighting even when severely wounded."),
-    (7, 1, "Way of the Ascendant Dragon", "You channel the power of dragons, using their mythical"
-    "essence to enhance your martial arts prowess. This subclass grants you abilities to breathe"
-    "elemental energy, manipulate the battlefield with draconic force and inspire awe or fear like a dragon."),
-    (7, 2, "Way of the Astral Self", "You summon an astral projection of yourself, enhancing your combat"
-    "capabilities. This subclass allows you to extend your reach, deal extra damage and use your astral form"
-    "to shield and strike at your enemies."),
-    (7, 3, "Way of the Drunken Master", "You incorporate unpredictable movements into your fighting"
-    "style, mimicking a drunkard. This subclass provides you with superior evasion, sudden strikes"
-    "and the ability to redirect attacks, making you a slippery target in combat."),
-    (7, 4, "Way of the Four Elements", "You harness the power of elemental forces, using them"
-    "to cast spells and augment your martial arts. This subclass allows you to manipulate earth,"
-    "air, fire and water to attack your foes, defend yourself and control the environment."),
-    (7, 5, "Way of the Kensei", "You master the use of weapons as an extension of your body,"
-    "integrating them into your martial practice. This subclass enhances your proficiency with"
-    "specific weapons, making them more effective and allowing you to use them in conjunction with other monk abilities."),
-    (7, 6, "Way of the Long Death", "You are fascinated with the meaning and mechanics of dying, using this"
-    "knowledge to your advantage in battle. This subclass grants you the ability to siphon"
-    "life force from those you kill to heal yourself and instill fear in your enemies."),
-    (7, 7, "Way of Mercy", "You balance between harm and healing, using your knowledge"
-    "of anatomy to both cure and cause pain. This subclass provides you with abilities"
-    "to heal and harm with your touch, choosing to restore health or drain it as you see fit."),
-    (7, 8, "Way of the Open Hand", "You focus on the pure techniques of martial arts, perfecting"
+    (7, 1, "Way of the Open Hand", "You focus on the pure techniques of martial arts, perfecting"
     "strikes that incapacitate your foes. This subclass gives you powerful techniques to"
     "knock enemies prone, push them away or deny them reactions, exemplifying the art of hand-to-hand combat."),
-    (7, 9, "Way of the Shadow", "You embrace the stealth and cunning of the shadow, using darkness to"
+    (7, 2, "Way of the Shadow", "You embrace the stealth and cunning of the shadow, using darkness to"
     "conceal your movements and strike unseen. This subclass allows you to teleport into shadows, become"
     "invisible in dim light and use the dark as a weapon against your enemies."),
-    (7, 10, "Way of the Sun Soul", "You channel your inner light into searing bolts of light, similar"
-    "to the rays of the sun. This subclass allows you to hurl radiant energy from your hands, use it to"
-    "create barriers or radiate light to damage and disrupt your foes."),
-    (8, 1, "Oath of Conquest", "Aimed at dominating enemies, this subclass grants spells and"
-    "abilities to instill fear and control over the battlefield, allowing you to intimidate and overpower foes."),
-    (8, 2, "Oath of Devotion", "Centered on the ideals of honesty and courage, this subclass offers protective"
-    "magic, the power to purge evil and the ability to protect and heal allies."),
-    (8, 3, "Oath of Glory", "Focused on the pursuit of fame and the embodiment of heroism,"
-    "this subclass provides enhancements to physical prowess and leadership, allowing you to excel"
-    "in athletic feats and inspire others during battle."),
-    (8, 4, "Oath of Redemption", "Focused on nonviolent solutions, you are able to access spells and"
-    "abilities to protect yourself and your allies, while also using non-lethal attacks to slow enemies down."),
-    (8, 5, "Oath of the Ancients", "Dedicated to preserving the light and life found in nature, you can"
+    (8, 1, "Oath of the Ancients", "Dedicated to preserving the light and life found in nature, you can"
     "access abilities that heal and protect, as well as tapping into offensive spells that harness nature’s wrath."),
-    (8, 6, "Oath of the Crown", "Committed to the ideals of civilization and leadership, you are"
-    "dedicated to protecting the lawful authority and those who serve it. Your abilities emphasize"
-    "defense and control in combat."),
-    (8, 7, "Oath of the Watchers", "Designed to guard against the threats of extraplanar entities,"
-    "you are able to hinder and combat creatures from other realms, with abilities centered around"
-    "detection, containment and banishment."),
-    (8, 8, "Oath of Vengeance", "Focused on punishing evildoers, this subclass offers aggressive"
+    (8, 2, "Oath of Vengeance", "Focused on punishing evildoers, this subclass offers aggressive"
     "tactics and powers that enhance your ability to hunt down and destroy your enemies, emphasizing"
     "relentless offensive attacks."),
-    (8, 9, "Oathbreaker", "Tailored for paladins who have forsaken their oaths, this evil subclass"
-    "provides powers to control and manipulate the undead, wield dread magics and command the shadows."),
-    (9, 1, "Beast Master", "You bond with a loyal beast companion, commanding it in battle to fight by"
-    "your side. Your connection allows you to work seamlessly as a team, enhancing your combat abilities and coordination."),
-    (9, 2, "Drakewarden", "You form a mystical bond with a drake, a dragon-like creature that assists you in battle."
-    "As you grow in power, your drake evolves, gaining new abilities that complement your own."),
-    (9, 3, "Fey Wanderer", "You draw on the mysterious magic of the Feywild, using enchantments and tricks to bewilder your"
-    "foes and charm others. Your abilities also strengthen your mind, providing resilience against mental assaults."),
-    (9, 4, "Gloom Stalker", "You excel in darkness and ambush, using your skills to become nearly invisible in the shadows."
+    (9, 1, "Gloom Stalker", "You excel in darkness and ambush, using your skills to become nearly invisible in the shadows."
     "Your attacks are swift and deadly, particularly at the onset of battle, giving you a critical advantage in the first"
     "moments of combat."),
-    (9, 5, "Horizon Walker", "You protect the world from extraplanar threats, gaining abilities that allow you to manipulate"
-    "space and even teleport. Your attacks can bypass defenses as you harness the energies of the multiverse."),
-    (9, 6, "Hunter", "You specialize in tracking and defeating a variety of creatures, adapting your tactics based on the"
+    (9, 2, "Hunter", "You specialize in tracking and defeating a variety of creatures, adapting your tactics based on the"
     "nature of your prey. In addition, you gain specific abilities that enhance your effectiveness against certain types"
     "of enemies."),
-    (9, 7, "Monster Slayer", "You focus on hunting down the most dangerous creatures, gaining supernatural abilities that"
-    "help you track, confront and destroy these threats. Your skills make you particularly adept at disrupting your"
-    "enemies’ abilities and resisting their magic."),
-    (9, 8, "Swarmkeeper", "You are surrounded by a swarm of tiny creatures or spirits that assist you in battle."
-    "This mystical connection to these creatures grants you a range of combat tactics, with both offensive and"
-    "defensive capabilities."),
     (10, 1, "Arcane Trickster", "You enhance your skills as a rogue with the subtle magic of illusion and"
     "enchantment. This subclass grants you the ability to cast spells that can manipulate others, hide your"
     "movements or confuse your foes."),
     (10, 2, "Assassin", "You specialize in infiltration and the art of the kill, becoming a master"
     "of disguise and deadly strikes. This subclass provides you with bonuses for attacking unaware"
     "opponents, allowing you to deal significant damage in the first moments of combat."),
-    (10, 3, "Inquisitive", "You have a sharp eye for detail and excel at deducing clues"
-    "and lies. This subclass allows you to use your keen observation to uncover hidden truths, spot"
-    "weaknesses in your opponents and gain an advantage in social and combat encounters."),
-    (10, 4, "Mastermind", "You are a strategist and manipulator, skilled at pulling the strings from"
-    "the shadows. This subclass grants you the ability to mimic speech, forge documents and direct allies in combat."),
-    (10, 5, "Phantom", "You channel the powers of the dead, gaining abilities linked to shadows and spirits. This"
-    "subclass allows you to steal aspects of the deceased to gain temporary benefits and leave behind spectral"
-    "tokens to spy or communicate."),
-    (10, 6, "Scout", "You are adept at wilderness survival and reconnaissance, using your skills to navigate"
-    "and track. This subclass enhances your mobility and ability to avoid danger, making you formidable"
-    "in stealth and surprise."),
-    (10, 7, "Soulknife", "You manifest psychic blades from your mind, using them as weapons. This subclass"
-    "grants you the ability to create and wield these ethereal blades, attack from a distance and use"
-    "your psychic power to deliver devestating mental assaults."),
-    (10, 8, "Swashbuckler", "You thrive in fast-paced duels and charismatic interactions, embodying"
-    "the daring rogue with a flair for dramatic combat. This subclass enhances your ability"
-    "to engage foes one-on-one, dodge attacks and charm individuals in social situations."),
-    (10, 9, "Thief", "You excel at climbing, sneaking and stealing, using your agility"
-    "and cunning to gain access to places others can’t go. This subclass provides you"
-    "with enhanced abilities to perform sleight of hand, disarm traps and make the most of your"
-    "ill-gotten goods."),
-    (11, 1, "Aberrant mind", "You are imbued with psychic powers derived from an alien"
-    "influence. This subclass grants you the ability to telepathically communicate, manipulate"
-    "thoughts and cast spells without verbal or somatic components."),
-    (11, 2, "Clockwork Soul", "Influenced by the orderly mechanisms of Mechanus, you"
-    "can manipulate probabilities and ensure that events unfold according to plan. This subclass"
-    "allows you to impose order on chaotic situations, prevent alterations to conditions and"
-    "repair both magical and mundane items."),
-    (11, 3, "Divine Soul", "With a touch of the divine in your bloodline, you blend sorcerous"
+    (11, 1, "Divine Soul", "With a touch of the divine in your bloodline, you blend sorcerous"
     "magic with divine power. This subclass provides you access to both sorcerer and cleric"
     "spell lists, enhancing your healing and protective capabilities alongside your natural sorcery."),
-    (11, 4, "Draconic Bloodline", "Your magical powers derive from a dragon ancestor, granting you"
+    (11, 2, "Draconic Bloodline", "Your magical powers derive from a dragon ancestor, granting you"
     "scales, fearsome presence and elemental affinities related to your dragon’s nature. This"
     "subclass enhances your durability, charisma, and grants abilities based on the type of dragon from which you descend."),
-    (11, 5, "Shadow Magic", "Born from the Plane of Shadow, you harness dark energies to create illusions,"
-    "summon shadow, and occasionally slip through the veil between life and death. This subclass"
-    "provides you with resilience against death and the ability to summon a shadowy hound to harry your foes."),
-    (11, 6, "Storm Sorcery", "Your magic crackles with the raw energy of tempests, giving you"
-    "control over wind, lightning and thunder. This subclass enhances your mobility, allowing you"
-    "to ride gusts of wind and channel your spells with the power of a storm."),
-    (11, 7, "Wild Magic", "Your magic is unpredictable and explosive, resulting from a chaotic"
-    "surge of magical energy. This subclass leads to random magical effects that can either"
-    "dramatically benefit or hamper you and your allies, adding an element of chance to every spell you cast."),
-    (12, 1, "Archfey", "You have made a pact with a powerful being of the Feywild, gaining powers that enchant"
-    "and bewilder. This subclass provides you with abilities to charm and frighten others, teleport short "
-    "distances and manipulate the minds and emotions of those around you."),
-    (12, 2, "Celestial", "Your patron is a creature of good, imbuing you with powers of healing and radiance."
-    "This subclass allows you to cure wounds, channel celestial energy into destructive power and provide"
-    "resilience against death for you and your allies."),
-    (12, 3, "Fathomless", "Bound to a mysterious entity from the watery depths, you command"
-    "the crushing pressure and cold darkness of the sea. This subclass grants you tentacle"
-    "attacks, watery teleportation and the ability to breathe underwater as well as resist cold."),
-    (12, 4, "Fiend", "Your patron is a creature of the lower planes, bestowing upon you the"
+    (12, 1, "Fiend", "Your patron is a creature of the lower planes, bestowing upon you the"
     "ability to channel fiery wrath and curses upon your foes. This subclass enhances your resilience,"
     "provides bonuses to certain types of spells and allows you to temporarily gain hit points"
     "when you reduce a foe to 0 hit points."),
-    (12, 5, "Genie", "You serve a powerful genie, gaining magic that reflects"
-    "the genie’s elemental nature—be it air, fire, earth or water. This subclass"
-    "allows you to craft a magical vessel linked to your genie, gain resistance related to"
-    "your genie’s type and manipulate the battlefield with elemental power."),
-    (12, 6, "Great Old One", "Linked to a mysterious, otherworldly entity, your"
-    "powers include telepathy and mental manipulation. This subclass provides you with"
-    "the ability to communicate thoughts, sow madness among your enemies and protect your"
-    "mind against intrusions."),
-    (12, 7, "Hexblade", "You are connected to a magical weapon borne from the Shadowfell,"
+    (12, 2, "Hexblade", "You are connected to a magical weapon borne from the Shadowfell,"
     "which grants you combat prowess and the ability to curse your foes. This subclass"
     "enhances your melee capabilities, allows you to use charisma for weapon attacks and"
     "provides spells related to combat and protection."),
-    (12, 8, "Undead", "You derive your power from a bond with the undead, embracing necrotic"
-    "energies and manipulating the forces of death. This subclass allows you to adopt"
-    "ghostly traits, terrify your enemies and eventually even defy death itself."),
-    (12, 9, "Undying", "Your patron is an immortal being who has mastered the secrets"
-    "of longevity, sharing with you the magic of endurance and preservation. This subclass"
-    "gives you abilities to avoid death, resist disease and restore health."),
-    (13, 1, "Bladesinger", "Almost entirely exclusive to elves and half-elves,"
-    "you blend expert swordplay with arcane magic, enhancing your agility, concentration"
-    "and combat spells through a mystical battle ritual known as the Bladesong."),
-    (13, 2, "Chronurgy", "You manipulate the flow of time through your magic, gaining"
-    "abilities that allow you to adjust initiative, hasten or slow spells and creatures, and even"
-    "alter the course of events as they occur."),
-    (13, 3, "Graviturgy", "Specializing in the manipulation of gravity, you can make"
-    "objects heavier or lighter, pin foes to the spot or use gravitational force to"
-    "enhance your own mobility and offensive capabilities."),
-    (13, 4, "Order of Scribes", "You magically awaken your spellbook, turning"
-    "it into a valuable assistant. This subclass provides unique ways to cast and"
-    "store spells, swap spell properties and even resurrect your spellbook if it’s destroyed."),
-    (13, 5, "School of Abjuration", "You specialize in protective magic, strengthening"
+    (13, 1, "School of Abjuration", "You specialize in protective magic, strengthening"
     "your defenses and banishing enemies. This school enhances your ability to cast wards,"
     "counterspells and protective enchantments, making you and your allies more resilient against attacks."),
-    (13, 6, "School of Conjuration", "You specialize in summoning creatures, objects and phenomena from"
-    "other places, mastering the art of teleportation and conjuration. This subclass grants"
-    "you the ability to instantly transport and create items and allies to aid in various situations."),
-    (13, 7, "School of Divination", "You focus on foresight and information, using your spells to"
-    "reveal secrets, predict events and gain insights that others cannot perceive. This school"
-    "provides abilities that manipulate dice rolls and provide additional information."),
-    (13, 8, "School of Enchantment", "You wield magic that charms and beguiles, influencing"
-    "and controlling the behavior of others. This school grants powers to charm individuals, erase"
-    "memories and dominate minds."),
-    (13, 9, "School of Evocation", "You channel raw elemental power into destructive spells"
+    (13, 2, "School of Evocation", "You channel raw elemental power into destructive spells"
     "to control and maximize damage. This school allows you to shape spells to protect allies,"
     "augment attacks and target enemies from afar."),
-    (13, 10, "School of Illusion", "You create convincing illusions and deceptive images that"
-    "can trick the senses. This school develops your skills to manipulate illusions, making"
-    "them interact with the environment and even become real for a short time."),
-    (13, 11, "School of Necromancy", "You tap into the energies of life and death,"
-    "using your spells to drain energy, control undead and manipulate existence. This"
-    "school enhances your abilities related to the undead and grants you necrotic"
-    "powers that sap strength from your enemies."),
-    (13, 12, "School of Transmutation", "You master the art of changing energy and matter,"
-    "transforming the physical properties of creatures, objects and yourself. This"
-    "school allows you to alter your physical form, enhance combat abilities and"
-    "manipulate the natural world."),
-    (13, 13, "War Magic", "A blend of defensive and offensive magic, you focus on"
-    "quick thinking and rapid responses to maintain superior control in battle. This"
-    "school enhances your ability to maintain concentration, boost defenses and deliver powerful counterattacks.")
     ]
 
 c.executemany('''INSERT INTO subclasses (class_id, subclass_id, name, description) VALUES (?, ?, ?, ?)''', subclasses)
@@ -2102,6 +1841,8 @@ c.execute('''CREATE TABLE IF NOT EXISTS subclass_features (
             FOREIGN KEY (class_id) REFERENCES classes(id),
             FOREIGN KEY (subclass_id) REFERENCES sublasses(subclass_id))
     ''')
+
+
 
 subclass_features = [
     (1, 1, "Tool Proficiency", 3, "When you adopt this specialization at 3rd level, you"
@@ -2197,10 +1938,288 @@ subclass_features = [
     "glimmers with magical light until the start of your next turn. The glimmering creature sheds"
     "dim light in a 5-foot radius, and it has disadvantage on attack rolls against you, as the light"
     "jolts it if it attacks you. In addition, the next attack roll against it has advantage, and"
-    "if that attack hits, the target takes an extra 1d6 lightning damage.")
-        
+    "if that attack hits, the target takes an extra 1d6 lightning damage."),
+    (2, 1, "Frenzy", 3, "Starting when you choose this path at 3rd level, you can go into a frenzy "
+    "when you rage. If you do so, for the duration of your rage you can make a single melee weapon "
+    "attack as a bonus action on each of your turns after this one. When your rage ends, you suffer "
+    "one level of exhaustion."),
+    (2, 1, "Mindless Rage", 6, "Beginning at 6th level, you can't be charmed or frightened while "
+    "raging. If you are charmed or frightened when you enter your rage, the effect is suspended "
+    "for the duration of the rage."),
+    (2, 1, "Intimidating Presence", 10, "Beginning at 10th level, you can use your action to "
+    "frighten someone with your menacing presence. When you do so, choose one creature that "
+    "you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a "
+    "Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be "
+    "frightened of you until the end of your next turn. On subsequent turns, you can use your "
+    "action to extend the duration of this effect on the frightened creature until the end of "
+    "your next turn. This effect ends if the creature ends its turn out of line of sight or more "
+    "than 60 feet away from you.\n\nIf the creature succeeds on its saving throw, you can't use "
+    "this feature on that creature again for 24 hours."),
+    (2, 1, "Retaliation", 14, "Starting at 14th level, when you take damage from a creature that "
+    "is within 5 feet of you, you can use your reaction to make a melee weapon attack against "
+    "that creature."),
+    (2, 2, "Spirit Seeker", 3, "Yours is a path that seeks attunement with the natural world, "
+    "giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the "
+    "ability to cast the Beast Sense and Speak with Animals spells, but only as rituals."),
+    (2, 2, "Totem Spirit", 3, "At 3rd level, when you adopt this path, you choose a totem "
+    "spirit and gain its feature. You must make or acquire a physical totem object – an "
+    "amulet or similar adornment – that incorporates fur or feathers, claws, teeth, or bones "
+    "of the totem animal. At your option, you also gain minor physical attributes that are "
+    "reminiscent of your totem spirit. For example, if you have a bear totem spirit, you "
+    "might be unusually hairy and thick-skinned, or if your totem is the eagle, your "
+    "eyes turn bright yellow.\n\nYour totem animal might be an animal related to those "
+    "listed here but more appropriate to your homeland. For example, you could choose a "
+    "hawk or vulture in place of an eagle.\n\tBear. While raging, you have resistance to "
+    "all damage except psychic damage. The spirit of the bear makes you tough enough "
+    "to stand up to any punishment.\n\tEagle. While you're raging and aren't wearing "
+    "heavy armor, other creatures have disadvantage on opportunity attack rolls against "
+    "you, and you can use the Dash action as a bonus action on your turn. The spirit "
+    "of the eagle makes you into a predator who can weave through the fray with ease.\n\tElk. "
+    "While you're raging and aren't wearing heavy armor, your walking speed increases by "
+    "15 feet. The spirit of the elk makes you extraordinarily swift.\n\tTiger. While raging, "
+    "you can add 10 feet to your long jump distance and 3 feet to your high jump "
+    "distance. The spirit of the tiger empowers your leaps.\n\tWolf. While you're raging, "
+    "your friends have advantage on melee attack rolls against any creature within 5 "
+    "feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters."),
+    (2, 2, "Aspect of the Beast", 6, "At 6th level, you gain a magical benefit based on the "
+    "totem animal of your choice. You can choose the same animal you selected at 3rd level "
+    "or a different one.\n\tBear. You gain the might of a bear. Your carrying capacity (including "
+    "maximum load and maximum lift) is doubled, and you have advantage on Strength checks made "
+    "to push, pull, lift, or break objects.\n\tEagle. You gain the eyesight of an eagle. You can "
+    "see up to 1 mile away with no difficulty, able to discern even fine details as though "
+    "looking at something no more than 100 feet away from you. Additionally, dim light doesn't "
+    "impose disadvantage on your Wisdom (Perception) checks.\n\tElk. Whether mounted or on foot, "
+    "your travel pace is doubled, as is the travel pace of up to ten companions while they're "
+    "within 60 feet of you and you're not incapacitated. The elk spirit helps you roam far and "
+    "fast.\n\tTiger. You gain proficiency in two skills from the following list: Athletics, "
+    "Acrobatics, Stealth, and Survival. The cat spirit hones your survival instincts.\n\tWolf. "
+    "You gain the hunting sensibilities of a wolf. You can track other creatures while traveling "
+    "at a fast pace, and you can move stealthily while traveling at a normal pace."),
+    (2, 2, "Spirit Walker", 10, "At 10th level, you can cast the Commune with Nature spell, "
+    "but only as a ritual. When you do so, a spiritual version of one of the animals you "
+    "chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek."),
+    (2, 2, "Totemic Attunement", 14, "At 14th level, you gain a magical benefit based on a totem "
+    "animal of your choice. You can choose the same animal you selected previously or a different "
+    "one.\n\tBear. While you're raging, any creature within 5 feet of you that's hostile to you "
+    "has disadvantage on attack rolls against targets other than you or another character with "
+    "this feature. An enemy is immune to this effect if it can't see or hear you or if it can't "
+    "be frightened.\n\tEagle. While raging, you have a flying speed equal to your current "
+    "walking speed. This benefit works only in short bursts; you fall if you end your turn in "
+    "the air and nothing else is holding you aloft.\n\tElk. While raging, you can use a bonus "
+    "action during your move to pass through the space of a Large or smaller creature. That "
+    "creature must succeed on a Strength saving throw (DC 8 + your Strength bonus + your "
+    "proficiency bonus) or be knocked prone and take bludgeoning damage equal to 1d12 + your "
+    "Strength modifier.\n\tTiger. While you're raging, if you move at least 20 feet in a "
+    "straight line toward a Large or smaller target right before making a melee weapon "
+    "attack against it, you can use a bonus action to make an additional melee weapon "
+    "attack against it.\n\tWolf. While you're raging, you can use a bonus action on "
+    "your turn to knock a Large or smaller creature prone when you hit it with melee "
+    "weapon attack."),
+    (3, 1, "Bonus Proficiencies", 3, "When you join the College of Lore at 3rd level, "
+    "you gain proficiency with three skills of your choice."),
+    (3, 1, "Cutting Words", 3, "Also at 3rd level, you learn how to use your wit to "
+    "distract, confuse, and otherwise sap the confidence and competence of others. When "
+    "a creature that you can see within 60 feet of you makes an attack roll, an ability "
+    "check, or a damage roll, you can use your reaction to expend one of your uses of "
+    "Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number "
+    "rolled from the creature's roll. You can choose to use this feature after the "
+    "creature makes its roll, but before the DM determines whether the attack roll or "
+    "ability check succeeds or fails, or before the creature deals its damage. The "
+    "creature is immune if it can't hear you or if it's immune to being charmed."),
+    (3, 1, "Additional Magical Secrets", 6, "At 6th level, you learn two spells of your "
+    "choice from any class. A spell you choose must be of a level you can cast, as shown "
+    "on the Bard table, or a cantrip. The chosen spells count as bard spells for you but "
+    "don't count against the number of bard spells you know."),
+    (3, 1, "Peerless Skill", 14, "Starting at 14th level, when you make an ability check, "
+    "you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add "
+    "the number rolled to your ability check. You can choose to do so after you roll the "
+    "die for the ability check, but before the DM tells you whether you succeed or fail."),
+    (3, 2, "Bonus Proficiencies", 3, "When you join the College of Swords at 3rd level, "
+    "you gain proficiency with medium armor and the scimitar.\n\nIf you’re proficient with "
+    "a simple or martial melee weapon, you can use it as a spellcasting focus for your bard spells."),
+    (3, 2, "Fighting Style", 3, "At 3rd level, you adopt a particular style of fighting as "
+    "your specialty. Choose one of the following options. You can't take a Fighting Style "
+    "option more than once, even if you later get to choose again.\n\t" + chr(9679) + "Dueling. "
+    "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 "
+    "bonus to damage rolls with that weapon.\n\t" + chr(9679) + "Two-Weapon Fighting. When you "
+    "engage in two-weapon fighting, you can add your ability modifier to the damage of the "
+    "second attack."),
+    (3, 2, "Blade Flourish", 3, "At 3rd level, you learn to conduct impressive displays of "
+    "martial prowess and speed.\n\nWhenever you take the Attack action on your turn, your "
+    "walking speed increases by 10 feet until the end of the turn, and if a weapon attack "
+    "that you make as part of this action hits a creature, you can use one of the following "
+    "Blade Flourish options of your choice. You can use only one Blade Flourish option per turn. "
+    "\n\nDefensive Flourish. You can expend one use of your Bardic Inspiration to cause the "
+    "weapon to deal extra damage to the target you hit. The damage equals the number you roll "
+    "on the Bardic Inspiration die. You also add the number rolled to your AC until the start "
+    "of your next turn.\n\nSlashing Flourish. You can expend one use of your Bardic Inspiration "
+    "to cause the weapon to deal extra damage to the target you hit and to any other creature "
+    "of your choice that you can see within 5 feet of you. The damage equals the number you "
+    "roll on the Bardic Inspiration die.\n\nMobile Flourish. You can expend one use of your "
+    "Bardic Inspiration to cause the weapon to deal extra damage to the target you hit. The "
+    "damage equals the number you roll on the Bardic Inspiration die. You can also push the "
+    "target up to 5 feet away from you, plus a number of feet equal to the number you roll "
+    "on that die. You can then immediately use your reaction to move up to your walking "
+    "speed to an unoccupied space within 5 feet of the target."),
+    (3, 2, "Extra Attack", 6, "Starting at 6th level, you can attack twice, instead of once, "
+    "whenever you take the Attack action on your turn."),
+    (3, 2, "Master's Flourish", 14, "Starting at 14th level, whenever you use a Blade Flourish "
+    "option, you can roll a d6 and use it instead of expending a Bardic Inspiration die."),
+    (4, 1, "Bonus Proficiencies", 1, "When you choose this domain at 1st level, you gain "
+    "proficiency with heavy armor."),
+    (4, 1, "Disciple of Life", 1, "Also starting at 1st level, your healing spells are more "
+    "effective. Whenever you use a spell of 1st level or higher to restore hit points to a "
+    "creature, the creature regains additional hit points equal to 2 + the spell's level."),
+    (4, 1, "Channel Divinity: Preserve Life", 2, "Starting at 2nd level, you can use your "
+    "Channel Divinity to heal the badly injured.\n\nAs an action, you present your holy "
+    "symbol and evoke healing energy that can restore a number of hit points equal to "
+    "five times your cleric level. Choose any creatures within 30 feet of you, and divide "
+    "those hit points among them. This feature can restore a creature to no more than half "
+    "of its hit point maximum. You can't use this feature on an undead or a construct."),
+    (4, 1, "Blessed Healer", 6, "Beginning at 6th level, the healing spells you cast on others "
+    "heal you as well. When you cast a spell of 1st level or higher that restores hit points "
+    "to a creature other than you, you regain hit points equal to 2 + the spell's level."),
+    (4, 1, "Divine Strike", 8, "At 8th level, you gain the ability to infuse your weapon "
+    "strikes with divine energy. Once on each of your turns when you hit a creature with a "
+    "weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the "
+    "target. When you reach 14th level, the extra damage increases to 2d8."),
+    (4, 1, "Supreme Healing", 17, "Starting at 17th level, when you would normally roll one "
+    "or more dice to restore hit points with a spell, you instead use the highest number "
+    "possible for each die. For example, instead of restoring 2d6 hit points to a "
+    "creature, you restore 12."),
+    (4, 2, "Bonus Cantrip", 1, "When you choose this domain at 1st level, you gain the "
+    "Light cantrip if you don't already know it. This cantrip doesn’t count against "
+    "the number of cleric cantrips you know."),
+    (4, 2, "Warding Flare", 1, "Also at 1st level, you can interpose divine light between "
+    "yourself and an attacking enemy. When you are attacked by a creature within 30 feet "
+    "of you that you can see, you can use your reaction to impose disadvantage on the "
+    "attack roll, causing light to flare before the attacker before it hits or misses. "
+    "An attacker that can't be blinded is immune to this feature.\n\nYou can use this "
+    "feature a number of times equal to your Wisdom modifier (a minimum of once). You "
+    "regain all expended uses when you finish a long rest."),
+    (4, 2, "Channel Divinity: Radiance of the Dawn", 2, "Starting at 2nd level, you can "
+    "use your Channel Divinity to harness sunlight, banishing darkness and dealing radiant "
+    "damage to your foes.\n\nAs an action, you present your holy symbol, and any magical "
+    "darkness within 30 feet of you is dispelled. Additionally, each hostile creature "
+    "within 30 feet of you must make a Constitution saving throw. A creature takes "
+    "radiant damage equal to 2d10 + your cleric level on a failed saving throw, and "
+    "half as much damage on a successful one. A creature that has total cover from "
+    "you is not affected."),
+    (4, 2, "Improved Flare", 6, "Starting at 6th level, you can also use your Warding "
+    "Flare feature when a creature that you can see within 30 feet of you attacks a "
+    "creature other than you."),
+    (4, 2, "Potent Spellcasting", 8, "Starting at 8th level, you add your Wisdom "
+    "modifier to the damage you deal with any cleric cantrip."),
+    (4, 2, "Corona of Light", 17, "Starting at 17th level, you can use your action "
+    "to activate an aura of sunlight that lasts for 1 minute or until you dismiss "
+    "it using another action. You emit bright light in a 60-foot radius and dim light "
+    "30 feet beyond that. Your enemies in the bright light have disadvantage on saving "
+    "throws against any spell that deals fire or radiant damage."),
+    (5, 1, "Bonus Cantrip", 2, "When you choose this circle at 2nd level, you learn "
+    "one additional druid cantrip of your choice. This cantrip doesn’t count against "
+    "the number of druid cantrips you know."),
+    (5, 1, "Natural Recovery", 2, "Starting at 2nd level, you can regain some of your "
+    "magical energy by sitting in meditation and communing with nature. During a short "
+    "rest, you choose expended spell slots to recover. The spell slots can have a "
+    "combined level that is equal to or less than half your druid level (rounded up), "
+    "and none of the slots can be 6th level or higher. You can't use this feature "
+    "again until you finish a long rest.\n\nFor example, when you are a 4th-level "
+    "druid, you can recover up to two levels worth of spell slots. You can recover "
+    "either a 2nd-level slot or two 1st-level slots."),
+    (5, 1, "Circle Spells", 3, "Your mystical connection to the land infuses you "
+    "with the ability to cast certain spells. At 3rd, 5th, 7th, and 9th level you "
+    "gain access to circle spells connected to the land where you became a druid. "
+    "Choose that land – arctic, coast, desert, forest, grassland, mountain, swamp, "
+    "or Underdark – and consult the associated list of spells.\n\nOnce you gain "
+    "access to a circle spell, you always have it prepared, and it doesn't count "
+    "against the number of spells you can prepare each day. If you gain access "
+    "to a spell that doesn't appear on the druid spell list, the spell is "
+    "nonetheless a druid spell for you."),
+    (5, 1, "Land's Stride", 6, "Starting at 6th level, moving through nonmagical "
+    "difficult terrain costs you no extra movement. You can also pass through "
+    "nonmagical plants without being slowed by them and without taking damage "
+    "from them if they have thorns, spines, or a similar hazard.\n\nIn addition, "
+    "you have advantage on saving throws against plants that are magically created "
+    "or manipulated to impede movement, such as those created by the Entangle spell."),
+    (5, 1, "Nature's Ward", 10, "When you reach 10th level, you can't be charmed or "
+    "frightened by elementals or fey, and you are immune to poison and disease."),
+    (5, 1, "Nature's Sanctuary", "When you reach 14th level, creatures of the natural "
+    "world sense your connection to nature and become hesitant to attack you. When a "
+    "beast or plant creature attacks you, that creature must make a Wisdom saving "
+    "throw against your druid spell save DC. On a failed save, the creature must "
+    "choose a different target, or the attack automatically misses. On a successful "
+    "save, the creature is immune to this effect for 24 hours.\n\nThe creature is "
+    "aware of this effect before it makes its attack against you."),
+    (5, 2, "Combat Wild Shape", 2, "When you choose this circle at 2nd level, you gain "
+    "the ability to use Wild Shape on your turn as a bonus action, rather than as an "
+    "action.\n\nAdditionally, while you are transformed by Wild Shape, you can use "
+    "a bonus action to expend one spell slot to regain 1d8 hit points per level "
+    "of the spell slot expended."),
+    (5, 2, "Circle Forms", 2, "The rites of your circle grant you the ability to "
+    "transform into more dangerous animal forms. Starting at 2nd level, you can use "
+    "your Wild Shape to transform into a beast with a challenge rating as high as 1. "
+    "You ignore the Max. CR column of the Beast Shapes table, but must abide by the "
+    "other limitations there.\n\nStarting at 6th level, you can transform into a "
+    "beast with a challenge rating as high as your druid level divided by 3, rounded down."),
+    (5, 2, "Primal Strike", 6, "Starting at 6th level, your attacks in beast form "
+    "count as magical for the purpose of overcoming resistance and immunity to nonmagical "
+    "attacks and damage."),
+    (5, 2, "Elemental Wild Shape", 10, "At 10th level, you can expend two uses of Wild Shape "
+    "at the same time to transform into an air elemental, an earth elemental, a fire "
+    "elemental, or a water elemental."),
+    (5, 2, "Thousand Forms", 14, "By 14th level, you have learned to use magic to alter "
+    "your physical form in more subtle ways. You can cast the Alter Self spell at will."),
+    (6, 1, "Combat Superiority", 3, "When you choose this archetype at 3rd level, you learn "
+    "maneuvers that are fueled by special dice called superiority dice.\n\nManeuvers. You "
+    "learn three maneuvers of your choice. Many maneuvers enhance an attack in some way. "
+    "You can use only one maneuver per attack. You learn two additional maneuvers of your "
+    "choice at 7th, 10th, and 15th level. Each time you learn new maneuvers, you can also "
+    "replace one maneuver you know with a different one.\n\nSuperiority Dice. You have four "
+    "superiority dice, which are d8s. A superiority die is expended when you use it. You "
+    "regain all of your expended superiority dice when you finish a short or long rest. "
+    "You gain another superiority die at 7th level and one more at 15th level.\n\nSaving Throws. "
+    "Some of your maneuvers require your target to make a saving throw to resist the "
+    "maneuver's effects. The saving throw DC is calculated as follows:\n\nManeuver save DC "
+    "= 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice)"),
+    (6, 1, "Student of War", 3, "At 3rd level, you gain proficiency with one type of "
+    "artisan's tools of your choice."),
+    (6, 1, "Know Your Enemy", 7, "Starting at 7th level, if you spend at least 1 minute "
+    "observing or interacting with another creature outside combat, you can learn certain "
+    "information about its capabilities compared to your own. The DM tells you if the "
+    "creature is your equal, superior, or inferior in regard to two of the following "
+    "characteristics of your choice:\n\t" + chr(9679) + "Strength score\n\t" + chr(9679) + 
+    "Dexterity score\n\t" + chr(9679) + "Constitution score\n\t" + chr(9679) + "Armor Class\n\t"
+    + chr(9679) + "Current hit points\n\t" + chr(9679) + "Total class levels, if any\n\t" + chr(9679)
+    + "Fighter class levels, if any"),
+    (6, 1, "Improved Combat Superiority", 10, "At 10th level, your superiority dice turn into "
+    "d10s. At 18th level, they turn into d12s."),
+    (6, 1, "Relentless", 15, "Starting at 15th level, when you roll initiative and have no superiority "
+    "dice remaining, you regain 1 superiority die."),
+    (6, 1, "Improved Combat Superiority(d12)", 18, "At 18th level, they turn into d12s."),
+    (6, 2, "Improved Critical", 3, "Beginning when you choose this archetype at 3rd level, your "
+    "weapon attacks score a critical hit on a roll of 19 or 20."),
+    (6, 2, "Remarkable Athlete", 7, "Starting at 7th level, you can add half your proficiency "
+    "bonus (rounded up) to any Strength, Dexterity, or Constitution check you make that doesn't "
+    "already use your proficiency bonus.\n\nIn addition, when you make a running long jump, "
+    "the distance you can cover increases by a number of feet equal to your Strength modifier."),
+    (6, 2, "Additional Fighting Style", 10, "At 10th level, you can choose a second option from "
+    "the Fighting Style class feature."),
+    (6, 2, "Superior Critical", 15, "Starting at 15th level, your weapon attacks score a "
+    "critical hit on a roll of 18-20."),
+    (6, 2, "Survivor", 18, "At 18th level, you attain the pinnacle of resilience in battle. "
+    "At the start of each of your turns, you regain hit points equal to 5 + your Constitution "
+    "modifier if you have no more than half of your hit points left. You don't gain this "
+    "benefit if you have 0 hit points.")
+    (7, 1, "Open Hand Technique", 3, "Starting when you choose this tradition at 3rd level, "
+    "you can manipulate your enemy's ki when you harness your own. Whenever you hit a creature "
+    "with one of the attacks granted by your Flurry of Blows, you can impose one of the "
+    "following effects on that target:\n\t" + chr(9679) + "It must succeed on a Dexterity saving "
+    "throw or be knocked prone.\n\t" + chr(9679) + "It must make a Strength saving throw. "
+    "If it fails, you can push it up to 15 feet away from you.\n\t" + chr(9679) + "It can't "
+    "take reactions until the end of your next turn."),
+    
     ]
-#c.executemany('INSERT INTO subclass_features (class_id, subclass_features, feature_name, level, description) VALUES (?, ?, ?, ?, ?)', subclass_features)
+c.executemany('INSERT INTO subclass_features (class_id, subclass_id, feature_name, level, description) VALUES (?, ?, ?, ?, ?)', subclass_features)
 
 
 
