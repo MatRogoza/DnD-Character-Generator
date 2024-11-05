@@ -6,6 +6,7 @@ from tkinter import ttk
 def next_tab3(tab2):
     notebook.select(2)
 
+
 def next_tab4():
     notebook.select(3)
 
