@@ -31,57 +31,99 @@ def create_tab2(tab):
 
 def create_tab3(tab):
     import requests
-    import json
-    
-    species = ["dragonborn", "dwarf", "elf", "gnome", "half-elf", "half-orc", "halfing", "human", "tiefling"]
-    
-    def fetch_race_date(race):
-        url = f"https://www.dnd5eapi.co/api/races/{selected_race}"
+    import tkinter as tk
+    from tkinter import ttk
+
+    species = ["dragonborn", "dwarf", "elf", "gnome", "half-elf", "half-orc", "halfling", "human", "tiefling"]
+
+    def fetch_race_data(race):
+        url = f"https://www.dnd5eapi.co/api/races/{race}"
         headers = {"Accept": "application/json"}
-        
+
         response = requests.get(url, headers=headers)
-        
+
         if response.status_code == 200:
             race_data = response.json()
             display_race_info(race_data)
         else:
-            result_label.config(text=f"Error: Could not retrieve data for {selected_race}")
-    
+            result_label.config(text=f"Error: Could not retrieve data for {race}")
+
+    def fetch_subrace_data(subrace_url):
+        headers = {"Accept": "application/json"}
+        response = requests.get(subrace_url, headers=headers)
+
+        if response.status_code == 200:
+            subrace_data = response.json()
+            display_subrace_info(subrace_data)
+        else:
+            result_label.config(text=f"Error: Could not retrieve data for subrace")
+
     def display_race_info(race_data):
         race_name = race_data.get("name", "Unknown")
         speed = race_data.get("speed", "Unknown")
         alignment = race_data.get("alignment", "Unknown")
         ability_bonuses = race_data.get("ability_bonuses", [])
-        
-        bonuses_text = ", ".join([f"{bonus["ability_score"]["name"]} +{bonus["bonus"]}" for bonus in ability_bonuses])
+        subraces = race_data.get("subraces", [])
+
+        bonuses_text = ", ".join([f"{bonus['ability_score']['name']} +{bonus['bonus']}" for bonus in ability_bonuses])
         
         result_text = (f"Race: {race_name}\n"
                        f"Speed: {speed}\n"
                        f"Alignment: {alignment}\n"
                        f"Ability Bonuses: {bonuses_text}")
         result_label.config(text=result_text)
+
+        # Display subrace combobox if subraces are available
+        if subraces:
+            subrace_options = [subrace['name'] for subrace in subraces]
+            subrace_urls = {subrace['name']: subrace['url'] for subrace in subraces}
+            
+            subrace_combobox['values'] = subrace_options
+            subrace_combobox.current(0)
+            subrace_combobox.pack()
+            subrace_label.pack()
+
+            def on_subrace_select(event):
+                selected_subrace = subrace_combobox.get()
+                subrace_url = subrace_urls[selected_subrace]
+                fetch_subrace_data(f"https://www.dnd5eapi.co{subrace_url}")
+
+            subrace_combobox.bind("<<ComboboxSelected>>", on_subrace_select)
+        else:
+            subrace_combobox.pack_forget()
+            subrace_label.pack_forget()
+
+    def display_subrace_info(subrace_data):
+        subrace_name = subrace_data.get("name", "Unknown")
+        desc = subrace_data.get("desc", "No description available")
         
+        result_text = f"{result_label.cget('text')}\n\nSubrace: {subrace_name}\nDescription: {desc}"
+        result_label.config(text=result_text)
+
     def on_combobox_select(event):
         selected_race = race_combobox.get()
-        fetch_race_date(selected_race)
-        
-    
-    label = tk.Label(tab, text="This is where you choose your Species")
+        fetch_race_data(selected_race)
+
+    # Race label and combobox
+    label = tk.Label(tab, text="Choose your Race:")
     label.pack()
-    
+
     race_combobox = ttk.Combobox(tab, values=species)
     race_combobox.pack()
     race_combobox.bind("<<ComboboxSelected>>", on_combobox_select)
+
+    # Subrace combobox and label (initially hidden)
+    subrace_label = tk.Label(tab, text="Choose a Subrace:")
+    subrace_combobox = ttk.Combobox(tab)
     
-    result_label = tk.Label(tab, text"Select a race to see details", justify="left")
-    result_label.pack
-    
-       
-    label = tk.Label(tab, text="This is where you choose your Species")
-    label.pack()
-    
+    # Result label for displaying race and subrace info
+    result_label = tk.Label(tab, text="Select a race to see details", justify="left")
+    result_label.pack()
+
+    # Continue button
     continue_button3 = tk.Button(tab, text="Continue", bg="green", font=("Arial", 20, "bold"), command=next_tab4)
     continue_button3.place(relx=1.0, rely=1.0, anchor='se')
+
 
 def create_tab4(tab):
     label = tk.Label(tab, text="This is where you choose your Stats")
