@@ -2209,7 +2209,7 @@ subclass_features = [
     (6, 2, "Survivor", 18, "At 18th level, you attain the pinnacle of resilience in battle. "
     "At the start of each of your turns, you regain hit points equal to 5 + your Constitution "
     "modifier if you have no more than half of your hit points left. You don't gain this "
-    "benefit if you have 0 hit points.")
+    "benefit if you have 0 hit points."),
     (7, 1, "Open Hand Technique", 3, "Starting when you choose this tradition at 3rd level, "
     "you can manipulate your enemy's ki when you harness your own. Whenever you hit a creature "
     "with one of the attacks granted by your Flurry of Blows, you can impose one of the "
@@ -2324,7 +2324,7 @@ subclass_features = [
     "damage. While frightened, the creature's speed is 0, and it can't benefit from "
     "any bonus to its speed.\n\nOn a successful save, the creature's speed is halved "
     "for 1 minute or until the creature takes any damage.\n\t" + chr(9679) + "Vow of "
-    "Enmity. As a bonus action, you can utter a vow of enmity against a creature you 
+    "Enmity. As a bonus action, you can utter a vow of enmity against a creature you "
     "can see within 10 feet of you, using your Channel Divinity. You gain advantage "
     "on attack rolls against the creature for 1 minute or until it drops to 0 hit "
     "points or falls unconscious."),
@@ -2371,7 +2371,7 @@ subclass_features = [
     "with wisps of supernatural shadow around you. Whenever a creature makes an attack roll "
     "against you and doesn't have advantage on the roll, you can use your reaction to impose "
     "disadvantage on it. You must use this feature before you know the outcome of the attack roll."),
-    (9, 2, "Hunter's Prey", 3 "At 3rd level, you gain one of the following features of your "
+    (9, 2, "Hunter's Prey", 3, "At 3rd level, you gain one of the following features of your "
     "choice.\n\t" + chr(9697) + "Colossus Slayer. Your tenacity can wear down the most potent "
     "foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage "
     "if it’s below its hit point maximum. You can deal this extra damage only once per "
@@ -2388,7 +2388,7 @@ subclass_features = [
     "by that creature for the rest of the turn.\n\t" + chr(9679) + "Steel Will. You have "
     "advantage on saving throws against being frightened."),
     (9, 2, "Multiattack", 11, "At 11th level, you gain one of the following features of "
-    "your choice.\n\t" + chr(9679), + "Volley. You can use your action to make a ranged "
+    "your choice.\n\t" + chr(9679) + "Volley. You can use your action to make a ranged "
     "attack against any number of creatures within 10 feet of a point you can see within "
     "your weapon’s range. You must have ammunition for each target, as normal, and you "
     "make a separate attack roll for each target." + chr(9679) + "Whirlwind Attack. You "
@@ -2461,7 +2461,7 @@ subclass_features = [
     "you can't use it again until you finish a long rest."),
     (10, 2, "Bonus Proficiencies", 3, "When you choose this archetype at 3rd level, you "
     "gain proficiency with the disguise kit and the poisoner's kit."),
-    (10, 2, "Assassinate", 3 "Starting at 3rd level, you are at your deadliest when you "
+    (10, 2, "Assassinate", 3, "Starting at 3rd level, you are at your deadliest when you "
     "get the drop on your enemies. You have advantage on attack rolls against any creature "
     "that hasn't taken a turn in the combat yet. In addition, any hit you score against "
     "a creature that is surprised is a critical hit."),
