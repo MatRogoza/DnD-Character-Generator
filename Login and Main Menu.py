@@ -3,21 +3,38 @@ from tkinter import messagebox
 import sqlite3
 import hashlib
 from create_menu import create_menu
+import os
+from Class_Features import populate_database
 
+
+def initialize_database():
+    db_path = 'dnd_character_info.db'
+    
+    # Check if the database exists or is empty
+    if not os.path.exists(db_path) or os.path.getsize(db_path) == 0:
+        print("Database is empty. Populating...")
+        populate_database()  # Call the function to populate the database
+    else:
+        print("Database is already populated.")
+
+# Call this function before launching the main program
+initialize_database()
+
+# Your existing login menu logic here...
 
 #Connect to the Sqlite database
 conn = sqlite3.connect('users.db')
 c = conn.cursor()
 
 #Create a table for storing user accounts
-# c.execute('''
-# CREATE TABLE IF NOT EXISTS users (
-#     id INTEGER PRIMARY KEY AUTOINCREMENT,
-#     username TEXT NOT NULL UNIQUE,
-#     password TEXT NOT NULL
-# )
-# ''')
-# conn.commit()
+c.execute('''
+ CREATE TABLE IF NOT EXISTS users (
+     id INTEGER PRIMARY KEY AUTOINCREMENT,
+     username TEXT NOT NULL UNIQUE,
+     password TEXT NOT NULL
+ )
+ ''')
+conn.commit()
 
 #Function to hash passwords
 def hash_password(password):
