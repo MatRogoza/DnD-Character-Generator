@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import Canvas, Scrollbar, Frame
 import sqlite3
 import ttkbootstrap as tb
 from create_menu_tabs import *
@@ -19,54 +20,48 @@ def center_window(window, width, height): #function to center window
     window.geometry(f'{width}x{height}+{x}+{y}')
 
 #function to populate the selected classes' features for what level you are
+def create_feature_button(feature, row, container):
+    # Create a feature button
+    feature_button = tk.Button(container, text=f"Level {feature[3]}: {feature[2]}", relief=tk.RAISED)
+    feature_button.grid(row=row, column=0, columnspan=2, sticky="ew", padx=10, pady=5)
+
+    # Create a hidden description label
+    feature_description = tk.Label(container, text=feature[4], wraplength=500, justify=tk.LEFT)
+    feature_description.grid(row=row+1, column=0, columnspan=2, padx=20, pady=5)
+    feature_description.grid_remove()  # Initially hidden
+
+    def toggle_description():
+        # Toggle visibility of the description
+        if feature_description.winfo_viewable():
+            feature_description.grid_remove()
+        else:
+            feature_description.grid()
+
+    # Set the button command
+    feature_button.config(command=toggle_description)
+
+
 def display_class_features(selected_class, selected_level):
-    #Clear existing content
-    for widget in frame_features.winfo_children():
+    # Clear the content of the scrollable frame
+    for widget in scrollable_frame.winfo_children():
         widget.destroy()
 
     conn = sqlite3.connect('dnd_character_info.db')
     c = conn.cursor()
-    
+
     class_id = class_options.index(selected_class) + 1
 
     c.execute('SELECT * FROM features WHERE class_id = ? AND level <= ? ORDER BY level', (class_id, selected_level))
     features = c.fetchall()
-    
+
     if features:
-        row = 0
-        for feature in features:
-            create_feature_button(feature, row)
-            row += 2
+        for row, feature in enumerate(features):
+            create_feature_button(feature, row * 2, scrollable_frame)
     else:
-        label_no_feature = tk.Label(frame_features, text="No features found for this class at the selected level.")
+        label_no_feature = tk.Label(scrollable_frame, text="No features found for this class at the selected level.")
         label_no_feature.grid(row=0, column=0, columnspan=2, padx=10, pady=5)
-    
+
     conn.close()
-    #text_features_box.delete(1.0, tk.END)
-
-    #if features:
-    #    for feature in features:
-    #        # Insert feature into the Text widget
-    #        text_features_box.insert(tk.END, f"Level {feature[3]}: {feature[2]} - {feature[4]}\n\n")
-    #else:
-    #    text_features_box.insert(tk.END, "No features found for this class at the selected level.\n")
-
-
-def create_feature_button(feature, row):
-    feature_button = tk.Button(frame_features, text=f"Level {feature[3]}: {feature[2]}", relief=tk.RAISED)
-    feature_button.grid(row=row, column=0, columnspan=2, sticky="ew", padx=10, pady=5)
-
-    feature_description = tk.Label(frame_features, text=feature[4], wraplength=500, justify=tk.LEFT)
-    feature_description.grid(row=row+1, column=0, columnspan=2, padx=20, pady=5)
-    feature_description.grid_remove() #hides the label initially
-
-    def toggle_description():
-        if feature_description.winfo_viewable():
-            feature_description.grid_remove()
-        else:
-            feature_description.grid(row=row+1, column=0, columnspan=2, padx=20, pady=5)
-    
-    feature_button.config(command=toggle_description)
 
 #create the new buttons for the level once class is chosen
 def class_level_button(e):
@@ -81,8 +76,8 @@ def class_level_button(e):
 
 #Event trigger and label once a class is chosen
 def get_class_level(e):
-    label_class_name = tk.Label(tab1, text=f"You selected: {combo_class.get()}")
-    label_class_name.grid(row=2, column=0, columnspan=2)
+    #label_class_name = tk.Label(tab1, text=f"You selected: {combo_class.get()}")
+    #label_class_name.grid(row=2, column=0, columnspan=2)
     class_level_button(e)
     
 def next_tab2():
@@ -91,8 +86,8 @@ def next_tab2():
 #function to call the create character menu
 def create_menu():
     global create_window
-    #global text_features_box  # Make the text widget global to access it in other functions
-    global frame_features
+    global combo_class
+    global scrollable_frame
     global tab1
     global notebook
 
@@ -131,27 +126,34 @@ def create_menu():
     entry_name.grid(row=0, column=1)
 
     # Class selection dropdown
-    global combo_class
     combo_class = ttk.Combobox(tab1, values=class_options)
     combo_class.grid(row=1, column=1, padx=10, pady=10)
 
     # Binding the action of selecting a class to then make the level button
     combo_class.bind('<<ComboboxSelected>>', get_class_level)
 
-    # Create a frame to hold the Text widget and scrollbar
-    frame_features = tk.Frame(tab1)
-    frame_features.grid(row=3, column=0, columnspan=4, padx=10, pady=10)
+    # Create a scrollable area
+    canvas = Canvas(tab1)
+    canvas.grid(row=2, column=0, columnspan=2, sticky="nsew", padx=10, pady=10)
 
-    # Create a scrollbar for the Text widget
-    scrollbar = tk.Scrollbar(frame_features)
-    scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+    scrollbar = Scrollbar(tab1, orient=tk.VERTICAL, command=canvas.yview)
+    scrollbar.grid(row=2, column=2, sticky="ns")
 
-    # Create a Text widget to display features
-    text_features_box = tk.Text(frame_features, wrap=tk.WORD, height=20, width=80, yscrollcommand=scrollbar.set)
-    text_features_box.pack(side=tk.LEFT, fill=tk.BOTH)
+    canvas.configure(yscrollcommand=scrollbar.set)
 
-    # Configure the scrollbar to scroll the Text widget
-    scrollbar.config(command=text_features_box.yview)
+    # Create a frame inside the canvas for scrollable content
+    scrollable_frame = Frame(canvas)
+    canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+
+    # Configure scroll behavior
+    scrollable_frame.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+    tab1.grid_rowconfigure(1, weight=1)
+    tab1.grid_columnconfigure(0, weight=1)
+
+    # Allow tab1 to expand properly with the content
+    tab1.grid_rowconfigure(3, weight=1)
+    tab1.grid_columnconfigure(0, weight=1)
+
 
     continue_button1 = tk.Button(tab1, text="Continue", bg="green", font=("Arial", 20, "bold"), command=next_tab2)
         
